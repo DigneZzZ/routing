@@ -1,0 +1,94 @@
+{
+  "domainStrategy": "IPIfNonMatch",
+  "id": "FE4D66DC-210C-5857-B4FB-8A9ABC421F25",
+  "name": "DigneZzZ Routing",
+  "domainMatcher": "hybrid",
+  "balancers": [],
+  "rules": [
+    {
+      "type": "field",
+      "id": "67995B22-503D-5353-A974-B54A6B133700",
+      "__name__": "Block Ads & Trackers",
+      "domainMatcher": "hybrid",
+      "domain": [
+        "geosite:category-ads-all",
+        "geosite:win-spy",
+        "geosite:win-extra"
+      ],
+      "outboundTag": "block"
+    },
+    {
+      "type": "field",
+      "id": "B126063E-F8CC-5CD9-B707-E9B39F809A6B",
+      "__name__": "Block QUIC",
+      "port": "443",
+      "network": "udp",
+      "outboundTag": "block"
+    },
+    {
+      "type": "field",
+      "id": "5A38D33D-5FEA-58AB-8CB9-42DD97546B18",
+      "__name__": "Direct Private IPs",
+      "ip": [
+        "geoip:private"
+      ],
+      "outboundTag": "direct"
+    },
+    {
+      "type": "field",
+      "id": "B7D094D7-A1D9-5EBF-A8AE-2C7E7AF68594",
+      "__name__": "Direct Private Domains",
+      "domainMatcher": "hybrid",
+      "domain": [
+        "geosite:private"
+      ],
+      "outboundTag": "direct"
+    },
+    {
+      "type": "field",
+      "id": "4D2E1E0A-89CF-5C66-A7E2-2492786AD952",
+      "__name__": "Direct RU Services",
+      "domainMatcher": "hybrid",
+      "domain": [
+        "geosite:category-ru",
+        "geosite:apple",
+        "geosite:microsoft",
+        "geosite:steam",
+        "geosite:epicgames",
+        "geosite:pinterest",
+        "geosite:google-play",
+        "geosite:origin",
+        "geosite:twitch"
+      ],
+      "outboundTag": "direct"
+    },
+    {
+      "type": "field",
+      "id": "AC0B6329-0D2D-5EDB-A046-85A778EFC500",
+      "__name__": "Direct RU TLDs",
+      "domainMatcher": "hybrid",
+      "domain": [
+        "regexp:.*\\.ru$",
+        "regexp:.*\\.su$",
+        "regexp:.*\\.xn--p1ai$"
+      ],
+      "outboundTag": "direct"
+    },
+    {
+      "type": "field",
+      "id": "07DCF558-E04D-5530-A8D7-8FD78CBD32AA",
+      "__name__": "Direct RU IPs",
+      "ip": [
+        "geoip:ru"
+      ],
+      "outboundTag": "direct"
+    },
+    {
+      "type": "field",
+      "id": "85A6EF60-8EEA-52F1-AC63-38D0E3BEA4ED",
+      "__name__": "Proxy All",
+      "port": "0-65535",
+      "outboundTag": "proxy"
+    }
+  ]
+}

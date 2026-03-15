@@ -1,0 +1,158 @@
+# MihoMo template for Remnawave
+# github.com/DigneZzZ/routing
+# Groups: VPN, YouTube, Discord, AI, Games, RU
+
+mixed-port: 7890
+mode: rule
+log-level: silent
+allow-lan: false
+ipv6: true
+unified-delay: true
+tcp-concurrent: true
+keep-alive-interval: 30
+find-process-mode: strict
+profile:
+  store-selected: true
+  store-fake-ip: true
+
+tun:
+  enable: true
+  stack: mixed
+  auto-route: true
+  auto-detect-interface: true
+  dns-hijack: [any:53]
+  strict-route: true
+  route-exclude-address:
+    - 224.0.0.0/3
+    - 10.0.0.0/8
+    - 127.0.0.0/8
+    - 100.64.0.0/10
+    - 172.16.0.0/12
+    - 169.254.0.0/16
+    - 192.168.0.0/16
+    - fc00::/7
+    - fe80::/10
+
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - rule-set:direct
+  default-nameserver: [https://77.88.8.8/dns-query, https://8.8.8.8/dns-query]
+  proxy-server-nameserver: [https://77.88.8.8/dns-query, https://8.8.8.8/dns-query]
+  direct-nameserver: [https://77.88.8.8/dns-query]
+  nameserver: [https://8.8.8.8/dns-query#PROXY]
+
+sniffer:
+  enable: true
+  override-destination: false
+  parse-pure-ip: true
+  sniff:
+    HTTP: { ports: [80, 8080-8880] }
+    TLS: { ports: [443, 8443] }
+  skip-dst-address:
+    - 224.0.0.0/3
+    - 10.0.0.0/8
+    - 127.0.0.0/8
+    - 100.64.0.0/10
+    - 172.16.0.0/12
+    - 198.18.0.0/15
+    - 169.254.0.0/16
+    - 192.168.0.0/16
+    - fc00::/7
+    - fe80::/10
+
+proxies: # LEAVE THIS LINE!
+
+proxy-groups:
+  - { name: 🛡️ VPN, icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hijacking.png", type: select, url: "https://cp.cloudflare.com/generate_204", proxies: [⚡️ Авто, 📶 Резерв, 🔓 DIRECT] }
+  # LEAVE THIS LINE!
+  - { name: 📺 YouTube, icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png", type: select, remnawave: { include-proxies: false }, include-all: true, proxies: [🛡️ VPN] }
+  - { name: 💬 Discord, icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Discord.png", type: select, remnawave: { include-proxies: false }, include-all: true, proxies: [🛡️ VPN] }
+  - { name: 🤖 AI, icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Dark/Bot.png", type: select, remnawave: { include-proxies: false }, include-all: true, proxies: [🛡️ VPN] }
+  - { name: 🎮 Игры, icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png", type: select, remnawave: { include-proxies: false }, include-all: true, proxies: [🔓 DIRECT, 🛡️ VPN] }
+  - { name: 🏠 RU, icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Russia.png", type: select, remnawave: { include-proxies: false }, proxies: [🔓 DIRECT, 🛡️ VPN] }
+  # --- hidden ---
+  - { name: ⚡️ Авто, type: url-test, tolerance: 150, url: "https://cp.cloudflare.com/generate_204", interval: 300, hidden: true, remnawave: { include-proxies: false }, include-all: true }
+  - { name: 📶 Резерв, type: fallback, url: "https://cp.cloudflare.com/generate_204", interval: 300, hidden: true, remnawave: { include-proxies: false }, include-all: true }
+  - { name: PROXY, type: select, hidden: true, remnawave: { include-proxies: false }, proxies: [🛡️ VPN] }
+  - { name: 🔓 DIRECT, type: select, hidden: true, remnawave: { include-proxies: false }, proxies: [DIRECT] }
+
+rule-providers:
+  # === Consolidated domains (format: text) ===
+  reject:     { type: http, behavior: domain, format: text, url: "https://raw.githubusercontent.com/DigneZzZ/routing/main/release/reject.list", path: ./rs/reject.list, interval: 86400 }
+  proxy:      { type: http, behavior: domain, format: text, url: "https://raw.githubusercontent.com/DigneZzZ/routing/main/release/proxy.list", path: ./rs/proxy.list, interval: 86400 }
+  direct:     { type: http, behavior: domain, format: text, url: "https://raw.githubusercontent.com/DigneZzZ/routing/main/release/direct.list", path: ./rs/direct.list, interval: 86400 }
+  youtube:    { type: http, behavior: domain, format: text, url: "https://raw.githubusercontent.com/DigneZzZ/routing/main/release/youtube.list", path: ./rs/youtube.list, interval: 86400 }
+  ai:         { type: http, behavior: domain, format: text, url: "https://raw.githubusercontent.com/DigneZzZ/routing/main/release/ai.list", path: ./rs/ai.list, interval: 86400 }
+  games:      { type: http, behavior: domain, format: text, url: "https://raw.githubusercontent.com/DigneZzZ/routing/main/release/games.list", path: ./rs/games.list, interval: 86400 }
+  # === Consolidated IPs (format: text) ===
+  proxy-ip:   { type: http, behavior: ipcidr, format: text, url: "https://raw.githubusercontent.com/DigneZzZ/routing/main/release/proxy-ip.list", path: ./rs/proxy-ip.list, interval: 86400 }
+  direct-ip:  { type: http, behavior: ipcidr, format: text, url: "https://raw.githubusercontent.com/DigneZzZ/routing/main/release/direct-ip.list", path: ./rs/direct-ip.list, interval: 86400 }
+  # === RKN bypass (Re:filter — text lists) ===
+  refilter-d: { type: http, behavior: domain, format: text, url: "https://raw.githubusercontent.com/DigneZzZ/routing/main/release/refilter-domain.list", path: ./rs/refilter-d.list, interval: 86400 }
+  refilter-ip: { type: http, behavior: ipcidr, format: text, url: "https://raw.githubusercontent.com/DigneZzZ/routing/main/release/refilter-ip.list", path: ./rs/refilter-ip.list, interval: 86400 }
+  refilter-community: { type: http, behavior: domain, format: text, url: "https://raw.githubusercontent.com/DigneZzZ/routing/main/release/refilter-community.list", path: ./rs/refilter-community.list, interval: 86400 }
+  # === Process rules (classical YAML) ===
+  proc-games:   { type: http, behavior: classical, format: yaml, url: "https://raw.githubusercontent.com/DigneZzZ/routing/main/release/proc-games.yaml", path: ./rs/proc-games.yaml, interval: 86400 }
+  proc-torrent: { type: http, behavior: classical, format: yaml, url: "https://raw.githubusercontent.com/DigneZzZ/routing/main/release/proc-torrent.yaml", path: ./rs/proc-torrent.yaml, interval: 86400 }
+  proc-ru:      { type: http, behavior: classical, format: yaml, url: "https://raw.githubusercontent.com/DigneZzZ/routing/main/release/proc-ru.yaml", path: ./rs/proc-ru.yaml, interval: 86400 }
+  # === Discord (inline — only 28 domains) ===
+  discord:
+    type: inline
+    behavior: domain
+    payload:
+      - "+.discord.com"
+      - "+.discord.gg"
+      - "+.discord.media"
+      - "+.discordapp.com"
+      - "+.discordapp.net"
+      - "+.discordcdn.com"
+      - "+.discord.co"
+      - "+.discord.design"
+      - "+.discord.dev"
+      - "+.discord.gift"
+      - "+.discord.gifts"
+      - "+.discord.new"
+      - "+.discord.store"
+      - "+.discord.tools"
+      - "+.dis.gd"
+      - "+.bigbeans.gg"
+
+rules:
+  # --- system ---
+  - RULE-SET,direct-ip,DIRECT,no-resolve
+  - IP-CIDR,::/0,REJECT-DROP,no-resolve
+  - AND,((NETWORK,UDP),(DST-PORT,443)),REJECT-DROP
+  - AND,((NETWORK,UDP),(DST-PORT,853)),REJECT-DROP
+  # --- block ---
+  - RULE-SET,reject,REJECT-DROP
+  # --- torrent → direct ---
+  - RULE-SET,proc-torrent,DIRECT
+  # --- ip check ---
+  - OR,((DOMAIN,ipwho.is),(DOMAIN,ipwhois.app),(DOMAIN,api.ip.sb),(DOMAIN,ipapi.co),(DOMAIN,ipinfo.io),(DOMAIN-SUFFIX,2ip.io)),PROXY
+  # --- AI ---
+  - RULE-SET,ai,🤖 AI
+  - PROCESS-NAME,com.openai.chat,🤖 AI
+  - PROCESS-NAME,com.anthropic.claude,🤖 AI
+  # --- youtube ---
+  - RULE-SET,youtube,📺 YouTube
+  # --- discord ---
+  - RULE-SET,discord,💬 Discord
+  - PROCESS-NAME-REGEX,discord|vesktop,💬 Discord
+  # --- rkn bypass (before direct!) ---
+  - RULE-SET,refilter-d,PROXY
+  - RULE-SET,refilter-community,PROXY
+  - RULE-SET,proxy,PROXY
+  # --- games ---
+  - OR,((RULE-SET,games),(RULE-SET,proc-games)),🎮 Игры
+  # --- direct services ---
+  - RULE-SET,direct,DIRECT
+  - RULE-SET,proc-ru,🏠 RU
+  # --- IPs ---
+  - RULE-SET,proxy-ip,PROXY,no-resolve
+  - RULE-SET,refilter-ip,PROXY,no-resolve
+  # --- fallback ---
+  - MATCH,PROXY

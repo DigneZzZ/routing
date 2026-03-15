@@ -1,0 +1,58 @@
+{
+  "Name": "DigneZzZ (full)",
+  "GlobalProxy": "true",
+  "UseChunkFiles": "true",
+  "RemoteDns": "8.8.8.8",
+  "DomesticDns": "77.88.8.8",
+  "RemoteDNSType": "DoH",
+  "RemoteDNSDomain": "https://8.8.8.8/dns-query",
+  "RemoteDNSIP": "8.8.8.8",
+  "DomesticDNSType": "DoH",
+  "DomesticDNSDomain": "https://77.88.8.8/dns-query",
+  "DomesticDNSIP": "77.88.8.8",
+  "LastUpdated": "1773620311",
+  "DnsHosts": {},
+  "RouteOrder": "block-proxy-direct",
+  "DirectSites": [
+    "geosite:private",
+    "geosite:category-ru",
+    "geosite:whitelist",
+    "geosite:microsoft",
+    "geosite:apple",
+    "geosite:google-play",
+    "geosite:epicgames",
+    "geosite:riot",
+    "geosite:escapefromtarkov",
+    "geosite:steam",
+    "geosite:origin",
+    "geosite:twitch",
+    "geosite:pinterest",
+    "geosite:faceit"
+  ],
+  "DirectIp": [
+    "geoip:private",
+    "geoip:whitelist"
+  ],
+  "BlockSites": [
+    "geosite:win-spy",
+    "geosite:torrent",
+    "geosite:category-ads"
+  ],
+  "BlockIp": [],
+  "DomainStrategy": "IPIfNonMatch",
+  "FakeDNS": "false",
+  "Geoipurl": "https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/geoip.dat",
+  "Geositeurl": "https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/geosite.dat",
+  "ProxySites": [
+    "geosite:github",
+    "geosite:twitch-ads",
+    "geosite:youtube",
+    "geosite:telegram",
+    "geosite:google-deepmind",
+    "geosite:category-geoblock-ru",
+    "geosite:community"
+  ],
+  "ProxyIp": [
+    "geoip:blocked-ru"
+  ]
+}

@@ -1,0 +1,42 @@
+name: Build Rule-Sets
+
+on:
+  schedule:
+    - cron: '0 4 * * *'   # daily 04:00 UTC
+  workflow_dispatch:       # manual
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Build consolidated rule-sets
+        run: python3 build.py
+
+      - name: Build V2Ray dat files
+        run: python3 build_dat.py
+
+      - name: Update README deeplinks
+        run: python3 update_readme.py
+
+      - name: Commit & Push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add release/ v2ray/ README.md
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            TIMESTAMP=$(date -u '+%Y-%m-%d %H:%M UTC')
+            CHANGED=$(git diff --cached --name-only | wc -l | tr -d ' ')
+            git commit -m "build: update ${CHANGED} rule-sets (${TIMESTAMP})"
+            git push
+          fi
