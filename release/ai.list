@@ -1,5 +1,5 @@
 # ai — auto-generated, do not edit
-# entries: 141
+# entries: 142
 ai.google.dev
 +.ai.studio
 +.aida.googleapis.com
@@ -129,6 +129,7 @@ production-openaicom-storage.azureedge.net
 +.runway.ml
 servd-anthropic-website.b-cdn.net
 +.sora.com
++.spicywriter.com
 +.stability.ai
 +.together.ai
 +.topaz.io
