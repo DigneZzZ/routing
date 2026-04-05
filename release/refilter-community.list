@@ -1,6 +1,6 @@
 # refilter-community — auto-generated from Re:filter
 # source: 1andrevich/Re-filter-lists
-# entries: 644
+# entries: 672
 +.4pda.ru
 +.4pda.to
 +.a360.co
@@ -28,6 +28,9 @@
 +.aftermarket.schaeffler.com
 +.aftermarket.zf.com
 +.ai.com
++.aimlab.gg
++.aimlabs.com
++.aimlabspages.kinsta.cloud
 +.aistudio.google.com
 +.alberta.ca
 +.amiibo.com
@@ -39,6 +42,7 @@
 +.api.home-connect.com
 +.api.instagram.com
 +.api.openai.com
++.api.pwnedpasswords.com
 +.api.radarr.video
 +.api.themoviedb.org
 +.aplawrence.com
@@ -49,6 +53,7 @@
 +.apt.releases.hashicorp.com
 +.aqicn.org
 +.arc.intel.com
++.arkoselabs.com
 +.artifacts.elastic.co
 +.atlassian.com
 +.atomic.stream.voidboost.cc
@@ -67,12 +72,14 @@
 +.beamng.com
 +.beamng.gmbh
 +.beamng.tech
++.beyond.hg-cdn.com
 +.bitbucket.org
 +.bitcoin.org
 +.bitru.org
 +.black.instagram.com
 +.blog.business.instagram.com
 +.blog.instagram.com
++.bloody.com
 +.bng.gg
 +.booktracker.org
 +.boosteroid.com
@@ -85,6 +92,7 @@
 +.bungiestore.com
 +.business.instagram.com
 +.byteoversea.com
++.caesium.app
 +.canva.com
 +.cdn-telegram.org
 +.cdn.betterttv.net
@@ -109,6 +117,7 @@
 +.cloud.mongodb.com
 +.cloudflare-dns.com
 +.cloudflare-ech.com
++.cloudflareclient.com
 +.colta.ru
 +.community.cisco.com
 +.community.instagram.com
@@ -153,6 +162,7 @@
 +.discourse-cdn.com
 +.disneyplus.com
 +.dist.torproject.org
++.distrochooser.de
 +.dkr.com
 +.dl.tailscale.com
 +.docker.elastic.co
@@ -170,6 +180,7 @@
 +.e4mc.link
 +.e621.net
 +.easylist-downloads.adblockplus.org
++.eaton.com
 +.edge.microsoft.com
 +.edgeservices.bing.com
 +.ej.ru
@@ -177,6 +188,7 @@
 +.essential.gg
 +.etsy.com
 +.event.on24.com
++.events.ccc.de
 +.excitebots.com
 +.exler.ru
 +.f95zone.to
@@ -192,6 +204,7 @@
 +.fork.pet
 +.forklog.com
 +.formula1.com
++.forum.dcs.world
 +.forum.voynaplemyon.com
 +.fsn1.your-objectstorage.com
 +.fw-download.ubnt.com
@@ -203,8 +216,10 @@
 +.gemini.google.com
 +.geni.us
 +.genius.com
++.geo.captcha-delivery.com
 +.geode-sdk.org
 +.ggpht.com
++.ghostrc.game.idtech.services
 +.githubcopilot.com
 +.gitlab.io
 +.gllto.glpals.com
@@ -242,6 +257,7 @@
 +.island-of-pleasure.site
 +.itch.io
 +.itch.zone
++.itdog.info
 +.jetbrains.ai
 +.jetbrains.com
 +.k1-api.wbagora.com
@@ -252,6 +268,7 @@
 +.lenovo.com
 +.lib.rus.ec
 +.libgen.rs
++.libsdl.org
 +.linuxiac.com
 +.localbitcoins.com
 +.login.amd.com
@@ -285,6 +302,7 @@
 +.miitomo.com
 +.miiverse.com
 +.mobile.events.data.microsoft.com
++.modartt.com
 +.modrinth.com
 +.monster.ie
 +.mouser.com
@@ -344,6 +362,7 @@
 +.notebooklm.google
 +.notepad-plus-plus.org
 +.notion.com
++.notion.site
 +.notion.so
 +.ntc.party
 +.nyaa.si
@@ -351,6 +370,7 @@
 +.oaistatic.com
 +.oaiusercontent.com
 +.oasis.app
++.ohmyz.sh
 +.omtrdc.net
 +.omv-extras.org
 +.onlineradiobox.com
@@ -363,6 +383,7 @@
 +.openaicomproductionae4b.blob.core.windows.net
 +.openwrt.wk.cz
 +.os.mbed.com
++.packages.cachyos.org
 +.packages.gitlab.com
 +.pandasecurity.com
 +.path3.xtracloud.net
@@ -374,6 +395,7 @@
 +.pcbway.com
 +.pcbway.ru
 +.pdq.com
++.penpot.app
 +.personaltrainermath.com
 +.phncdn.com
 +.php.su
@@ -440,6 +462,7 @@
 +.rus.delfi.lv
 +.rutor.info
 +.rutor.is
++.saerasoft.com
 +.saverudata.info
 +.sc-jpl.com
 +.sc-static.net
@@ -475,6 +498,8 @@
 +.sora.com
 +.soundcloud.com
 +.sovanews.tv
++.spiceworks.com
++.spiceworksstatic.com
 +.splatoon2tournament.com
 +.spotify.com
 +.squadbustersgame.com
@@ -568,6 +593,7 @@
 +.veritas.com
 +.viber.com
 +.video.twimg.com.cdn.cloudflare.net
++.vintagestory.at
 +.vipdrive.net
 +.vrv.co
 +.vyos.io
@@ -614,6 +640,8 @@
 +.www.jabra.com
 +.www.microchip.com
 +.www.mongodb.com
++.www.montechpc.com
++.www.noctua.at
 +.www.postfix.org
 +.www.qualcomm.com
 +.www.smashwords.com
