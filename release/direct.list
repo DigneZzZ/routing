@@ -1,5 +1,5 @@
 # direct — auto-generated, do not edit
-# entries: 2927
+# entries: 2928
 +.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
 +.10.in-addr.arpa
 +.100.100.in-addr.arpa
@@ -1590,6 +1590,7 @@ icloud.cdn-apple.com
 +.icloudpay.net
 +.icloudsecure.net
 +.icloudsetup.com
++.ideco.dev
 +.ids-apple.com
 +.idvd.eu
 +.ie10.com
@@ -1790,8 +1791,8 @@ is5.mzstatic.com
 +.itunbes.com
 +.ituneas.com
 +.itunes-apple.cn
-+.itunes-apple.com.akadns.net
 itunes-apple.com.akadns.net
++.itunes-apple.com.akadns.net
 +.itunes-radio.net
 itunes.apple.com
 +.itunes.ca
