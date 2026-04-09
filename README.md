@@ -25,10 +25,10 @@ release/              # MihoMo rule-sets (auto-generated)
 
 v2ray/                # V2Ray/Xray geo-data + routing configs (auto-generated)
 ├── geosite.dat       # 26 domain categories (protobuf, full)
-├── geoip.dat         # 3 IP categories (protobuf, full)
+├── geoip.dat         # 4 IP categories (protobuf, full)
 ├── happ/
 │   ├── geosite.dat   # lite — without heavy RKN lists (for mobile)
-│   ├── geoip.dat     # lite — without blocked-ru IPs (for mobile)
+│   ├── geoip.dat     # lite — without blocked-ru IPs (keeps telegram)
 │   ├── default.json  # Happ routing config (lite)
 │   ├── default_deeplink.txt
 │   ├── full.json     # Happ routing config (full)
@@ -128,13 +128,14 @@ https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/geoip.dat
 | `FACEIT` | Faceit | PROXY |
 | `RIOT` | Riot Games (LoL, Valorant) | PROXY |
 
-### geoip.dat categories (3)
+### geoip.dat categories (4)
 
 | Category | Description | Routing |
 |---|---|---|
 | `WHITELIST` | Russian IP ranges | DIRECT |
 | `PRIVATE` | RFC1918 private ranges | DIRECT |
 | `BLOCKED-RU` | IPs blocked in Russia (Re:filter) | PROXY |
+| `TELEGRAM` | Telegram DC IPs (Loyalsoldier/geoip) | PROXY |
 
 ### Example V2Ray/Xray config
 
@@ -146,7 +147,7 @@ https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/geoip.dat
   "DirectSites": ["geosite:private", "geosite:whitelist", "geosite:ip-check", "geosite:vpndetect"],
   "DirectIp": ["geoip:private", "geoip:whitelist"],
   "ProxySites": ["geosite:category-geoblock-ru", "geosite:community"],
-  "ProxyIp": ["geoip:blocked-ru"],
+  "ProxyIp": ["geoip:blocked-ru", "geoip:telegram"],
   "BlockSites": ["geosite:win-spy", "geosite:torrent", "geosite:category-ads"]
 }
 ```
@@ -184,7 +185,7 @@ Ready-to-use routing configs for **Happ** and **INCY** clients. GlobalProxy mode
 | | Lite | Full |
 |---|---|---|
 | geosite.dat | 100 KB (24 категории, ~4 400 доменов) | 1.8 MB (26 категорий, ~86 000 доменов) |
-| geoip.dat | 385 KB (2 категории, ~25 000 CIDR) | 763 KB (3 категории, ~63 000 CIDR) |
+| geoip.dat | 385 KB (3 категории, ~25 300 CIDR) | 763 KB (4 категории, ~64 000 CIDR) |
 | **Итого** | **~500 KB** | **~2.6 MB** |
 | iOS (Happ/INCY) | ✅ Работает | ❌ Вылетает (превышение памяти) |
 | Android / Desktop | ✅ Работает | ✅ Работает |
@@ -221,9 +222,11 @@ Download the JSON config and import in app settings:
 | Rule | Categories | Action |
 |---|---|---|
 | **BLOCK** | win-spy, torrent, category-ads | Block telemetry, ads, torrents |
-| **PROXY** | github, youtube, telegram, google-deepmind, twitch-ads | Through VPN |
+| **PROXY** | github, youtube, telegram (geosite + geoip), google-deepmind, twitch-ads | Through VPN |
 | **DIRECT** | private, category-ru, whitelist, microsoft, apple, google-play, steam, epic, twitch, pinterest, riot, origin, faceit, eft, ip-check, vpndetect | Bypass VPN |
 | **DEFAULT** | Everything else (`GlobalProxy=true`) | Through VPN |
+
+**Оба варианта явно гоняют Telegram через прокси по IP** (`geoip:telegram`) — помимо доменного `geosite:telegram`. Это нужно, потому что мобильные клиенты Telegram ходят прямо на DC по IP, минуя DNS, и доменного правила недостаточно.
 
 **Full variant additionally includes explicit proxy rules** (redundant, but faster DNS matching):
 - `geosite:category-geoblock-ru` — 81K+ доменов, заблокированных РКН (Re:filter domains_all.lst)
@@ -245,8 +248,11 @@ V2RayTUN использует встроенные `geosite.dat`/`geoip.dat` (с
 | Правило | Категории | Действие |
 |---|---|---|
 | **BLOCK** | category-ads-all, win-spy, win-extra, QUIC (UDP/443) | Блокировка рекламы/телеметрии |
+| **PROXY (Telegram)** | `geosite:telegram` + `geoip:telegram` (до direct-ru, чтобы RU PoPs не уходили direct) | Через VPN |
 | **DIRECT** | private, category-ru, apple, microsoft, steam, epicgames, pinterest, google-play, origin, twitch, ip-check, vpndetect, `*.ru`/`*.su`/`*.рф`, geoip:ru | Мимо VPN |
 | **PROXY** | Всё остальное (catch-all) | Через VPN |
+
+> `geoip:telegram` ссылается на кастомную категорию из нашего `v2ray/geoip.dat`. Если клиент использует встроенный v2fly geoip — правило по IP тихо игнорируется, и Telegram всё равно попадёт в прокси через `geosite:telegram` или финальный catch-all.
 
 ### Использование
 
