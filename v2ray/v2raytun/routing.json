@@ -46,6 +46,19 @@
     },
     {
       "type": "field",
+      "id": "EE1EDA78-2B2C-5B3A-B312-0487F868591C",
+      "__name__": "Proxy Telegram",
+      "domainMatcher": "hybrid",
+      "domain": [
+        "geosite:telegram"
+      ],
+      "ip": [
+        "geoip:telegram"
+      ],
+      "outboundTag": "proxy"
+    },
+    {
+      "type": "field",
       "id": "4D2E1E0A-89CF-5C66-A7E2-2492786AD952",
       "__name__": "Direct RU Services",
       "domainMatcher": "hybrid",

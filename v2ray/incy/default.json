@@ -10,7 +10,7 @@
   "DomesticDNSType": "DoH",
   "DomesticDNSDomain": "https://77.88.8.8/dns-query",
   "DomesticDNSIP": "77.88.8.8",
-  "LastUpdated": "1775710178",
+  "LastUpdated": "1775722744",
   "DnsHosts": {},
   "RouteOrder": "block-proxy-direct",
   "DirectSites": [
@@ -52,5 +52,7 @@
     "geosite:telegram",
     "geosite:google-deepmind"
   ],
-  "ProxyIp": []
+  "ProxyIp": [
+    "geoip:telegram"
+  ]
 }
