@@ -40,10 +40,18 @@ dns:
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
     - rule-set:direct
-  default-nameserver: [https://77.88.8.8/dns-query, https://8.8.8.8/dns-query]
-  proxy-server-nameserver: [https://77.88.8.8/dns-query, https://8.8.8.8/dns-query]
-  direct-nameserver: [https://77.88.8.8/dns-query]
-  nameserver: [https://8.8.8.8/dns-query#PROXY]
+  default-nameserver:
+    - 1.1.1.1
+    - 8.8.8.8
+  proxy-server-nameserver:
+    - 1.1.1.1
+    - 8.8.8.8
+  direct-nameserver:
+    - 1.1.1.1
+    - 8.8.8.8
+  nameserver:
+    - 1.1.1.1#PROXY
+    - 8.8.8.8#PROXY
 
 sniffer:
   enable: true
