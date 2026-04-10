@@ -1,5 +1,5 @@
 # reject — auto-generated, do not edit
-# entries: 1058
+# entries: 1065
 +.1oavsblobprodcus350.blob.core.windows.net
 +.1rx.io
 +.2mdn-cn.net
@@ -70,8 +70,8 @@ ad-display.diwodiwo.xyz
 adeventtracker.spotify.com
 +.adfilter.imtt.qq.com
 +.adfox.ru
-adfox.yandex.ru
-adfstat.yandex.ru
++.adfox.yandex.ru
++.adfstat.yandex.ru
 +.adimg.mobile.sina.cn
 +.adimg.uve.weibo.com
 +.adinplay.com
@@ -115,8 +115,9 @@ adfstat.yandex.ru
 +.ads.wteam.xyz
 +.ads.yahoo.com
 +.ads.yandex
-ads.yandex.com
-ads.yandex.ru
++.ads.yandex.com
++.ads.yandex.ru
++.ads.yango.com
 +.ads.youtube.com
 +.ads1.msads.net
 +.ads1.msn.com
@@ -126,7 +127,7 @@ ads5-normal-hl.zijieapi.com
 ads5-normal.zijieapi.com
 +.adscdn.baidu.com
 +.adsclick.qq.com
-adsdk.yandex.ru
++.adsdk.yandex.ru
 +.adse.wsa.ximalaya.com
 +.adse.ximalaya.com
 +.adsense.com
@@ -159,8 +160,8 @@ adstudio-assets.scdn.co
 +.adv.app.qq.com
 +.adv.sec.intl.miui.com
 +.adv.sec.miui.com
-adv.yandex.com
-adv.yandex.ru
++.adv.yandex.com
++.adv.yandex.ru
 +.advapi.joyplus.tv
 +.advapikj.joyplus.tv
 +.adver.qq.com
@@ -188,19 +189,18 @@ adv.yandex.ru
 +.alogs.umeng.com
 +.alogus.umeng.com
 +.amazon-adsystem.com
-amc.yandex.ru
-an.yandex.ru
++.amc.yandex.ru
++.an.yandex.ru
 +.analytics-alv.google.com
 +.analytics-data.io
 +.analytics.163.com
 +.analytics.facebook.com
 analytics.google.com
-analytics.mobile.yandex.net
++.analytics.mobile.yandex.net
 +.analytics.tiktok.com
 +.analytics.umetrip.com
 +.analytics.vpc.duolingo.com
 +.api-adservices.apple.com
-api.appmetrica.yandex.ru
 +.api.cortana.ai
 +.api.edgeoffer.microsoft.com
 apilog-web.acfun.cn
@@ -211,6 +211,10 @@ apilog-web.acfun.cn
 +.apple.www.letv.com
 +.applovin.com
 +.applvn.com
++.appmetrica.yandex.com
++.appmetrica.yandex.net
++.appmetrica.yandex.ru
++.appmetrica.yango.com
 +.ar.umeng.com
 +.ark.letv.com
 +.asimov-win.settings.data.microsoft.com.akadns.net
@@ -281,12 +285,12 @@ bloodhound.spotify.com
 +.bn4sch101123202.wns.windows.com
 +.bn4sch102110124.wns.windows.com
 browser-intake-datadoghq.com
-browser-updater.yandex.net
++.browser-updater.yandex.net
 +.browser.events.data.msn.cn
 +.browser.events.data.msn.com
 +.browser.pipe.aria.microsoft.com
 +.bs.serving-sys.com
-bs.yandex.ru
++.bs.yandex.ru
 +.btrace.qq.com
 +.bugly.qq.com
 +.byteadverts.com
@@ -412,8 +416,10 @@ bs.yandex.ru
 +.china-caa.org
 +.chinaciaf.org
 +.clarity.ms
-clck.yandex.net
-clck.yandex.ru
++.clck.yandex.com
++.clck.yandex.net
++.clck.yandex.ru
++.clck.yango.com
 +.clearbit.com
 +.clearbitjs.com
 +.clearbitscripts.com
@@ -436,8 +442,8 @@ clickstream.sberbank.ru
 +.copilot-telemetry.githubusercontent.com
 +.corp.sts.microsoft.com
 +.corpext.msitadfs.glbdns2.microsoft.com
-counter.yandex.net
-counter.yandex.ru
++.counter.yandex.net
++.counter.yandex.ru
 +.cpmstar.com
 +.cpro.baidu.com
 +.cpro.baidustatic.com
@@ -674,7 +680,7 @@ error-tracking.megamarket.tech
 +.imgstat.baidu.com
 +.imp.go.sohu.com
 +.impact-ad.jp
-informer.yandex.ru
++.informer.yandex.ru
 +.inner-active.mobi
 +.innovid.com
 +.insideruser.trafficmanager.net
@@ -732,13 +738,15 @@ log5-applog.fqnovel.com
 +.marketing.alibaba.com
 +.marketingplatform.google.com
 +.mbdlog.iqiyi.com
-mc.yandex.com
-mc.yandex.ru
++.mc.yandex.com
++.mc.yandex.net
++.mc.yandex.ru
++.mc.yango.com
 +.mcs.snssdk.com
 +.mdt.qq.com
 +.mediav.com
 +.metrics.duolingo.com
-metrika.yandex.ru
++.metrika.yandex.ru
 +.mfadsrvr.com
 +.mgid.com
 +.miao.baidu.com
@@ -841,9 +849,9 @@ pinggai7.caixin.com
 pinggai8.caixin.com
 pinggai9.caixin.com
 +.pingjs.qq.com
-pix.yandex.ru
++.pix.yandex.ru
 +.pixel.facebook.com
-pixel.yandex.net
++.pixel.yandex.net
 +.pl.youku.com
 +.plbslog.umeng.com
 +.pmir.3g.qq.com
@@ -869,9 +877,7 @@ pixel.yandex.net
 +.realsrv.com
 +.redir.metaservices.microsoft.com
 +.reke.at.sohu.com
-report-partners.appmetrica.yandex.net
-report.ap.yandex-net.ru
-report.appmetrica.yandex.net
++.report.ap.yandex-net.ru
 +.report.qqweb.qq.com
 +.report.tencentmusic.com
 +.res.hunantv.com
@@ -1038,10 +1044,11 @@ wlog.kuaishou.com
 +.wwads.cn
 +.xblgdvrassets3010.blob.core.windows.net
 +.xy-log.tagtic.cn
-yabs.yandex.ru
++.yabs.yandex.ru
 +.yads.tech
 +.yandex-metrica.ru
 +.yandexmetrica.com
++.yango-ads.com
 +.yektanet.com
 +.yfanads.cn
 +.yfanads.com

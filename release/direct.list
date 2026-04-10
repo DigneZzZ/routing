@@ -1,5 +1,5 @@
 # direct — auto-generated, do not edit
-# entries: 2928
+# entries: 2971
 +.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
 +.10.in-addr.arpa
 +.100.100.in-addr.arpa
@@ -166,15 +166,16 @@ a5.mzstatic.com
 adcdownload.apple.com
 adcdownload.apple.com.akadns.net
 +.adfox.ru
-adfox.yandex.ru
-adfstat.yandex.ru
++.adfox.yandex.ru
++.adfstat.yandex.ru
 +.admetrica.ru
 +.ads.yandex
-ads.yandex.com
-ads.yandex.ru
-adsdk.yandex.ru
-adv.yandex.com
-adv.yandex.ru
++.ads.yandex.com
++.ads.yandex.ru
++.ads.yango.com
++.adsdk.yandex.ru
++.adv.yandex.com
++.adv.yandex.ru
 +.advertising.apple.com
 +.aeasyshop.com
 +.aggresmart.com
@@ -191,7 +192,7 @@ adv.yandex.ru
 +.albeats.com
 +.alchemysynth.com
 +.alfabank.st
-amc.yandex.ru
++.amc.yandex.ru
 amp-api-edge-lb-cn.itunes-apple.com.akadns.net
 amp-api-edge-lb.itunes-apple.com.akadns.net
 amp-api-edge.apps.apple.com
@@ -201,8 +202,8 @@ amp-api-updates.apps.apple.com
 amp-api.apps.apple.com
 amp-api.media.apple.com
 amp-api.music.apple.com
-an.yandex.ru
-analytics.mobile.yandex.net
++.an.yandex.ru
++.analytics.mobile.yandex.net
 +.ankarazirvesi2018.com
 +.annstores.net
 aod-ssl.itunes.apple.com
@@ -212,7 +213,6 @@ aod.itunes.apple.com
 +.api-adservices.apple.com
 api-edge.apps.apple.com
 +.api-extractor.com
-api.appmetrica.yandex.ru
 +.apihub-internal.cn
 +.apisof.net
 +.aple.com
@@ -565,6 +565,10 @@ appleworldwidedeveloper.sc.omtrdc.net
 +.applle.com
 +.applw.com
 +.appmediagroup.com
++.appmetrica.yandex.com
++.appmetrica.yandex.net
++.appmetrica.yandex.ru
++.appmetrica.yango.com
 apps.mzstatic.com
 +.appserviceenvironment.cn
 +.appsto.re
@@ -1017,10 +1021,10 @@ bookkeeper.itunes.apple.com
 +.brands098.com
 +.brazilpartneruniversity.com
 +.breakdown.me
-browser-updater.yandex.net
++.browser-updater.yandex.net
 +.browser.events.data.msn.cn
 +.browser.events.data.msn.com
-bs.yandex.ru
++.bs.yandex.ru
 build.microsoft.com
 +.burstly.net
 +.burstlyrewards.com
@@ -1043,6 +1047,7 @@ build.microsoft.com
 +.bybeatsdre.com
 +.bydrebeats.com
 +.c-msedge.net
++.cabconnect.org
 +.calendarserver.org
 +.callersbane.com
 +.camelphat.com
@@ -1163,8 +1168,10 @@ cl4.apple.com
 cl5-cdn.origin-apple.com.akadns.net
 cl5.apple.com
 +.clarity.ms
-clck.yandex.net
-clck.yandex.ru
++.clck.yandex.com
++.clck.yandex.net
++.clck.yandex.ru
++.clck.yango.com
 clickstream.sberbank.ru
 client-api.itunes.apple.com
 clientflow.apple.com
@@ -1195,8 +1202,8 @@ configuration.apple.com.akadns.net
 +.cortanaskills.com
 +.cosmosdb.info
 +.cosmosdb.net
-counter.yandex.net
-counter.yandex.ru
++.counter.yandex.net
++.counter.yandex.ru
 +.courier-push-apple.com.akadns.net
 +.cozydrdrebeats.com
 +.cqcorea.com
@@ -1353,6 +1360,7 @@ dqrpb9wgowsf5.cloudfront.net
 +.dremonsterbeatsoutlets.com
 +.dreprobeats.com
 +.dreprofy.com
++.driveawaytaxi.org
 ds0h3roq6wcgc.cloudfront.net
 dtlgalleryint.cloudapp.net
 +.dtsell.com
@@ -1463,9 +1471,11 @@ github-cloud.s3.amazonaws.com
 +.gmnetworks.net
 +.gobeatsye.com
 +.gobuyonlinestore.net
++.gogettaxi.org
 +.goodsdunk.net
 +.googleplay.com
 +.gotcosmos.com
++.goup.ai
 +.graphengine.io
 gs-loc-cn.apple.com
 gs-loc.apple.com
@@ -1490,6 +1500,7 @@ gspe85-cn-ssl.ls.apple.com
 guzzoni-apple-com.v.aaplimg.com
 guzzoni.apple.com
 guzzoni.smoot.apple.com
++.hayya.ae
 +.hdinsightservices.cn
 +.headphonepubs.com
 +.headphones-cool.com
@@ -1630,7 +1641,7 @@ inappcheck-lb.itunes-apple.com.akadns.net
 inappcheck.itunes.apple.com
 +.incentivetravelgifts.com
 +.indiaipad.com
-informer.yandex.ru
++.informer.yandex.ru
 +.ingads.com
 ingest.apple-studies.com
 init-kt.apple.com
@@ -1791,8 +1802,8 @@ is5.mzstatic.com
 +.itunbes.com
 +.ituneas.com
 +.itunes-apple.cn
-itunes-apple.com.akadns.net
 +.itunes-apple.com.akadns.net
+itunes-apple.com.akadns.net
 +.itunes-radio.net
 itunes.apple.com
 +.itunes.ca
@@ -1829,6 +1840,18 @@ itunesconnect.apple.com
 +.iwork.wang
 +.jetfuelapp.com
 +.jetfuelapps.com
++.jivo.chat
++.jivochat.co.in
++.jivochat.co.za
++.jivochat.com
++.jivochat.com.br
++.jivochat.com.co
++.jivochat.com.pe
++.jivochat.com.tr
++.jivochat.de
++.jivochat.es
++.jivochat.ng
++.jivosite.com
 +.jkbeats.com
 js-cdn.music.apple.com
 +.jtvnw.net
@@ -1935,8 +1958,10 @@ maps.apple.com
 +.masalladeloslimites.com
 +.mbeats-tech.com
 +.mbheadphone.com
-mc.yandex.com
-mc.yandex.ru
++.mc.yandex.com
++.mc.yandex.net
++.mc.yandex.ru
++.mc.yango.com
 +.mcchcdn.com
 +.me.com
 +.medsi.com
@@ -1950,7 +1975,7 @@ mesu-cdn.apple.com.akadns.net
 mesu-china.apple.com.akadns.net
 mesu.apple.com
 +.meteum.ai
-metrika.yandex.ru
++.metrika.yandex.ru
 metro.spb.ru
 +.mgmt-azure-api.cn
 +.microbit.org
@@ -2215,6 +2240,7 @@ musicstatus.music.apple.com
 +.mvk.com
 mvod.itunes.apple.com
 mwf-service.akamaized.net
++.my-manager-account.com
 +.my.router
 myapp.itunes.apple.com
 +.myappleid.com
@@ -2402,9 +2428,9 @@ pd.itunes.apple.com
 +.pinterest.uk
 +.pinterest.vn
 +.pinterestmail.com
-pix.yandex.ru
++.pix.yandex.ru
 +.pixapp.net
-pixel.yandex.net
++.pixel.yandex.net
 play-edge.itunes.apple.com
 +.play-fe.googleapis.com
 +.play-games.googleusercontent.com
@@ -2464,9 +2490,7 @@ redirector.c.play.google.com
 +.renovacionoffice.com
 +.renovacionxboxlive.com
 +.repo.new
-report-partners.appmetrica.yandex.net
-report.ap.yandex-net.ru
-report.appmetrica.yandex.net
++.report.ap.yandex-net.ru
 +.repsneakermall.com
 +.repswing.com
 res-1.cdn.office.net
@@ -2607,6 +2631,7 @@ su.itunes.apple.com
 +.superearsenjoy.com
 +.supplybestjerseys.com
 support-china.apple-support.akadns.net
++.support-uber.com
 support.apple.com
 +.surface.com
 surface.downloads.prss.microsoft.com
@@ -2640,6 +2665,9 @@ sync.itunes.apple.com
 +.tamtam.chat
 +.tatar
 taxi.yandex.ru
++.taxiaid.org
++.taxiguru.org
++.taxitax.org
 +.taxsee.com
 +.tbank-online.com
 +.techhub.ms
@@ -2874,7 +2902,7 @@ www.support.apple.com
 +.xn--ruq8a011kt6y.xn--hxt814e
 xp.apple.com
 +.ya.cc
-yabs.yandex.ru
++.yabs.yandex.ru
 +.yads.tech
 +.yammer.com
 +.yandex
@@ -2916,9 +2944,24 @@ yabs.yandex.ru
 +.yandexadexchange.net
 +.yandexcloud.net
 +.yandexcom.net
++.yandexgo.com
 +.yandexmetrica.com
 +.yandexwebcache.net
 +.yandexwebcache.org
++.yango-ads.com
++.yango-b2b.com
++.yango-team.com
++.yango-tech.com
++.yango.africa
++.yango.ao
++.yango.bh
++.yango.co.il
++.yango.com
++.yango.fi
++.yango.qa
++.yango.taxi
++.yango.tech
++.yangofellowship.com
 +.yastat.net
 +.yastatic.net
 +.yclients.com
