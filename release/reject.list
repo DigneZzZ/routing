@@ -1,5 +1,5 @@
 # reject — auto-generated, do not edit
-# entries: 1122
+# entries: 1128
 +.1oavsblobprodcus350.blob.core.windows.net
 +.1rx.io
 +.2mdn-cn.net
@@ -108,7 +108,7 @@ adeventtracker.spotify.com
 +.ads.huantest.com
 +.ads.msn.com
 +.ads.music.126.net
-+.ads.neon.click
++.ads.sber.ru
 +.ads.service.kugou.com
 +.ads.sina.com
 +.ads.sohu.com
@@ -233,11 +233,9 @@ analytics.google.com
 +.api.cortana.ai
 +.api.dashly.app
 +.api.dashlytrack.app
-+.api.e.mindbox.ru
 +.api.edgeoffer.microsoft.com
 +.api.mindbox.cloud
 +.api.mindbox.ru
-+.api.s.mindbox.ru
 apilog-web.acfun.cn
 +.app-analytics-services-att.com
 +.app-analytics-services.com
@@ -521,11 +519,13 @@ disney.my.sentry.io
 +.doubleclick.com
 +.doubleclick.net
 +.drmcmm.baidu.com
++.dt.dbankcloud.ru
 +.dualstack-logs.amap.com
 +.duiwai.baidu.com
 +.dup.baidustatic.com
 +.e.kuaishou.cn
 +.e.kuaishou.com
++.e.mindbox.ru
 +.e.qq.com
 +.e.stat.ykimg.com
 +.eaus2watcab01.blob.core.windows.net
@@ -559,6 +559,7 @@ disney.my.sentry.io
 +.fpb.sohu.com
 +.g.163.com
 +.g.click.taobao.com
++.g.mindbox.ru
 +.g.msn.com
 +.g1.tagtic.cn
 +.g3.letv.com
@@ -773,8 +774,10 @@ log5-applog.fqnovel.com
 +.m-adash.m.taobao.com
 +.m.aty.sohu.com
 +.mail-ads.google.com
++.marketing-info.wildberries.ru
 +.marketing.alibaba.com
 +.marketingplatform.google.com
++.marketplace-sentry.wb.ru
 +.mbdlog.iqiyi.com
 +.mc.yandex.com
 +.mc.yandex.net
@@ -783,6 +786,7 @@ log5-applog.fqnovel.com
 +.mcs.snssdk.com
 +.mdt.qq.com
 +.mediav.com
++.metrics.21-school.ru
 +.metrics.duolingo.com
 +.metrika.yandex.ru
 +.mfadsrvr.com
@@ -823,6 +827,7 @@ log5-applog.fqnovel.com
 +.nbsdk-baichuan.alicdn.com
 +.nbsdk-baichuan.taobao.com
 +.nelreports.net
++.neon.click
 +.new-aaid.umeng.com
 +.new-aaid.umeng.com.gds.alibabadns.com
 +.new-adv.ozon.ru
@@ -934,6 +939,7 @@ rtlog5-applog-hl.fqnovel.com
 rtlog5-applog.fqnovel.com
 +.s-adashx.ut.youku.com
 +.s.360.cn
++.s.mindbox.ru
 +.s.so.360.cn
 +.s.union.360.cn
 +.s4yxaqyq95.com

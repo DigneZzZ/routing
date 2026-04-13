@@ -1,5 +1,5 @@
 # direct — auto-generated, do not edit
-# entries: 3292
+# entries: 3290
 +.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
 +.10.in-addr.arpa
 +.100.100.in-addr.arpa
@@ -163,6 +163,7 @@ a5.mzstatic.com
 +.aaplimg.com
 +.abcheadphones.com
 +.abeatsbydrdre.com
++.accesspoint.uz
 activate.activation-v2.kaspersky.com
 activation-v2.geo.kaspersky.com
 activation-v2.kaspersky.com
@@ -176,7 +177,7 @@ adcdownload.apple.com.akadns.net
 +.admetrica.ru
 +.ads-gate.wildberries.ru
 +.ads-media.wildberries.ru
-+.ads.neon.click
++.ads.sber.ru
 +.ads.wildberries.ru
 +.ads.x5media.ru
 +.ads.yandex
@@ -209,6 +210,7 @@ adcdownload.apple.com.akadns.net
 +.aka.ms
 +.albeats.com
 +.alchemysynth.com
++.alfabank.oavdo.amc
 +.alfabank.st
 +.amc.yandex.ru
 amp-api-edge-lb-cn.itunes-apple.com.akadns.net
@@ -248,10 +250,8 @@ api-edge.apps.apple.com
 +.api.carrottrack.app
 +.api.dashly.app
 +.api.dashlytrack.app
-+.api.e.mindbox.ru
 +.api.mindbox.cloud
 +.api.mindbox.ru
-+.api.s.mindbox.ru
 +.apihub-internal.cn
 +.apisof.net
 +.aple.com
@@ -1049,7 +1049,6 @@ bj1.api.bing.com
 +.bluecloudprod.com
 +.bluehatil.com
 +.bluehatnights.com
-+.bonbon.am
 bookkeeper.itunes.apple.com
 +.bookonsky.net
 +.boosty.to
@@ -1099,7 +1098,6 @@ build.microsoft.com
 +.canada-beatsbydre.com
 +.carbon.com
 +.carekit.org
-+.caronino.com
 +.carrot-mail.io
 +.carrotquest-mail.io
 +.carrotquest.app
@@ -1464,6 +1462,7 @@ dtlgalleryint.cloudapp.net
 dykkng5hnh52u.cloudfront.net
 +.dynamics.cn
 +.dynamics.com
++.e.mindbox.ru
 +.eaptechka.online
 +.earphonescheapest.com
 +.earpod.net
@@ -1519,7 +1518,6 @@ flightsimulator.azureedge.net
 +.flipwithsurface.com
 +.fluidpreview.com
 +.footprintdns.com
-+.foralice.online
 +.forza.net
 +.forzamotorsport.net
 +.forzaracingchampionship.com
@@ -1533,6 +1531,7 @@ flightsimulator.azureedge.net
 +.frishoes.com
 fs.microsoft.com
 +.fundaiphone5s.com
++.g.mindbox.ru
 +.gamebeforethegame.com
 +.gamepass.com
 +.gamesstack.com
@@ -1546,8 +1545,8 @@ fs.microsoft.com
 +.genotek.am
 +.genotek.health
 +.geoport.com
-+.gerronfox.com
 +.getdrebeatssale.com
++.getsynapse.io
 +.gfx.ms
 +.gh.io
 +.ghcr.io
@@ -1624,6 +1623,8 @@ guzzoni.smoot.apple.com
 +.hebiphone.com
 +.hellokittybeats.com
 +.hf-iphone.com
++.hh.by
++.hh.kz
 +.highbolt.net
 +.highdefinitionbeatsbydre.com
 +.hipaa6020.com
@@ -1945,9 +1946,6 @@ itunesconnect.apple.com
 +.iwork.wang
 +.jetfuelapp.com
 +.jetfuelapps.com
-+.jieshang.online
-+.jieshang.shop
-+.jieshang.store
 +.jivo.chat
 +.jivochat.co.in
 +.jivochat.co.za
@@ -2054,7 +2052,6 @@ learn.microsoft.com
 +.livephotos.com.cn
 +.livephotos.tv
 +.livingyourambition.com
-+.lizageld.de
 +.local
 local.adguard.org
 +.localdomain
@@ -2129,6 +2126,8 @@ location.microsoft.com
 +.management-azure-devices.cn
 +.management-azure-devices.net
 maps.apple.com
++.marketing-info.wildberries.ru
++.marketplace-sentry.wb.ru
 +.masalladeloslimites.com
 +.mbeats-tech.com
 +.mbheadphone.com
@@ -2145,13 +2144,13 @@ mdr.ksn.kaspersky-labs.com
 +.meetyourdevices.com
 +.megafon.com
 +.megamarket.tech
-+.megapolis.llc
 +.memealerts.com
 +.mepn.com
 mesu-cdn.apple.com.akadns.net
 mesu-china.apple.com.akadns.net
 mesu.apple.com
 +.meteum.ai
++.metrics.21-school.ru
 +.metrika.yandex.ru
 metro.spb.ru
 +.mgmt-azure-api.cn
@@ -2469,9 +2468,6 @@ np-edge.itunes.apple.com
 +.npmjs.org
 +.nuget.org
 +.nugettest.org
-+.nuwjon.online
-+.nuwjon.shop
-+.nuwjon.store
 +.nxta.org
 +.o365cn.com
 +.o365files.cn
@@ -2581,7 +2577,6 @@ p19.upd.kaspersky.com
 packages.microsoft.com
 pancake.apple.com
 pancake.cdn-apple.com.akadns.net
-+.papertole.by
 +.pascherbeatsmonster.com
 +.passport.net
 +.paulsimon-music.com
@@ -2710,6 +2705,7 @@ push-apple.com.akadns.net
 +.quicktime.tv
 +.qwapi.com
 +.r.bing.com
++.rabota.by
 +.rbsgr.com
 +.reactorms.com.cn
 redirector.c.play.google.com
@@ -2749,6 +2745,7 @@ routerlogin.com
 +.s-msedge.net
 +.s-msft.com
 +.s-msn.com
++.s.mindbox.ru
 s.mzstatic.com
 s00.upd.kaspersky.com
 s01.upd.kaspersky.com
@@ -2864,6 +2861,8 @@ software.download.prss.microsoft.com
 +.soso7778.com
 +.sourcecraft.dev
 sp.itunes.apple.com
++.spasibo.digital
++.spasibo.market
 +.specialtyheadphones.com
 speedysub.music.apple.com
 +.spektral.cc
@@ -2965,7 +2964,6 @@ tf-feedback.itunes.apple.com
 +.thegithubshop.com
 +.theuab.net
 +.thinkdifferent.us
-+.tigrenok.toys
 +.timelinestoryteller.com
 +.tinkoff-group.com
 +.tinkoff.ai
