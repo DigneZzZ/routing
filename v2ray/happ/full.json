@@ -10,7 +10,7 @@
   "DomesticDNSType": "DoH",
   "DomesticDNSDomain": "https://77.88.8.8/dns-query",
   "DomesticDNSIP": "77.88.8.8",
-  "LastUpdated": "1776155773",
+  "LastUpdated": "1776160652",
   "DnsHosts": {},
   "RouteOrder": "block-proxy-direct",
   "DirectSites": [
@@ -50,7 +50,10 @@
     "geosite:twitch-ads",
     "geosite:youtube",
     "geosite:telegram",
+    "geosite:discord",
+    "geosite:whatsapp",
     "geosite:google-deepmind",
+    "geosite:crypto",
     "geosite:category-geoblock-ru",
     "geosite:community"
   ],

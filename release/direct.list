@@ -1,5 +1,5 @@
 # direct — auto-generated, do not edit
-# entries: 3456
+# entries: 3464
 +.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
 +.10.in-addr.arpa
 +.100.100.in-addr.arpa
@@ -273,6 +273,7 @@ api-edge.apps.apple.com
 +.api.carrottrack.app
 +.api.dashly.app
 +.api.dashlytrack.app
++.api.ipify.org
 +.api.mindbox.cloud
 +.api.mindbox.ru
 +.apihub-internal.cn
@@ -1224,6 +1225,7 @@ certs.apple.com
 +.cheapshoesvip.com
 +.cheapwireless04.com
 +.cheapwirelessbeats.com
++.checkip.amazonaws.com
 +.cheerwholesale.us
 +.chihair-straightener.com
 +.chinaclothesstore.com
@@ -1796,6 +1798,7 @@ icloud.cdn-apple.com
 +.ie11.com
 +.ie8.co
 +.ie9.com
++.ifconfig.me
 +.igoshopping.net
 +.ikids.com
 +.ilecture.co.nz
@@ -1858,6 +1861,7 @@ iosapps.itunes.apple.com
 iosapps.itunes.g.aaplimg.com
 +.iosinthecar.com
 +.iotinactionevents.com
++.ip.mail.ru
 +.ipa-iphone.net
 +.ipad.co.kr
 +.ipad.de
@@ -1971,6 +1975,8 @@ iphone-ld.origin-apple.com.akadns.net
 +.ipodtouch.co
 +.ipodtouch.com
 +.ipple.com
++.ipv4-internet.yandex.net
++.ipv6-internet.yandex.net
 is-ssl.mzstatic.com-cn-lb.itunes-apple.com.akadns.net
 is1-ssl.mzstatic.com
 is1.mzstatic.com
@@ -1991,8 +1997,8 @@ is5.mzstatic.com
 +.itunbes.com
 +.ituneas.com
 +.itunes-apple.cn
-+.itunes-apple.com.akadns.net
 itunes-apple.com.akadns.net
++.itunes-apple.com.akadns.net
 +.itunes-radio.net
 itunes.apple.com
 +.itunes.ca
@@ -2216,6 +2222,7 @@ maps.apple.com
 +.marketing-info.wildberries.ru
 +.marketplace-sentry.wb.ru
 +.masalladeloslimites.com
++.max.ru
 +.mbeats-tech.com
 +.mbheadphone.com
 +.mc.yandex.com
@@ -2612,6 +2619,7 @@ officecdn.microsoft.com
 +.onedrive
 +.onedrive.com
 +.onedriveupdater
++.oneme.ru
 +.onenote.com
 +.onenote.net
 oneocsp.microsoft.com
