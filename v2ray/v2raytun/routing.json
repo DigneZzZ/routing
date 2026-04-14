@@ -220,7 +220,8 @@
         "domain:ntc.party",
         "domain:kemono.su",
         "domain:jut.su",
-        "domain:kara.su"
+        "domain:kara.su",
+        "domain:kino.pub"
       ],
       "outboundTag": "proxy"
     },
