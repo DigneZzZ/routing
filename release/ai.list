@@ -1,5 +1,5 @@
 # ai — auto-generated, do not edit
-# entries: 147
+# entries: 148
 ai.google.dev
 +.ai.studio
 +.aida.googleapis.com
@@ -97,6 +97,7 @@ daily-cloudcode-pa.googleapis.com
 +.marscode.com
 +.meta.ai
 +.midjourney.com
++.minimax.io
 +.mistral.ai
 notebooklm-pa.googleapis.com
 +.notebooklm.google
