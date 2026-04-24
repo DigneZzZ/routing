@@ -1,7 +1,9 @@
 # ai — auto-generated, do not edit
-# entries: 152
+# entries: 155
++.agentclientprotocol.com
 ai.google.dev
 +.ai.studio
++.aicode.googleapis.com
 +.aida.googleapis.com
 +.aisandbox-pa.googleapis.com
 +.aistudio.google.com
@@ -125,6 +127,7 @@ openaicomproductionae4b.blob.core.windows.net
 +.oystermercury.top
 +.perplexity.ai
 +.perplexity.com
++.plannotator.ai
 +.poe.com
 +.poecdn.net
 ppl-ai-file-upload.s3.amazonaws.com
