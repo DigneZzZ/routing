@@ -46,6 +46,10 @@ v2ray/                # V2Ray/Xray geo-data + routing configs (auto-generated)
 template.yaml         # Remnawave subscription template
 ```
 
+> Every domain/IP `.list` also has a compiled **`.mrs`** sibling in `release/`
+> (e.g. `proxy.mrs`, `direct.mrs`, `refilter-domain.mrs`). Use `.mrs` on mihomo —
+> especially mobile — for far lower memory. See [Rule-sets in your own config](#rule-sets-in-your-own-config).
+
 ## Auto-update
 
 Everything is rebuilt every 4 hours via GitHub Actions.
@@ -73,6 +77,71 @@ Everything is rebuilt every 4 hours via GitHub Actions.
 - **DIRECT** — torrents, Microsoft, Apple, Google Play, Pinterest, Twitch, RU sites, IP-check, VPN-detect
 - **PROXY** — Telegram, GitHub, RKN bypass (refilter)
 - **Groups** — YouTube, Discord, AI, Games via separate proxy-groups
+
+### Rule-sets in your own config
+
+Each domain/IP list ships in **two formats**: text `.list` and binary `.mrs`
+(compiled radix-tree). Same URL, just swap the extension and `format`.
+
+| Format | When to use |
+|---|---|
+| `.mrs` | **Mobile / low-RAM.** Compiled binary, a fraction of the memory, instant load. |
+| `.list` | Desktop, debugging, or other cores that don't read MRS. |
+
+> **Why it matters on mobile:** text providers are parsed into RAM rule-by-rule.
+> With ~6000+ entries the OS kills the mihomo process (Network Extension memory
+> limit). MRS is a compact binary tree and avoids this. Prefer `.mrs` on phones.
+
+**MRS rule-providers (recommended for mobile):**
+
+```yaml
+rule-providers:
+  reject:      { type: http, behavior: domain, format: mrs, interval: 86400, url: "https://raw.githubusercontent.com/DigneZzZ/routing/main/release/reject.mrs",          path: ./rs/reject.mrs }
+  proxy:       { type: http, behavior: domain, format: mrs, interval: 86400, url: "https://raw.githubusercontent.com/DigneZzZ/routing/main/release/proxy.mrs",           path: ./rs/proxy.mrs }
+  direct:      { type: http, behavior: domain, format: mrs, interval: 86400, url: "https://raw.githubusercontent.com/DigneZzZ/routing/main/release/direct.mrs",          path: ./rs/direct.mrs }
+  youtube:     { type: http, behavior: domain, format: mrs, interval: 86400, url: "https://raw.githubusercontent.com/DigneZzZ/routing/main/release/youtube.mrs",         path: ./rs/youtube.mrs }
+  ai:          { type: http, behavior: domain, format: mrs, interval: 86400, url: "https://raw.githubusercontent.com/DigneZzZ/routing/main/release/ai.mrs",              path: ./rs/ai.mrs }
+  games:       { type: http, behavior: domain, format: mrs, interval: 86400, url: "https://raw.githubusercontent.com/DigneZzZ/routing/main/release/games.mrs",           path: ./rs/games.mrs }
+  proxy-ip:    { type: http, behavior: ipcidr, format: mrs, interval: 86400, url: "https://raw.githubusercontent.com/DigneZzZ/routing/main/release/proxy-ip.mrs",        path: ./rs/proxy-ip.mrs }
+  direct-ip:   { type: http, behavior: ipcidr, format: mrs, interval: 86400, url: "https://raw.githubusercontent.com/DigneZzZ/routing/main/release/direct-ip.mrs",       path: ./rs/direct-ip.mrs }
+  refilter-d:  { type: http, behavior: domain, format: mrs, interval: 86400, url: "https://raw.githubusercontent.com/DigneZzZ/routing/main/release/refilter-domain.mrs", path: ./rs/refilter-d.mrs }
+  refilter-ip: { type: http, behavior: ipcidr, format: mrs, interval: 86400, url: "https://raw.githubusercontent.com/DigneZzZ/routing/main/release/refilter-ip.mrs",     path: ./rs/refilter-ip.mrs }
+```
+
+**Text rule-providers** — identical URLs with `.list` and `format: text`:
+
+```yaml
+  proxy: { type: http, behavior: domain, format: text, interval: 86400, url: "https://raw.githubusercontent.com/DigneZzZ/routing/main/release/proxy.list", path: ./rs/proxy.list }
+```
+
+**Process rules** (`classical` — desktop only, no MRS equivalent):
+
+```yaml
+  proc-games:   { type: http, behavior: classical, format: yaml, interval: 86400, url: "https://raw.githubusercontent.com/DigneZzZ/routing/main/release/proc-games.yaml",   path: ./rs/proc-games.yaml }
+  proc-torrent: { type: http, behavior: classical, format: yaml, interval: 86400, url: "https://raw.githubusercontent.com/DigneZzZ/routing/main/release/proc-torrent.yaml", path: ./rs/proc-torrent.yaml }
+  proc-ru:      { type: http, behavior: classical, format: yaml, interval: 86400, url: "https://raw.githubusercontent.com/DigneZzZ/routing/main/release/proc-ru.yaml",      path: ./rs/proc-ru.yaml }
+```
+
+### Mobile (low-RAM) profile
+
+When the OS keeps killing mihomo on a phone:
+
+1. Use **`.mrs`** for every domain/ipcidr provider (block above).
+2. **Drop** `proc-games` / `proc-torrent` / `proc-ru` and set
+   `find-process-mode: off` — removes ~630 rules **and** the per-connection
+   process lookup. Route those apps by domain/IP instead.
+3. On very tight devices, drop `refilter-d` / `refilter-ip` (the ~150k-entry
+   RKN set) and rely on `proxy` + `proxy-ip`, or swap `refilter-domain` for the
+   smaller `refilter-community`.
+
+```yaml
+find-process-mode: off    # mobile: disables PROCESS-NAME rules → no lookups
+```
+
+> Order note for desktop: place narrow overrides **before** the broad group
+> that would otherwise swallow them. E.g. an "EOS/Epic → VPN" or
+> "LM Studio → DIRECT" rule must come before `RULE-SET,games` / `RULE-SET,ai`,
+> since `epicgames.com` lives in `games` and `lmstudio.ai` in `ai`.
 
 ---
 
