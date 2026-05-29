@@ -47,7 +47,6 @@ payload:
   - PROCESS-NAME-REGEX,(?i).*vanguard.*
   - PROCESS-NAME,vgc.exe
   - PROCESS-NAME,vgm.exe
-  - PROCESS-NAME,EasyAntiCheat.exe
   - PROCESS-NAME,denuvo-anti-cheat-update-service.exe
   - DOMAIN-SUFFIX,codefusion.technology
   - PROCESS-NAME,EscapeFromTarkovArena_BE.exe
@@ -64,7 +63,6 @@ payload:
   - PROCESS-NAME,Discovery.exe
   - PROCESS-NAME,Discovery-d.exe
   - PROCESS-NAME-REGEX,(?i).*RustClient.*
-  - PROCESS-NAME,BsgLauncher.exe
   - PROCESS-NAME-REGEX,EscapeFromTarkov.*
   - PROCESS-NAME,UAGame.exe
   - PROCESS-NAME,MarvelRivals_Launcher.exe

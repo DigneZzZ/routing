@@ -1,7 +1,7 @@
 {
   "Name": "DigneZzZ (lite)",
   "GlobalProxy": "true",
-  "UseChunkFiles": "true",
+  "UseChunkFiles": "false",
   "RemoteDns": "8.8.8.8",
   "DomesticDns": "77.88.8.8",
   "RemoteDNSType": "DoH",
@@ -10,7 +10,7 @@
   "DomesticDNSType": "DoH",
   "DomesticDNSDomain": "https://77.88.8.8/dns-query",
   "DomesticDNSIP": "77.88.8.8",
-  "LastUpdated": "1776155773",
+  "LastUpdated": "1780045948",
   "DnsHosts": {},
   "RouteOrder": "block-proxy-direct",
   "DirectSites": [
@@ -50,7 +50,10 @@
     "geosite:twitch-ads",
     "geosite:youtube",
     "geosite:telegram",
-    "geosite:google-deepmind"
+    "geosite:discord",
+    "geosite:whatsapp",
+    "geosite:google-deepmind",
+    "geosite:crypto"
   ],
   "ProxyIp": [
     "geoip:telegram"

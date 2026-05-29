@@ -1,7 +1,9 @@
 # ai — auto-generated, do not edit
-# entries: 146
+# entries: 165
++.agentclientprotocol.com
 ai.google.dev
 +.ai.studio
++.aicode.googleapis.com
 +.aida.googleapis.com
 +.aisandbox-pa.googleapis.com
 +.aistudio.google.com
@@ -12,6 +14,7 @@ antigravity-pa.googleapis.com
 +.antigravity-unleash.goog
 +.antigravity.google
 antigravity.googleapis.com
++.anythingllm.com
 +.bard.google.com
 browser-intake-datadoghq.com
 +.cerebras.ai
@@ -42,8 +45,14 @@ cloudcode-pa.googleapis.com
 +.comfy.org
 +.comfyci.org
 +.comfyregistry.org
+copilot-proxy.githubusercontent.com
+copilot-telemetry-service.githubusercontent.com
+copilot-telemetry.githubusercontent.com
+copilot-workspace.githubnext.com
 +.copilot.microsoft.com
+copilotprodattachments.blob.core.windows.net
 +.coze.com
++.crewai.com
 +.crixet.com
 +.cursor-cdn.com
 +.cursor.com
@@ -68,6 +77,7 @@ daily-cloudcode-pa.googleapis.com
 +.geller-pa.googleapis.com
 +.gemini.google
 +.gemini.google.com
++.gemini.gstatic.com
 +.generativeai.google
 +.generativelanguage.googleapis.com
 +.githubcopilot.com
@@ -86,8 +96,10 @@ daily-cloudcode-pa.googleapis.com
 +.kiro.dev
 +.labs.google
 +.labs.google.com
++.langchain.com
 +.leonardo.ai
 +.liveperson.net
++.lmstudio.ai
 +.lovart.ai
 +.lpsnmedia.net
 +.luma.ai
@@ -97,7 +109,9 @@ daily-cloudcode-pa.googleapis.com
 +.marscode.com
 +.meta.ai
 +.midjourney.com
++.minimax.io
 +.mistral.ai
++.mozilla.ai
 notebooklm-pa.googleapis.com
 +.notebooklm.google
 +.notebooklm.google.com
@@ -106,6 +120,7 @@ notebooklm.googleapis.com
 o33249.ingest.sentry.io
 +.oaistatic.com
 +.oaiusercontent.com
++.ollama.com
 +.opal.google
 +.opal.google.com
 +.openai.com
@@ -117,9 +132,11 @@ openaicomproductionae4b.blob.core.windows.net
 +.openart.ai
 +.openclaw.ai
 +.openrouter.ai
++.openspec.dev
 +.oystermercury.top
 +.perplexity.ai
 +.perplexity.com
++.plannotator.ai
 +.poe.com
 +.poecdn.net
 ppl-ai-file-upload.s3.amazonaws.com
@@ -134,6 +151,8 @@ servd-anthropic-website.b-cdn.net
 +.sora.com
 +.spicywriter.com
 +.stability.ai
++.stitch.withgoogle.com
++.tapnow.ai
 +.themeforest.net
 +.together.ai
 +.topaz.io

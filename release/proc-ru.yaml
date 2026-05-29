@@ -289,6 +289,7 @@ payload:
   - PROCESS-NAME,ru.alfabank.mobile.android
   - PROCESS-NAME,ru.alfabank.oavdo.amc
   - PROCESS-NAME,ru.alfadirect.app
+  - PROCESS-NAME,ru.alfastrah.app
   - PROCESS-NAME,ru.aliexpress.buyer
   - PROCESS-NAME,ru.altarix.mos.pgu
   - PROCESS-NAME,ru.auto.ara
@@ -369,10 +370,6 @@ payload:
   - PROCESS-NAME,ru.raiffeisennews
   - PROCESS-NAME,ru.rambler.mail
   - PROCESS-NAME,com.dartit.RTcabinet
-  - PROCESS-NAME,ru.onlime.my.app
-  - PROCESS-NAME,ru.rt.key
-  - PROCESS-NAME,ru.rt.video.app.mobile
-  - PROCESS-NAME,ru.rt.video.app.tv
   - PROCESS-NAME,ru.rostel
   - PROCESS-NAME,ru.rutube.app
   - PROCESS-NAME,ru.rutube.RutubeKids
@@ -393,6 +390,7 @@ payload:
   - PROCESS-NAME,ru.sberbankmobile
   - PROCESS-NAME,ru.sberins.insureapp.android
   - PROCESS-NAME,ru.sbermegamarket.pro
+  - PROCESS-NAME,ru.bankuralsib.mb.android
   - PROCESS-NAME,ru.sovcombank.dms
   - PROCESS-NAME,ru.sovcombank.investor
   - PROCESS-NAME,ru.sovcomcard.halva.v1
