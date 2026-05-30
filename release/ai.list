@@ -1,5 +1,5 @@
 # ai — auto-generated, do not edit
-# entries: 165
+# entries: 166
 +.agentclientprotocol.com
 ai.google.dev
 +.ai.studio
@@ -15,6 +15,7 @@ antigravity-pa.googleapis.com
 +.antigravity.google
 antigravity.googleapis.com
 +.anythingllm.com
++.arena.ai
 +.bard.google.com
 browser-intake-datadoghq.com
 +.cerebras.ai

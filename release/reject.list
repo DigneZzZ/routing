@@ -1,5 +1,5 @@
 # reject — auto-generated, do not edit
-# entries: 1206
+# entries: 1210
 1l-hit.mail.ru
 1l-hit.vkplay.ru
 +.1oavsblobprodcus350.blob.core.windows.net
@@ -104,6 +104,7 @@ adfstat.yandex.ru
 +.adq.chinaso.com
 +.ads-api.duolingo.com
 ads-gate.wildberries.ru
+ads-img.mozilla.org
 ads-integration.rustore.ru
 ads-media.wildberries.ru
 +.ads-pixiv.net
@@ -116,6 +117,7 @@ ads.dahlmessenger.com
 +.ads.huan.tv
 +.ads.huantest.com
 ads.icq.com
+ads.mozilla.org
 +.ads.msn.com
 +.ads.music.126.net
 ads.rustore.ru
@@ -751,6 +753,8 @@ google-analytics-suite.ozon.ru
 +.imgstat.baidu.com
 +.imp.go.sohu.com
 +.impact-ad.jp
+incoming-telemetry.thunderbird.net
+incoming.telemetry.mozilla.org
 informer.yandex.ru
 +.inner-active.mobi
 +.innovid.com
