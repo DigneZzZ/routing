@@ -1,5 +1,5 @@
 # reject — auto-generated, do not edit
-# entries: 1210
+# entries: 1214
 1l-hit.mail.ru
 1l-hit.vkplay.ru
 +.1oavsblobprodcus350.blob.core.windows.net
@@ -279,6 +279,7 @@ apilog-web.acfun.cn
 +.appmetrica.yandex.net
 +.appmetrica.yandex.ru
 +.appmetrica.yango.com
++.appsflyersdk.com
 +.apptracer.ru
 +.ar.umeng.com
 +.ark.letv.com
@@ -792,6 +793,7 @@ log-sdk.gifshow.com
 +.log.hunantv.com
 +.log.mix.sina.com.cn
 +.log.sina.cn
+log.strm.yandex.ru
 +.log.tbs.qq.com
 +.log.umtrack.com
 +.log.v2.hunantv.com
@@ -802,6 +804,7 @@ log3-applog.fqnovel.com
 log5-applog-hl.fqnovel.com
 log5-applog.fqnovel.com
 +.logger.qmai.cn
+logs.ads.vungle.com
 +.logs.amap.com
 +.logs.chelaile.net.cn
 +.logupdate.avlyun.sec.miui.com
@@ -1067,6 +1070,7 @@ stacks.vk-portal.net
 +.static.javhd.com
 +.static.sensorsdata.cn
 +.statis.api.3g.youku.com
+stats.avito.ru
 stats.dahlmessenger.com
 stats.dev.telega.info
 +.stats.music.xiaomi.com

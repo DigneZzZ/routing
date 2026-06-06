@@ -1,5 +1,5 @@
 # direct — auto-generated, do not edit
-# entries: 3753
+# entries: 3755
 +.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
 +.10.in-addr.arpa
 +.100.100.in-addr.arpa
@@ -2261,6 +2261,7 @@ local.adguard.org
 +.localhost.sec.qq.com
 location.microsoft.com
 +.log.dzen.ru
+log.strm.yandex.ru
 +.lojaiphone.com.br
 +.lovebeatsdr.com
 +.lovemarca.com
@@ -3256,6 +3257,7 @@ statics-marketingsites-eas-ms-com.akamaized.net
 statics-marketingsites-eus-ms-com.akamaized.net
 statics-marketingsites-wcus-ms-com.akamaized.net
 statics.teams.cdn.office.net
+stats.avito.ru
 stats.dahlmessenger.com
 stats.dev.telega.info
 stats.rustore.ru

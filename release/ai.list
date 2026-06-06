@@ -1,5 +1,5 @@
 # ai — auto-generated, do not edit
-# entries: 166
+# entries: 167
 +.agentclientprotocol.com
 ai.google.dev
 +.ai.studio
@@ -32,6 +32,7 @@ browser-intake-datadoghq.com
 +.claude.ai
 +.claude.com
 +.claudemcpclient.com
++.claudemcpcontent.com
 +.claudeusercontent.com
 +.clawhub.ai
 +.clipdrop.co
