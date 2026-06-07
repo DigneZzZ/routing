@@ -1,5 +1,5 @@
 # ai — auto-generated, do not edit
-# entries: 167
+# entries: 170
 +.agentclientprotocol.com
 ai.google.dev
 +.ai.studio
@@ -121,6 +121,7 @@ notebooklm.googleapis.com
 +.notion.so
 o33249.ingest.sentry.io
 +.oaistatic.com
++.oaistatsig.com
 +.oaiusercontent.com
 +.ollama.com
 +.opal.google
@@ -146,10 +147,12 @@ pplx-res.cloudinary.com
 +.pplx.ai
 +.proactivebackend-pa.googleapis.com
 production-openaicom-storage.azureedge.net
++.qoder.com
 +.replicate.com
 +.robinfrontend-pa.googleapis.com
 +.runway.ml
 servd-anthropic-website.b-cdn.net
++.sider.ai
 +.sora.com
 +.spicywriter.com
 +.stability.ai
