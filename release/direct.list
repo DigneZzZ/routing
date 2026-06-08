@@ -1,5 +1,5 @@
 # direct — auto-generated, do not edit
-# entries: 3755
+# entries: 3751
 +.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
 +.10.in-addr.arpa
 +.100.100.in-addr.arpa
@@ -1275,6 +1275,7 @@ cl1.apple.com
 cl2-cdn.origin-apple.com.akadns.net
 cl2-cn.apple.com
 cl2.apple.com
+cl2.apple.com.edgekey.net.globalredir.akadns.net
 cl3-cdn.origin-apple.com.akadns.net
 cl3.apple.com
 cl4-cdn.origin-apple.com.akadns.net
@@ -1728,6 +1729,7 @@ google-analytics-suite.ozon.ru
 gs-loc-cn.apple.com
 gs-loc.apple.com
 gsp10-ssl-cn.ls.apple.com
+gsp11-cn.ls.apple.com
 gsp12-cn.ls.apple.com
 gsp13-cn.ls.apple.com
 gsp4-cn.ls.apple.com
@@ -1809,11 +1811,9 @@ hls.itunes.apple.com
 +.ibooksauthor.com
 +.ichat.co.in
 +.icloud-apple.cn
-icloud-cdn.icloud.com.akadns.net
 +.icloud-content.com
 +.icloud-isupport.com
 +.icloud-sandbox.com
-icloud.cdn-apple.com
 +.icloud.ch
 +.icloud.cn
 +.icloud.com
@@ -2711,10 +2711,8 @@ np-edge.itunes.apple.com
 +.o365weve.com
 oasisauth.h3c.com
 +.obs.mts.ru
-ocsp-lb.apple.com.akadns.net
 ocsp.apple.com
 ocsp.microsoft.com
-ocsp2-lb.apple.com.akadns.net
 ocsp2.apple.com
 +.octocaptcha.com
 +.odnoklasniki.by
@@ -2826,7 +2824,6 @@ p18.upd.kaspersky.com
 p19.upd.kaspersky.com
 packages.microsoft.com
 pancake.apple.com
-pancake.cdn-apple.com.akadns.net
 +.pascherbeatsmonster.com
 +.passport.net
 +.paulsimon-music.com
@@ -3012,7 +3009,6 @@ res.cdn.office.net
 +.researchkit.net
 +.researchkit.org
 +.researchkit.tv
-reserve-prime.apple.com
 +.reso-med.com
 +.restream-media.net
 rink.hockeyapp.net
