@@ -47,8 +47,6 @@ payload:
   - PROCESS-NAME-REGEX,(?i).*vanguard.*
   - PROCESS-NAME,vgc.exe
   - PROCESS-NAME,vgm.exe
-  - PROCESS-NAME,denuvo-anti-cheat-update-service.exe
-  - DOMAIN-SUFFIX,codefusion.technology
   - PROCESS-NAME,EscapeFromTarkovArena_BE.exe
   - PROCESS-NAME,EscapeFromTarkov_BE.exe
   - PROCESS-NAME,EasyAntiCheat_EOS.exe
