@@ -1,5 +1,5 @@
 # proxy — auto-generated, do not edit
-# entries: 270
+# entries: 271
 +.4pda.to
 +.ads.twitch.tv
 +.airhorn.solutions
@@ -111,6 +111,7 @@ discord-attachments-uploads-prd.storage.googleapis.com
 +.gatetool.com
 +.gh.io
 +.ghcr.io
++.ghe.com
 +.git.io
 github-api.arkoselabs.com
 github-cloud.s3.amazonaws.com

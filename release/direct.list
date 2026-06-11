@@ -1,5 +1,5 @@
 # direct — auto-generated, do not edit
-# entries: 3751
+# entries: 3765
 +.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
 +.10.in-addr.arpa
 +.100.100.in-addr.arpa
@@ -1537,6 +1537,17 @@ dqrpb9wgowsf5.cloudfront.net
 +.dreprofy.com
 +.driveawaytaxi.org
 +.drobbox.pro
++.drweb-av.de
++.drweb-av.es
++.drweb-av.it
++.drweb-av.pl
++.drweb.by
++.drweb.cn
++.drweb.co.jp
++.drweb.com
++.drweb.fr
++.drweb.kz
++.drweb.uz
 ds0h3roq6wcgc.cloudfront.net
 dtlgalleryint.cloudapp.net
 +.dtsell.com
@@ -1672,6 +1683,7 @@ fs.microsoft.com
 +.gfx.ms
 +.gh.io
 +.ghcr.io
++.ghe.com
 +.gib-global.com
 +.gib.sg
 +.gibdev.net
@@ -2099,8 +2111,8 @@ is5.mzstatic.com
 +.itunbes.com
 +.ituneas.com
 +.itunes-apple.cn
-+.itunes-apple.com.akadns.net
 itunes-apple.com.akadns.net
++.itunes-apple.com.akadns.net
 +.itunes-radio.net
 itunes.apple.com
 +.itunes.ca
@@ -2249,6 +2261,8 @@ learn.microsoft.com
 +.live.eu
 +.live.net
 +.livefilestore.com
++.livejournal.com
++.livejournal.net
 +.livephotos.cn
 +.livephotos.com.cn
 +.livephotos.tv
