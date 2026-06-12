@@ -1,5 +1,5 @@
 # direct — auto-generated, do not edit
-# entries: 3765
+# entries: 3763
 +.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
 +.10.in-addr.arpa
 +.100.100.in-addr.arpa
@@ -2111,8 +2111,8 @@ is5.mzstatic.com
 +.itunbes.com
 +.ituneas.com
 +.itunes-apple.cn
-itunes-apple.com.akadns.net
 +.itunes-apple.com.akadns.net
+itunes-apple.com.akadns.net
 +.itunes-radio.net
 itunes.apple.com
 +.itunes.ca
@@ -2261,8 +2261,6 @@ learn.microsoft.com
 +.live.eu
 +.live.net
 +.livefilestore.com
-+.livejournal.com
-+.livejournal.net
 +.livephotos.cn
 +.livephotos.com.cn
 +.livephotos.tv

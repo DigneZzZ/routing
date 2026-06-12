@@ -1,5 +1,5 @@
 # reject — auto-generated, do not edit
-# entries: 1214
+# entries: 1221
 1l-hit.mail.ru
 1l-hit.vkplay.ru
 +.1oavsblobprodcus350.blob.core.windows.net
@@ -239,6 +239,7 @@ analytics-adv.ozon.ru
 +.analytics-data.io
 analytics-stage.wildberries.ru
 +.analytics.163.com
++.analytics.cloud.unity3d.com
 +.analytics.facebook.com
 analytics.google.com
 analytics.mobile.yandex.net
@@ -267,6 +268,7 @@ api.dashlytrack.app
 +.api.edgeoffer.microsoft.com
 api.mindbox.cloud
 api.mindbox.ru
++.api2.amplitude.com
 apilog-web.acfun.cn
 +.app-analytics-services-att.com
 +.app-analytics-services.com
@@ -378,6 +380,7 @@ bs.mail.ru
 +.cdn.atdmt.com
 +.cdn.banclip.com
 +.cdn.pocoiq.cn
++.cdp.cloud.unity3d.com
 +.cds1.stn.llnw.net
 +.cds10.stn.llnw.net
 +.cds1203.lon.llnw.net
@@ -506,6 +509,7 @@ click.rustore.ru
 +.collector.github.com
 +.collector.xhamster.com
 +.compatexchange1.trafficmanager.net
++.config.uca.cloud.unity3d.com
 +.contentabc.com
 +.contextual.media.net
 copilot-telemetry-service.githubusercontent.com
@@ -927,6 +931,8 @@ p9-ad-sign.byteimg.com
 +.passport-log.youku.com
 +.pb.i.sogou.com
 +.pbmp.ali213.net
++.perf-events.cloud.unity3d.com
++.perf.cloud.unity3d.com
 +.pgdt.gtimg.cn
 +.pglstatp-sdk-toutiao.com
 +.pglstatp-snssdk-toutiao.com
@@ -952,6 +958,7 @@ pixel.yandex.com
 +.pmir.3g.qq.com
 +.policy.video.iqiyi.com
 +.pos.baidu.com
++.prd-lender.cdp.internal.unity3d.com
 +.pre.footprintpredict.com
 +.presage.io
 +.presence.teams.live.com
