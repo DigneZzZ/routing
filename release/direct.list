@@ -1,5 +1,5 @@
 # direct — auto-generated, do not edit
-# entries: 3765
+# entries: 3789
 +.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
 +.10.in-addr.arpa
 +.100.100.in-addr.arpa
@@ -741,6 +741,7 @@ az764295.vo.msecnd.net
 +.azure-dns.info
 +.azure-dns.net
 +.azure-dns.org
++.azure-mobile.cn
 +.azure-mobile.net
 +.azure-sphere.com
 +.azure-test.net
@@ -773,6 +774,8 @@ azure.microsoft.com
 +.azureiotsuite.cn
 +.azureiotsuite.com
 azuremarketplace.microsoft.com
+azuremigrate.download.prss.microsoft.com
+azuremigratetest.download.prss.microsoft.com
 +.azuremresolver.cn
 +.azureplanetscale.info
 +.azureplanetscale.net
@@ -781,6 +784,8 @@ azuremarketplace.microsoft.com
 +.azuresandbox.cn
 +.azureserviceprofiler.com
 +.azuresmartspaces.net
+azurestackhub.download.prss.microsoft.com
+azurestackhubuat.download.prss.microsoft.com
 +.azurestackvalidation.com
 +.azurewebsites.net
 b.c2r.ts.cdn.office.net
@@ -1077,8 +1082,6 @@ beginners-adv.ozon.ru
 +.bethesda.net
 +.bethesdagamestudios.com
 +.bethsoft.com
-bg.v4.a.dl.ws.microsoft.com
-bg4.v4.a.dl.ws.microsoft.com
 +.biitii.com
 bilet.nspk.ru
 +.binads.com
@@ -1127,7 +1130,6 @@ bookkeeper.itunes.apple.com
 +.browser.events.data.msn.com
 bs.mail.ru
 +.bs.yandex.ru
-build.microsoft.com
 +.burstly.net
 +.burstlyrewards.com
 +.businesswebwise.com
@@ -1178,6 +1180,7 @@ build.microsoft.com
 +.casquemonsterbeatsbydre2013.com
 +.casquesbeatsaudio.com
 +.catalina.hk
+cbdstest.download.prss.microsoft.com
 +.cbkiller.com
 +.cdek.shopping
 +.cdn-apple.com
@@ -1188,7 +1191,6 @@ cdn-cn3.apple-mapkit.com
 cdn-cn4.apple-mapkit.com
 +.cdn-vk.net
 cdn.apple-mapkit.com
-cdn.marketplaceimages.windowsphone.com
 cdn1.apple-mapkit.com
 cdn2.apple-mapkit.com
 cdn3.apple-mapkit.com
@@ -1307,6 +1309,8 @@ cn.windowssearch.com
 +.cnshopin.com
 +.codeseason.by
 +.codethemicrobit.com
+collaborate.download.prss.microsoft.com
+collaborateppe.download.prss.microsoft.com
 +.collector.github.com
 communities.apple.com
 +.comss.club
@@ -1427,7 +1431,6 @@ dejavu.apple.com
 +.detaliczny.com
 +.dev-my.com
 +.dev-my.games
-devblogs.microsoft.com
 +.developer-advisor.com
 developer.microsoft.com
 +.device-manager.us
@@ -1467,7 +1470,6 @@ dnl-17.geo.kaspersky.com
 dnl-18.geo.kaspersky.com
 dnl-19.geo.kaspersky.com
 +.docs.com
-docs.microsoft.com
 +.dodois.com
 +.dodois.io
 +.dodopizza.com
@@ -1504,6 +1506,8 @@ dqrpb9wgowsf5.cloudfront.net
 +.drdremonster-beats.com
 +.drdremonsterdre.com
 +.drdreprobeatssale.com
+dreamspark.download.prss.microsoft.com
+dreamsparkuat.download.prss.microsoft.com
 +.drebeats-australia.com
 +.drebeats-france.com
 +.drebeats-monster.com
@@ -1656,7 +1660,6 @@ flightsimulator.azureedge.net
 +.freede.tech
 +.freedert.online
 +.frishoes.com
-fs.microsoft.com
 +.fundaiphone5s.com
 +.g-ib.ae
 +.g-ib.sg
@@ -2105,6 +2108,8 @@ is5.mzstatic.com
 +.ischool.com
 +.islamiccenterofnewlondon.com
 +.it-territory.com
+itacademy.download.prss.microsoft.com
+itacademyuat.download.prss.microsoft.com
 +.italiabeatsbydrdre.com
 +.itools.info
 +.itun.es
@@ -2249,11 +2254,12 @@ ksn-verdict.geoksn.kaspersky.com
 +.latampartneruniversity.com
 +.latticedata.com
 +.launchpad.wang
-learn.microsoft.com
 +.leecountytimes.com
 +.leike.cc
 +.lenta.com
 +.lenta.tech
+lex.download.prss.microsoft.com
+lexuat.download.prss.microsoft.com
 +.lexuemei.com
 +.live-video.net
 +.live.com
@@ -2350,6 +2356,7 @@ marketplace-sentry.wb.ru
 +.max.ru
 +.mbeats-tech.com
 +.mbheadphone.com
+mbs.download.prss.microsoft.com
 mc.yandex.com
 mc.yandex.net
 +.mc.yandex.ru
@@ -2365,6 +2372,7 @@ mdr.ksn.kaspersky-labs.com
 +.megafon.com
 +.megamarket.tech
 +.memealerts.com
+mensura.cdn-apple.com
 +.mepn.com
 mesu-cdn.apple.com.akadns.net
 mesu-china.apple.com.akadns.net
@@ -2598,6 +2606,9 @@ mos.transport.vtb.ru
 +.movika.com
 +.mp.world
 +.mpgw-my.com
+mpnbenefits.download.prss.microsoft.com
+mpnbenefitsrtl.download.prss.microsoft.com
+mpnbenefitsrtluat.download.prss.microsoft.com
 +.mpnevolution.com
 +.mr-apple.com.tw
 +.mradx.net
@@ -2616,6 +2627,8 @@ mos.transport.vtb.ru
 +.mschcdn.com
 mscrl.microsoft.com
 +.msdn.com
+msdn.download.prss.microsoft.com
+msdprod-ad.download.prss.microsoft.com
 +.msecnd.net
 +.msedge.net
 +.msft.info
@@ -2647,6 +2660,7 @@ mscrl.microsoft.com
 +.msocsp.com
 +.mspairlift.com
 +.mspil.cn
+msproduct.download.prss.microsoft.com
 +.msra.cn
 +.msropendata.com
 +.msturing.org
@@ -2736,6 +2750,7 @@ ocsp2.apple.com
 +.odnoklassniki.lv
 +.odnoklassniki.tj
 oemsoc.download.prss.microsoft.com
+oemsocuat.download.prss.microsoft.com
 +.offerairjordanlebron.com
 +.office
 +.office.com
@@ -2747,6 +2762,8 @@ oemsoc.download.prss.microsoft.com
 +.office365tw.com
 officecdn-microsoft-com.akamaized.net
 officecdn.microsoft.com
+officemkt.download.prss.microsoft.com
+officemktuat.download.prss.microsoft.com
 +.officeplus.cn
 +.officewebapps.cn
 +.officialbeatsbydreshop.com
@@ -2784,6 +2801,7 @@ oneocsp.microsoft.com
 oscdn.apple.com
 oscdn.origin-apple.com.akadns.net
 +.oskelly.co
+osrelease.download.prss.microsoft.com
 osxapps.itunes.apple.com
 osxapps.itunes.g.aaplimg.com
 +.outingsapp.com
@@ -3014,8 +3032,6 @@ reklama.mail.ru
 report.ap.yandex-net.ru
 +.repsneakermall.com
 +.repswing.com
-res-1.cdn.office.net
-res.cdn.office.net
 +.researchandcare.org
 +.researchkit.cn
 +.researchkit.com.cn
@@ -3036,6 +3052,7 @@ router.asus.com
 +.router.ctc
 routerlogin.com
 rs.mail.ru
+rsm.download.prss.microsoft.com
 +.rt-school.online
 +.rt.com
 +.rt.rs
@@ -3238,6 +3255,10 @@ software.download.prss.microsoft.com
 +.solostudioksale.com
 +.soso7778.com
 +.sourcecraft.dev
++.sovcloud-mx.cn
++.sovcloud-static.cn
++.sovcloud-usercontent.cn
++.sovcloud.cn
 sp.itunes.apple.com
 +.spasibo.digital
 +.spasibo.market
@@ -3280,6 +3301,8 @@ store.apple.com.edgekey.net
 store.apple.com.edgekey.net.globalredir.akadns.net
 store.storeimages.apple.com.akadns.net
 store.storeimages.cdn-apple.com
+storecorefulfillment.download.prss.microsoft.com
+storeedge.microsoft.com
 storeedgefd.dsx.mp.microsoft.com
 +.straightouttasomewhere.com
 streamingaudio.itunes.apple.com
@@ -3295,6 +3318,7 @@ support-china.apple-support.akadns.net
 +.support-uber.com
 support.apple.com
 +.surface.com
+surface.download.prss.microsoft.com
 surface.downloads.prss.microsoft.com
 +.sustainthesound.com
 +.svc.ms
@@ -3447,7 +3471,6 @@ tv.applemusic.com
 +.uni.rest
 +.unidraw.io
 +.unirest.tech
-+.unity3dcloud.cn
 universal-activity-service.itunes.apple.com
 +.unlocklimitlesslearning.com
 +.unstyle.us
@@ -3518,7 +3541,9 @@ visor.sberbank.ru
 +.vkuservideo.com
 +.vkuservideo.net
 +.vkworkspace.kz
+vlportal.download.prss.microsoft.com
 +.vmailru.net
+volic.download.prss.microsoft.com
 +.vsallin.net
 +.vsassets.io
 +.vscale.blog
@@ -3582,6 +3607,7 @@ whiteline.mail.ru
 +.wildberries.tj
 +.wildberries.tm
 +.wildberries.uz
+windbg.download.prss.microsoft.com
 +.windows
 +.windows-int.net
 +.windows.com
@@ -3603,8 +3629,6 @@ whiteline.mail.ru
 +.worldcoinpay.com
 +.worldcuprussia.com
 +.wpewebkit.org
-wscont1.apps.microsoft.com
-wscont2.apps.microsoft.com
 +.wuxiapple.com
 +.wwapple.net
 www-cdn.icloud.com.akadns.net
