@@ -1,5 +1,5 @@
 # direct — auto-generated, do not edit
-# entries: 3789
+# entries: 3794
 +.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
 +.10.in-addr.arpa
 +.100.100.in-addr.arpa
@@ -1615,6 +1615,7 @@ error-tracking.megamarket.tech
 +.ewisdom.us.kg
 +.eworld.com
 +.example
++.exp-tas.com
 experiments.apple.com
 +.ext-twitch.tv
 f.c2r.ts.cdn.office.net
@@ -1706,6 +1707,7 @@ github-production-upload-manifest-file-7fdce7.s3.amazonaws.com
 github-production-user-asset-6210df.s3.amazonaws.com
 +.github.ai
 +.github.blog
++.github.career
 +.github.com
 +.github.community
 +.github.dev
@@ -3552,10 +3554,13 @@ volic.download.prss.microsoft.com
 vscode-sync-insiders.trafficmanager.net
 vscode-sync.trafficmanager.net
 +.vscode-unpkg.net
++.vscode-webview.net
 vscode.blob.core.windows.net
 +.vscode.dev
 vscode.download.prss.microsoft.com
 vscode.search.windows.net
++.vscodeedu.app
++.vscodeedu.com
 vsmarketplacebadge.apphb.com
 +.vtb-direct.com
 +.vtbglobalperspectives.com

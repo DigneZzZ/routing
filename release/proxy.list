@@ -1,5 +1,5 @@
 # proxy — auto-generated, do not edit
-# entries: 271
+# entries: 272
 +.4pda.to
 +.ads.twitch.tv
 +.airhorn.solutions
@@ -122,6 +122,7 @@ github-production-upload-manifest-file-7fdce7.s3.amazonaws.com
 github-production-user-asset-6210df.s3.amazonaws.com
 +.github.ai
 +.github.blog
++.github.career
 +.github.com
 +.github.community
 +.github.dev
