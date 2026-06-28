@@ -1,5 +1,5 @@
 # ai — auto-generated, do not edit
-# entries: 170
+# entries: 171
 +.agentclientprotocol.com
 ai.google.dev
 +.ai.studio
@@ -162,6 +162,7 @@ servd-anthropic-website.b-cdn.net
 +.together.ai
 +.topaz.io
 +.trae.ai
++.tripo3d.ai
 +.turn.livekit.cloud
 webchannel-alkalimakersuite-pa.clients6.google.com
 +.windsurf.build
