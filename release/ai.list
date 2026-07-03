@@ -1,5 +1,5 @@
 # ai — auto-generated, do not edit
-# entries: 171
+# entries: 174
 +.agentclientprotocol.com
 ai.google.dev
 +.ai.studio
@@ -51,6 +51,7 @@ copilot-proxy.githubusercontent.com
 copilot-telemetry-service.githubusercontent.com
 copilot-telemetry.githubusercontent.com
 copilot-workspace.githubnext.com
++.copilot.com
 +.copilot.microsoft.com
 copilotprodattachments.blob.core.windows.net
 +.coze.com
@@ -128,7 +129,9 @@ o33249.ingest.sentry.io
 +.opal.google.com
 +.openai.com
 +.openai.com.cdn.cloudflare.net
+openai.qualtrics.com
 openaiapi-site.azureedge.net
+openaiassets.blob.core.windows.net
 openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
 openaicom.imgix.net
 openaicomproductionae4b.blob.core.windows.net

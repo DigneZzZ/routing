@@ -1,5 +1,5 @@
 # direct — auto-generated, do not edit
-# entries: 3798
+# entries: 3804
 +.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
 +.10.in-addr.arpa
 +.100.100.in-addr.arpa
@@ -1333,6 +1333,7 @@ copilot-proxy.githubusercontent.com
 copilot-telemetry-service.githubusercontent.com
 copilot-telemetry.githubusercontent.com
 copilot-workspace.githubnext.com
++.copilot.com
 copilotprodattachments.blob.core.windows.net
 +.coreml.net
 +.cortanaanalytics.com
@@ -1654,6 +1655,7 @@ flightsimulator.azureedge.net
 +.forzamotorsport.net
 +.forzaracingchampionship.com
 +.forzarc.com
++.foto-planeta.com
 +.foundationdb.org
 +.fr-beatsbydrestore.com
 +.francecasquebeatssolde.com
@@ -2122,8 +2124,8 @@ itacademyuat.download.prss.microsoft.com
 +.itunbes.com
 +.ituneas.com
 +.itunes-apple.cn
-itunes-apple.com.akadns.net
 +.itunes-apple.com.akadns.net
+itunes-apple.com.akadns.net
 +.itunes-radio.net
 itunes.apple.com
 +.itunes.ca
@@ -2997,6 +2999,7 @@ prodvizhenie-adv.ozon.ru
 psg-int-centralus.cloudapp.net
 psg-int-eastus.cloudapp.net
 +.psk
++.ptsecurity.com
 publicassets.cdn-apple.com
 +.pullstring.net
 push-apple.com.akadns.net
@@ -3022,6 +3025,7 @@ r1.mail.ru
 +.rabbitcounter.com
 +.rabota.by
 +.radar.imgsmail.ru
++.randomgodbot.com
 +.rbsgr.com
 +.rbth.com
 +.reactorms.com.cn
@@ -3206,6 +3210,7 @@ sequoia.apple.com
 +.servercore.com
 +.servercore.live
 +.serverlesslibrary.net
++.servicepipe.tech
 +.services-apple.net
 +.servicetalk.io
 setmeup.arubanetworks.com
@@ -3286,6 +3291,7 @@ st-ok-pts.cdn-vk.ru
 st-ok.cdn-vk.ru
 stacks.vk-portal.net
 +.staffhub.ms
++.standoff365.com
 +.start.com
 +.static-storage.net
 static.gc.apple.com
