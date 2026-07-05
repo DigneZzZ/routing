@@ -1,5 +1,5 @@
 # direct — auto-generated, do not edit
-# entries: 3804
+# entries: 3808
 +.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
 +.10.in-addr.arpa
 +.100.100.in-addr.arpa
@@ -339,6 +339,7 @@ appldnld.g.aaplimg.com
 +.apple-store.cn
 +.apple-store.net
 +.apple-store.wang
++.apple-studies.com
 apple-tv-plus-press.apple.com
 +.apple-usa.net
 +.apple-watch.com.ru
@@ -721,6 +722,7 @@ az764295.vo.msecnd.net
 +.aztask.cn
 +.azure
 +.azure-api.cn
++.azure-api.net
 +.azure-apihub.cn
 +.azure-automation.cn
 +.azure-connectedvehicles-stage.cn
@@ -790,6 +792,7 @@ azuremigratetest.download.prss.microsoft.com
 azurestackhub.download.prss.microsoft.com
 azurestackhubuat.download.prss.microsoft.com
 +.azurestackvalidation.com
++.azurestaticapps.net
 +.azurewebsites.net
 b.c2r.ts.cdn.office.net
 +.b.e.f.ip6.arpa
@@ -1595,6 +1598,7 @@ education.tbank.ru
 +.emias.info
 emoi-cncdn.bing.com
 +.engkoo.com
+entitlements-edge.itunes.apple.com
 +.envybox.company
 +.envybox.family
 +.envybox.io
@@ -1657,6 +1661,7 @@ flightsimulator.azureedge.net
 +.forzarc.com
 +.foto-planeta.com
 +.foundationdb.org
+fpinit.itunes.apple.com
 +.fr-beatsbydrestore.com
 +.francecasquebeatssolde.com
 +.frcasquesbeats.com
@@ -1959,7 +1964,6 @@ inappcheck.itunes.apple.com
 +.indiaipad.com
 informer.yandex.ru
 +.ingads.com
-ingest.apple-studies.com
 init-kt.apple.com
 init-p01md-lb.push-apple.com.akadns.net
 init-p01md.apple.com
@@ -2124,8 +2128,8 @@ itacademyuat.download.prss.microsoft.com
 +.itunbes.com
 +.ituneas.com
 +.itunes-apple.cn
-+.itunes-apple.com.akadns.net
 itunes-apple.com.akadns.net
++.itunes-apple.com.akadns.net
 +.itunes-radio.net
 itunes.apple.com
 +.itunes.ca

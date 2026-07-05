@@ -1,5 +1,5 @@
 # ai — auto-generated, do not edit
-# entries: 174
+# entries: 175
 +.agentclientprotocol.com
 ai.google.dev
 +.ai.studio
@@ -51,6 +51,7 @@ copilot-proxy.githubusercontent.com
 copilot-telemetry-service.githubusercontent.com
 copilot-telemetry.githubusercontent.com
 copilot-workspace.githubnext.com
++.copilot.cloud.microsoft
 +.copilot.com
 +.copilot.microsoft.com
 copilotprodattachments.blob.core.windows.net
