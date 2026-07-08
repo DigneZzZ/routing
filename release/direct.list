@@ -1,5 +1,5 @@
 # direct — auto-generated, do not edit
-# entries: 3808
+# entries: 3819
 +.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
 +.10.in-addr.arpa
 +.100.100.in-addr.arpa
@@ -1338,6 +1338,7 @@ copilot-telemetry.githubusercontent.com
 copilot-workspace.githubnext.com
 +.copilot.com
 copilotprodattachments.blob.core.windows.net
++.copymonkey.app
 +.coreml.net
 +.cortanaanalytics.com
 +.cortanaskills.com
@@ -1651,6 +1652,8 @@ flightsimulator.azureedge.net
 +.flipwithsurface.com
 +.flocktory.com
 +.flomni.com
++.flowwow-images.com
++.flowwow.com
 +.fluidpreview.com
 +.fon.bet
 +.fon.promo
@@ -1672,6 +1675,7 @@ fpinit.itunes.apple.com
 +.freedert.online
 +.frishoes.com
 +.fundaiphone5s.com
++.funpay.com
 +.g-ib.ae
 +.g-ib.sg
 +.g-ib.us
@@ -1692,6 +1696,7 @@ fpinit.itunes.apple.com
 +.genotek.eu
 +.genotek.health
 +.geoport.com
++.gerwin.io
 +.getdrebeatssale.com
 +.getsynapse.io
 +.gfx.ms
@@ -2952,6 +2957,7 @@ play.music.apple.com
 +.pobeda.page
 +.pocketbiketrader.com
 podorozhnik.spb.ru
++.polza.ai
 +.popmechanic.io
 poshtestgallery.cloudapp.net
 +.poshtestgallery.com
@@ -3056,6 +3062,7 @@ report.ap.yandex-net.ru
 +.reso-med.com
 +.restream-media.net
 rink.hockeyapp.net
++.robotext.io
 +.rocketozon.by
 +.roistat.com
 +.romanovs100.com
@@ -3117,6 +3124,7 @@ rsm.download.prss.microsoft.com
 +.ru.ccb.com
 +.ru.com
 +.ru.net
++.rugpt.io
 +.ruhub.tv
 +.runewsrt.com
 +.ruptly.agency
@@ -3221,6 +3229,7 @@ setmeup.arubanetworks.com
 sf-api-token-service.itunes.apple.com
 +.sfbassets.com
 +.sfbassets.net
++.sfunpay.com
 +.sfx.ms
 sh-pod2-smp-device.apple.com
 +.sharepoint.cn
@@ -3406,6 +3415,7 @@ tf-feedback.itunes.apple.com
 +.tilda.ws
 +.tildaapi.com
 +.tildacdn.com
++.tildacdn.net
 +.timelinestoryteller.com
 +.timeweb.cloud
 +.timeweb.com
@@ -3417,6 +3427,7 @@ tj-pod1-smp-device.apple.com
 +.tochka-tech.com
 +.tochka.com
 +.tok.media
++.tokenator.top
 +.top-fwz1.mail.ru
 top-staging.mail.ru
 +.topbeatsbydrdreoutlet.com
