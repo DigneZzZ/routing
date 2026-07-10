@@ -1,5 +1,5 @@
 # direct — auto-generated, do not edit
-# entries: 3819
+# entries: 3821
 +.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
 +.10.in-addr.arpa
 +.100.100.in-addr.arpa
@@ -257,6 +257,7 @@ amp-api-updates.apps.apple.com
 amp-api.apps.apple.com
 amp-api.media.apple.com
 amp-api.music.apple.com
+amp-api.podcasts.apple.com
 an.mail.ru
 +.an.yandex.ru
 analytics-adv.ozon.ru
@@ -690,7 +691,6 @@ asusrouter.com
 +.auricularesbeatsbaratosshop.com
 +.auricularesbeatsmarkt.com
 +.ausbeatsbydrdre.com
-auth.music.apple.com
 +.aviasales.com
 +.avito.st
 +.avs.io
@@ -2956,6 +2956,8 @@ play.music.apple.com
 +.plex.direct
 +.pobeda.page
 +.pocketbiketrader.com
+podcasts.apple.com
+podcasts.itunes.apple.com
 podorozhnik.spb.ru
 +.polza.ai
 +.popmechanic.io
