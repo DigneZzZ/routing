@@ -1,5 +1,5 @@
 # reject — auto-generated, do not edit
-# entries: 1225
+# entries: 1229
 1l-hit.mail.ru
 1l-hit.vkplay.ru
 +.1oavsblobprodcus350.blob.core.windows.net
@@ -607,6 +607,7 @@ error-tracking.megamarket.tech
 +.geo.settings-win.data.microsoft.com.akadns.net
 +.geo.settings.data.microsoft.com.akadns.net
 +.geo.vortex.data.microsoft.com.akadns.net
++.getsentry.com
 +.gia.jd.com
 +.gio.ren
 +.giocdn.com
@@ -1026,12 +1027,15 @@ rtlog5-applog.fqnovel.com
 +.segmenthub.com
 +.segmentify.com
 +.sensors.umetrip.com.cn
++.sentry-cdn.com
 sentry-ng.g.smailru.net
 +.sentry.d.mi.com
 +.sentry.d.xiaomi.net
++.sentry.dev
 sentry.dev-my.com
 sentry.dev-my.games
 sentry.hetzner.company
++.sentry.io
 sentry.iptv.rt.ru
 sentry.kontur.host
 sentry.mindbox.ru
