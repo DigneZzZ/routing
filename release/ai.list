@@ -1,5 +1,5 @@
 # ai — auto-generated, do not edit
-# entries: 175
+# entries: 176
 +.agentclientprotocol.com
 ai.google.dev
 +.ai.studio
@@ -23,6 +23,7 @@ browser-intake-datadoghq.com
 +.chat.com
 +.chatgpt.com
 +.chatgpt.livekit.cloud
++.chatgpt.site
 +.chutes.ai
 +.cici.com
 +.ciciai.com
