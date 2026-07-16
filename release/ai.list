@@ -1,5 +1,5 @@
 # ai — auto-generated, do not edit
-# entries: 176
+# entries: 178
 +.agentclientprotocol.com
 ai.google.dev
 +.ai.studio
@@ -49,6 +49,7 @@ cloudcode-pa.googleapis.com
 +.comfyci.org
 +.comfyregistry.org
 copilot-proxy.githubusercontent.com
++.copilot-stg.com
 copilot-telemetry-service.githubusercontent.com
 copilot-telemetry.githubusercontent.com
 copilot-workspace.githubnext.com
@@ -78,6 +79,7 @@ daily-cloudcode-pa.googleapis.com
 +.envato-static.com
 +.envato.com
 +.envatousercontent.com
++.flow.google
 +.gateway.ai.cloudflare.com
 +.geller-pa.googleapis.com
 +.gemini.google

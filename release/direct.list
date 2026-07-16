@@ -1,5 +1,5 @@
 # direct — auto-generated, do not edit
-# entries: 3820
+# entries: 3822
 +.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
 +.10.in-addr.arpa
 +.100.100.in-addr.arpa
@@ -771,6 +771,7 @@ azure.microsoft.com
 +.azuredns-prd.org
 +.azureedge-test.net
 +.azureedge.net
++.azureedge.us
 +.azurefd.net
 +.azurehdinsight.cn
 +.azureiotcentral.com
@@ -1332,6 +1333,7 @@ configuration.apple.com.akadns.net
 +.cooliphonecasesstore.com
 +.coolmonster.net
 copilot-proxy.githubusercontent.com
++.copilot-stg.com
 copilot-telemetry-service.githubusercontent.com
 copilot-telemetry.githubusercontent.com
 copilot-workspace.githubnext.com
