@@ -1,5 +1,5 @@
 # direct — auto-generated, do not edit
-# entries: 3829
+# entries: 3845
 +.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
 +.10.in-addr.arpa
 +.100.100.in-addr.arpa
@@ -1342,6 +1342,7 @@ copilot-workspace.githubnext.com
 copilotprodattachments.blob.core.windows.net
 +.copymonkey.app
 +.coreml.net
++.corp.express
 +.cortanaanalytics.com
 +.cortanaskills.com
 +.cosmosdb.info
@@ -1628,6 +1629,7 @@ error-tracking.megamarket.tech
 +.example
 +.exp-tas.com
 experiments.apple.com
++.express.ms
 +.ext-twitch.tv
 f.c2r.ts.cdn.office.net
 +.f6.dev
@@ -1747,10 +1749,12 @@ github-production-user-asset-6210df.s3.amazonaws.com
 +.goodsdunk.net
 google-analytics-suite.ozon.ru
 +.googleplay.com
++.gorzdrav.org
 +.gotcosmos.com
 +.goup.ai
 +.graphengine.io
 +.green-box-tv.com
++.greywallpass.com
 +.group-ib.ae
 +.group-ib.co.uk
 +.group-ib.com
@@ -2170,9 +2174,12 @@ itunesconnect.apple.com
 +.itunesu.com
 +.itunesu.net
 +.iutunes.com
++.ivicdn.tv
 +.iwork.com
 +.iwork.se
 +.iwork.wang
++.ixbt.com
++.ixbt.site
 +.jetfuelapp.com
 +.jetfuelapps.com
 +.jinrieluosi.cn
@@ -2409,6 +2416,7 @@ metrika.kontur.ru
 +.metrika.yandex.net
 +.metrika.yandex.ru
 metro.spb.ru
++.mfa.center
 +.mgmt-azure-api.cn
 +.microbit.org
 +.microsoft
@@ -2725,6 +2733,9 @@ myvs.download.prss.microsoft.com
 +.negoziomonsterbeats.com
 +.nelreports.net
 +.neon.click
++.netcraze.club
++.netcraze.link
++.netcraze.pro
 +.netmonet.co
 new-adv.ozon.ru
 +.newbeatsblackfriday.com
@@ -2824,6 +2835,7 @@ oscdn.apple.com
 oscdn.origin-apple.com.akadns.net
 +.oskelly.co
 osrelease.download.prss.microsoft.com
++.ostin.com
 osxapps.itunes.apple.com
 osxapps.itunes.g.aaplimg.com
 +.outingsapp.com
@@ -3016,6 +3028,7 @@ prodvizhenie-adv.ozon.ru
 psg-int-centralus.cloudapp.net
 psg-int-eastus.cloudapp.net
 +.ptsecurity.com
++.public.express
 publicassets.cdn-apple.com
 +.pullstring.net
 push-apple.com.akadns.net
@@ -3194,6 +3207,7 @@ s5.mzstatic.com
 +.sber-bank.by
 +.sber.pro
 +.sberauto.com
++.sberbank-tele.com
 +.sberbank.com
 +.sbercloud.tech
 +.sbermarketing.ru
@@ -3527,6 +3541,7 @@ valid.origin-apple.com.akadns.net
 +.vfsforgit.org
 +.videobreakdown.com
 +.videoindexer.ai
++.vimu.tv
 +.vip-beats.com
 +.vipbeatsbydre.com
 +.vipheadphones.com
@@ -3725,6 +3740,7 @@ xapi.ozonru.me
 +.xboxservices.com
 +.xboxstudios.com
 +.xbx.lv
++.xlnk.ms
 +.xn-----6kc7adj0c9esa.com
 +.xn----7sbaba0dc6cdn7cxcj.com
 +.xn----7sbabae2a0bnvtsfr4loc.com

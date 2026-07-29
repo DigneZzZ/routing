@@ -1,5 +1,5 @@
 # ai — auto-generated, do not edit
-# entries: 178
+# entries: 179
 +.agentclientprotocol.com
 ai.google.dev
 +.ai.studio
@@ -91,6 +91,7 @@ daily-cloudcode-pa.googleapis.com
 +.grammarly.com
 +.grok.com
 +.grok.x.com
++.grokipedia.com
 +.groq.com
 +.h2o.ai
 +.hf.co
