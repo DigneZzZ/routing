@@ -1,5 +1,5 @@
 # direct — auto-generated, do not edit
-# entries: 3845
+# entries: 3866
 +.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
 +.10.in-addr.arpa
 +.100.100.in-addr.arpa
@@ -690,6 +690,7 @@ asusrouter.com
 +.auricularesbeatsbaratosshop.com
 +.auricularesbeatsmarkt.com
 +.ausbeatsbydrdre.com
++.autoru.me
 +.aviasales.com
 +.avito.st
 +.avs.io
@@ -1277,6 +1278,7 @@ certs.apple.com
 +.chipcore.com
 +.chizhik.club
 +.chomp.com
++.cian.site
 +.ciattackers.com
 +.ciciq.net
 cl1-cdn.origin-apple.com.akadns.net
@@ -1306,6 +1308,7 @@ clientflow.apple.com.akadns.net
 +.cloudappsecurity.com
 +.cloudru.cn
 +.clstorage.net
++.cm.expert
 cma.itunes.apple.com
 +.cmhalq.com
 cn-smp-paymentservices.apple.com
@@ -1566,6 +1569,7 @@ dreamsparkuat.download.prss.microsoft.com
 ds0h3roq6wcgc.cloudfront.net
 dtlgalleryint.cloudapp.net
 +.dtsell.com
++.durovscode.com
 +.dvdstudiopro.biz
 +.dvdstudiopro.com
 +.dvdstudiopro.info
@@ -1590,6 +1594,7 @@ dykkng5hnh52u.cloudfront.net
 edge.geo.kaspersky.com
 +.edu-research.org
 edu.tinkoff.ru
++.edu22.info
 education.tbank.ru
 +.efproject.net
 +.elderscrolls.com
@@ -1752,6 +1757,7 @@ google-analytics-suite.ozon.ru
 +.gorzdrav.org
 +.gotcosmos.com
 +.goup.ai
++.gramotei.online
 +.graphengine.io
 +.green-box-tv.com
 +.greywallpass.com
@@ -2179,7 +2185,13 @@ itunesconnect.apple.com
 +.iwork.se
 +.iwork.wang
 +.ixbt.com
++.ixbt.games
++.ixbt.market
++.ixbt.media
++.ixbt.pro
++.ixbt.shop
 +.ixbt.site
++.ixbt.video
 +.jetfuelapp.com
 +.jetfuelapps.com
 +.jinrieluosi.cn
@@ -2400,6 +2412,7 @@ mdr.ksn.kaspersky-labs.com
 +.meetyourdevices.com
 +.megafon.com
 +.megamarket.tech
++.mel.fm
 +.memealerts.com
 mensura.cdn-apple.com
 +.mepn.com
@@ -2737,6 +2750,7 @@ myvs.download.prss.microsoft.com
 +.netcraze.link
 +.netcraze.pro
 +.netmonet.co
++.netschool.website
 new-adv.ozon.ru
 +.newbeatsblackfriday.com
 +.newbemany.com
@@ -2827,6 +2841,7 @@ oneocsp.microsoft.com
 +.onmschina.cn
 +.onsalekey.com
 +.onsaletrend.com
++.opennet.dev
 +.opensource.guide
 +.opentranslatorstothings.org
 +.opticsforthecloud.net
@@ -2980,6 +2995,7 @@ podorozhnik.spb.ru
 +.popmechanic.io
 poshtestgallery.cloudapp.net
 +.poshtestgallery.com
++.poudobnee.com
 +.powerapps.cn
 +.powerappscdn.net
 +.powerappsportals.cn
@@ -3217,6 +3233,7 @@ sdx.microsoft.com
 se-edge.itunes.apple.com
 se2.itunes.apple.com
 search.itunes.apple.com
++.seclab.lat
 seed-sequoia.siri.apple.com
 seed-swallow.siri.apple.com
 seed.siri.apple.com
@@ -3401,6 +3418,7 @@ sync.itunes.apple.com
 t.mail.ru
 +.t1.cloud
 +.tailwindtraders.com
++.tak-pravilno.com
 +.takegoto.com
 +.tamtam.chat
 +.tarantool.io
@@ -3594,6 +3612,7 @@ visor.sberbank.ru
 +.vkworkspace.kz
 vlportal.download.prss.microsoft.com
 +.vmailru.net
++.volganet.net
 volic.download.prss.microsoft.com
 +.vsallin.net
 +.vsassets.io
@@ -3836,9 +3855,11 @@ xray.mail.ru
 +.yango.taxi
 +.yango.tech
 +.yangofellowship.com
++.yaplakal.com
 +.yastat.net
 +.yastatic.net
 +.yclients.com
++.yndx.net
 +.youla.io
 +.yourgood.app
 +.yourmonsterbeats.com
