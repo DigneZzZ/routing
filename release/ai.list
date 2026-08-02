@@ -1,5 +1,5 @@
 # ai — auto-generated, do not edit
-# entries: 179
+# entries: 183
 +.agentclientprotocol.com
 ai.google.dev
 +.ai.studio
@@ -89,6 +89,8 @@ daily-cloudcode-pa.googleapis.com
 +.generativelanguage.googleapis.com
 +.githubcopilot.com
 +.grammarly.com
++.grazie.ai
++.grazie.aws.intellij.net
 +.grok.com
 +.grok.x.com
 +.grokipedia.com
@@ -99,6 +101,7 @@ daily-cloudcode-pa.googleapis.com
 +.host.livekit.cloud
 +.huggingface.co
 +.jasper.ai
++.jetbrains.ai
 +.jules.google
 +.jules.google.com
 +.kiro.dev
@@ -120,6 +123,7 @@ daily-cloudcode-pa.googleapis.com
 +.minimax.io
 +.mistral.ai
 +.mozilla.ai
++.notebook.google.com
 notebooklm-pa.googleapis.com
 +.notebooklm.google
 +.notebooklm.google.com
