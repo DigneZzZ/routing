@@ -1,5 +1,5 @@
 # direct — auto-generated, do not edit
-# entries: 3866
+# entries: 3872
 +.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
 +.10.in-addr.arpa
 +.100.100.in-addr.arpa
@@ -2858,14 +2858,17 @@ osxapps.itunes.g.aaplimg.com
 +.outlook.cn
 +.outlook.com
 +.overapple.com
++.ozon.app
 +.ozon.by
 +.ozon.com
 +.ozon.com.by
 +.ozon.com.kz
 +.ozon.dev
 +.ozon.express
++.ozon.global
 +.ozon.kz
 +.ozon.li
++.ozon.market
 +.ozon.tech
 +.ozon.tm
 +.ozon.travel
@@ -3177,6 +3180,7 @@ rsm.download.prss.microsoft.com
 +.russieactuelle.fr
 +.rustore.team
 +.rustore.tv
++.rutube.sport
 +.rwbautomation.tech
 +.s-dc-msedge.net
 +.s-microsoft.com
@@ -3465,6 +3469,8 @@ tf-feedback.itunes.apple.com
 +.tinkoffmobile.com
 +.tips.tips
 tj-pod1-smp-device.apple.com
+tj-pod2-smp-device.apple.com
+tj-pod3-smp-device.apple.com
 +.tochka-tech.com
 +.tochka.com
 +.tok.media
