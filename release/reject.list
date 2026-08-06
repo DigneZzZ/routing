@@ -1,5 +1,5 @@
 # reject — auto-generated, do not edit
-# entries: 1232
+# entries: 1216
 1l-hit.mail.ru
 1l-hit.vkplay.ru
 +.1oavsblobprodcus350.blob.core.windows.net
@@ -44,7 +44,6 @@ ad.ozone.ru
 +.ad.sina.com.cn
 +.ad.tencentmusic.com
 +.ad.toutiao.com
-+.ad.unimhk.com
 +.ad.us.sinaimg.cn
 +.ad.wang502.com
 +.ad.weixin.qq.com
@@ -73,6 +72,8 @@ adblogger.vk.ru
 +.adbutter.net
 +.adc.hpplay.cn
 +.adcolony.com
++.addthis.com
++.addthiscdn.com
 +.addthisedge.com
 +.adeng.hpplay.cn
 adeventtracker.spotify.com
@@ -101,7 +102,6 @@ adfstat.yandex.ru
 +.adnxs.com
 +.adping.qq.com
 +.adpm.app.qq.com
-+.adq.chinaso.com
 +.ads-api.duolingo.com
 ads-gate.wildberries.ru
 ads-img.mozilla.org
@@ -377,10 +377,8 @@ bs.mail.ru
 +.cb.baidu.com
 +.cbjs.baidu.com
 +.ccs.umeng.com
-+.cdn.advertserve.com
 +.cdn.atdmt.com
 +.cdn.banclip.com
-+.cdn.pocoiq.cn
 +.cdp.cloud.unity3d.com
 +.cds1.stn.llnw.net
 +.cds10.stn.llnw.net
@@ -536,7 +534,6 @@ copilot-telemetry.githubusercontent.com
 +.cy2.vortex.data.microsoft.com.akadns.net
 +.da.hunantv.com
 +.da.mgtv.com
-+.das-rpt-log.ucloud.cn
 +.data.flurry.com
 +.data.mistat.india.xiaomi.com
 +.data.mistat.intl.xiaomi.com
@@ -554,7 +551,6 @@ copilot-telemetry.githubusercontent.com
 +.diagnostics.support.microsoft.com
 +.dig.bdurl.net
 disney.my.sentry.io
-+.dn-growing.qbox.me
 +.doubleclick-cn.net
 +.doubleclick.cn
 +.doubleclick.com
@@ -899,7 +895,6 @@ o4504926511693824.ingest.sentry.io
 +.obs.mts.ru
 +.oc.umeng.com
 +.oca.telemetry.microsoft.us
-+.oct.pocoiq.cn
 +.ogury.co
 +.ogury.com
 +.onecollector.cloudapp.aria.akadns.net
@@ -944,16 +939,6 @@ p9-ad-sign.byteimg.com
 +.pglstatp-toutiao-b.com
 +.pglstatp-toutiao.com
 +.pimlog.baidu.com
-pinggai0.caixin.com
-pinggai1.caixin.com
-pinggai2.caixin.com
-pinggai3.caixin.com
-pinggai4.caixin.com
-pinggai5.caixin.com
-pinggai6.caixin.com
-pinggai7.caixin.com
-pinggai8.caixin.com
-pinggai9.caixin.com
 +.pingjs.qq.com
 +.pixel.facebook.com
 pixel.rustore.ru
@@ -1079,7 +1064,6 @@ srch-telemeter10.g.smailru.net
 +.ssp.api.tappx.com
 +.ssw.live.com
 stacks.vk-portal.net
-+.stat.chinaso.com
 +.stat.m.jd.com
 +.stat.y.qq.com
 +.stat.youku.com
