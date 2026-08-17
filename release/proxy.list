@@ -1,5 +1,5 @@
 # proxy — auto-generated, do not edit
-# entries: 273
+# entries: 252
 +.4pda.to
 +.ads.twitch.tv
 +.airhorn.solutions
@@ -55,7 +55,6 @@
 +.byreal.io
 +.bytick.com
 +.cb-bn.net
-+.cdn-telegram.org
 +.cdnbase.io
 +.coinbase-statics.com
 +.coinbase.cloud
@@ -65,8 +64,6 @@
 +.coinify.com
 +.coinmarketcap.com
 +.collector.github.com
-+.comments.app
-+.contest.com
 copilot-proxy.githubusercontent.com
 copilot-telemetry-service.githubusercontent.com
 copilot-telemetry.githubusercontent.com
@@ -101,7 +98,6 @@ discord-attachments-uploads-prd.storage.googleapis.com
 +.discordstatus.com
 +.echo.msk.ru
 +.etherscan.io
-+.fragment.com
 +.gate.ac
 +.gate.io
 +.gatedata.org
@@ -137,7 +133,6 @@ github-production-user-asset-6210df.s3.amazonaws.com
 +.githubsupport.com
 +.githubuniverse.com
 +.githubusercontent.com
-+.graph.org
 +.graph.whatsapp.com
 +.graph.whatsapp.net
 +.habr.com
@@ -224,7 +219,6 @@ productionresultssa7.blob.core.windows.net
 productionresultssa8.blob.core.windows.net
 productionresultssa9.blob.core.windows.net
 +.proekt.media
-+.quiz.directory
 +.qwant.com
 +.repo.new
 +.republic.ru
@@ -236,28 +230,13 @@ productionresultssa9.blob.core.windows.net
 +.snob.ru
 +.solscan.io
 +.sshid.io
-+.t.me
-+.tdesktop.com
-+.telega.one
-+.telegra.ph
-+.telegram-cdn.org
-+.telegram.dog
-+.telegram.me
-+.telegram.org
-+.telegram.space
-+.telesco.pe
-+.tg.dev
 +.the-village.ru
 +.thegithubshop.com
 +.theins.ru
-+.ton.org
-+.toncenter.com
 +.tradingview.com
 +.tronscan.org
 +.trustwallet.com
 +.tvrain.ru
-+.tx.me
-+.usercontent.dev
 +.vdsina.com
 +.wa.me
 +.watchanimeattheoffice.com
