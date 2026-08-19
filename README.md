@@ -176,7 +176,7 @@ Google-push.
 https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/geosite.dat        # 603.7 KB — с реестром РКН
 https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/geoip.dat          # 787.6 KB
 https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/happ/geosite.dat   # 154.8 KB — без реестра, для телефонов
-https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/happ/geoip.dat     # 388.5 KB
+https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/happ/geoip.dat     # 776.6 KB
 ```
 
 Файлы стандартные (protobuf v2ray/v2fly), подходят для V2Ray, Xray, sing-box и
@@ -231,7 +231,7 @@ https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/happ/geoip.dat     # 388
 | Категория | CIDR | Есть в mobile-файле |
 |---|---|---|
 | `geoip:ru` | 25,161 | да |
-| `geoip:whitelist` | 25,161 | нет |
+| `geoip:whitelist` | 25,161 | да |
 | `geoip:blocked-ru` | 1,119 | нет |
 | `geoip:private` | 18 | да |
 | `geoip:telegram` | 12 | да |
@@ -350,7 +350,7 @@ v2ray/happ/default.json                              2 KB
 v2ray/happ/default_deeplink.txt                      2 KB
 v2ray/happ/full.json                                 2 KB
 v2ray/happ/full_deeplink.txt                         2 KB
-v2ray/happ/geoip.dat                               389 KB
+v2ray/happ/geoip.dat                               777 KB
 v2ray/happ/geosite.dat                             155 KB
 v2ray/incy/default.json                              2 KB
 v2ray/incy/default_deeplink.txt                      2 KB
