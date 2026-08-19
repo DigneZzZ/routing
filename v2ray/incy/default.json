@@ -10,35 +10,35 @@
   "DomesticDNSType": "DoH",
   "DomesticDNSDomain": "https://77.88.8.8/dns-query",
   "DomesticDNSIP": "77.88.8.8",
-  "LastUpdated": "1787127041",
+  "LastUpdated": "2026-08-19",
   "DnsHosts": {},
   "RouteOrder": "block-proxy-direct",
   "DirectSites": [
     "geosite:private",
     "geosite:category-ru",
-    "geosite:whitelist",
     "geosite:microsoft",
     "geosite:apple",
     "geosite:google-play",
-    "geosite:epicgames",
-    "geosite:riot",
-    "geosite:escapefromtarkov",
-    "geosite:steam",
-    "geosite:origin",
     "geosite:twitch",
     "geosite:pinterest",
+    "geosite:steam",
+    "geosite:epicgames",
+    "geosite:origin",
+    "geosite:escapefromtarkov",
     "geosite:faceit",
+    "geosite:riot",
+    "geosite:roblox",
     "geosite:ip-check",
     "geosite:vpndetect"
   ],
   "DirectIp": [
     "geoip:private",
-    "geoip:whitelist"
+    "geoip:ru"
   ],
   "BlockSites": [
+    "geosite:category-ads",
     "geosite:win-spy",
-    "geosite:torrent",
-    "geosite:category-ads"
+    "geosite:torrent"
   ],
   "BlockIp": [],
   "DomainStrategy": "IPIfNonMatch",
@@ -46,13 +46,15 @@
   "Geoipurl": "https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/happ/geoip.dat",
   "Geositeurl": "https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/happ/geosite.dat",
   "ProxySites": [
-    "geosite:github",
-    "geosite:twitch-ads",
-    "geosite:youtube",
     "geosite:telegram",
+    "geosite:github",
     "geosite:discord",
     "geosite:whatsapp",
-    "geosite:google-deepmind",
+    "geosite:banned-ru",
+    "geosite:hosting",
+    "geosite:twitch-ads",
+    "geosite:youtube",
+    "geosite:ai",
     "geosite:crypto"
   ],
   "ProxyIp": [

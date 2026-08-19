@@ -1,24 +1,25 @@
 # ══════════════════════════════════════════════════════════════════
 #  Шаблон подписки MihoMo (Clash.Meta) для Remnawave
 #
-#  ВАРИАНТ: компьютер + реестр РКН  (полный набор)
+#  ВАРИАНТ: телефон, облегчённый  (рекомендуется для iOS)
 # ══════════════════════════════════════════════════════════════════
 #
 #  Всего вариантов четыре — выберите один:
 #
-#    template-mobile.yaml        телефон, облегчённый  (рекомендуется для iOS)
+#    template-mobile.yaml        телефон, облегчённый  (рекомендуется для iOS)   ← этот файл
 #    template-mobile-full.yaml   телефон + реестр РКН
-#    template.yaml               компьютер + реестр РКН  (полный набор)   ← этот файл
+#    template.yaml               компьютер + реестр РКН  (полный набор)
 #    template-lite.yaml          компьютер, облегчённый
 #
 #  Чем этот вариант отличается:
-#    • полный набор: реестр РКН, российские IP, правила по процессам;
-#    • process-правила стоят в самом низу — mihomo ищет процесс
-#      только для того, что не разобрали правила по доменам;
-#    • для телефона тяжеловат, возьмите template-mobile.yaml.
+#    • все наборы правил в формате .mrs — примерно 50 КБ вместо 2 МБ
+#      текста, который ядро держит в памяти построчно;
+#    • нет process-правил: mihomo не ищет процесс на каждое соединение;
+#    • без реестра РКН, поэтому неизвестные домены в зоне .ru идут
+#      через VPN — медленнее, но открывается всё.
 #
 #  Прямая ссылка на этот файл:
-#    https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/template.yaml
+#    https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/template-mobile.yaml
 #
 #  Сгенерировано github.com/DigneZzZ/routing-build — не правьте
 #  файл руками, изменения перезапишутся при следующей сборке.
@@ -32,29 +33,11 @@ ipv6: false
 unified-delay: true
 tcp-concurrent: true
 keep-alive-interval: 30
-find-process-mode: strict
+find-process-mode: off    # без PROCESS-правил → нет поиска процесса на каждое соединение
 profile:
   store-selected: true
   store-fake-ip: true
 
-
-tun:
-  enable: true
-  stack: mixed
-  auto-route: true
-  auto-detect-interface: true
-  dns-hijack: [any:53]
-  strict-route: true
-  route-exclude-address:
-    - 224.0.0.0/3
-    - 10.0.0.0/8
-    - 127.0.0.0/8
-    - 100.64.0.0/10
-    - 172.16.0.0/12
-    - 169.254.0.0/16
-    - 192.168.0.0/16
-    - fc00::/7
-    - fe80::/10
 
 
 dns:
@@ -118,8 +101,8 @@ proxy-groups:
   - { name: 🤖 AI, icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Dark/Bot.png", type: select, remnawave: { include-proxies: false }, include-all: true, proxies: [🛡️ VPN] }
   - { name: 🎮 Игры, icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png", type: select, remnawave: { include-proxies: false }, include-all: true, proxies: [🔓 DIRECT, 🛡️ VPN] }
   # --- hidden ---
-  - { name: ⚡️ Авто, type: url-test, tolerance: 150, url: "https://cp.cloudflare.com/generate_204", interval: 300, lazy: true, hidden: true, remnawave: { include-proxies: false }, include-all: true }
-  - { name: 📶 Резерв, type: fallback, url: "https://cp.cloudflare.com/generate_204", interval: 300, lazy: true, hidden: true, remnawave: { include-proxies: false }, include-all: true }
+  - { name: ⚡️ Авто, type: url-test, tolerance: 150, url: "https://cp.cloudflare.com/generate_204", interval: 900, lazy: true, hidden: true, remnawave: { include-proxies: false }, include-all: true }
+  - { name: 📶 Резерв, type: fallback, url: "https://cp.cloudflare.com/generate_204", interval: 900, lazy: true, hidden: true, remnawave: { include-proxies: false }, include-all: true }
   - { name: PROXY, type: select, hidden: true, remnawave: { include-proxies: false }, proxies: [🛡️ VPN] }
   - { name: 🔓 DIRECT, type: select, hidden: true, remnawave: { include-proxies: false }, proxies: [DIRECT] }
 
@@ -135,12 +118,6 @@ rule-providers:
   games:        { type: http, behavior: domain, format: mrs, interval: 86400, url: "https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/release/games.mrs", path: ./rs/games.mrs }
   direct:       { type: http, behavior: domain, format: mrs, interval: 86400, url: "https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/release/direct.mrs", path: ./rs/direct.mrs }
   direct-ip:    { type: http, behavior: ipcidr, format: mrs, interval: 86400, url: "https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/release/direct-ip.mrs", path: ./rs/direct-ip.mrs }
-  refilter-d:   { type: http, behavior: domain, format: mrs, interval: 86400, url: "https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/release/refilter-domain.mrs", path: ./rs/refilter-domain.mrs }
-  refilter-ip:  { type: http, behavior: ipcidr, format: mrs, interval: 86400, url: "https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/release/refilter-ip.mrs", path: ./rs/refilter-ip.mrs }
-  ru-ip:        { type: http, behavior: ipcidr, format: mrs, interval: 86400, url: "https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/release/ru-ip.mrs", path: ./rs/ru-ip.mrs }
-  proxy-ip:     { type: http, behavior: ipcidr, format: mrs, interval: 86400, url: "https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/release/proxy-ip.mrs", path: ./rs/proxy-ip.mrs }
-  proc-games:   { type: http, behavior: classical, format: yaml, interval: 86400, url: "https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/release/proc-games.yaml", path: ./rs/proc-games.yaml }
-  proc-torrent: { type: http, behavior: classical, format: yaml, interval: 86400, url: "https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/release/proc-torrent.yaml", path: ./rs/proc-torrent.yaml }
 
 rules:
   # --- local & system ---
@@ -157,30 +134,8 @@ rules:
   # --- IP-probe endpoints must report the real IP ---
   # (after the proxied services: upstream lists gstatic.com here)
   - RULE-SET,ip-check,DIRECT
-  # --- RKN bypass, before the direct sets it has to override ---
-  - RULE-SET,refilter-d,🛡️ VPN
   # --- games & direct services ---
   - RULE-SET,games,🎮 Игры
   - RULE-SET,direct,DIRECT
-  # --- remaining Russian TLDs ---
-  - DOMAIN-SUFFIX,ru,DIRECT
-  - DOMAIN-SUFFIX,su,DIRECT
-  - DOMAIN-SUFFIX,moscow,DIRECT
-  - DOMAIN-SUFFIX,xn--p1ai,DIRECT
-  - DOMAIN-SUFFIX,xn--p1acf,DIRECT
-  - DOMAIN-SUFFIX,xn--80asehdb,DIRECT
-  - DOMAIN-SUFFIX,xn--c1avg,DIRECT
-  - DOMAIN-SUFFIX,xn--80aswg,DIRECT
-  - DOMAIN-SUFFIX,xn--80adxhks,DIRECT
-  - DOMAIN-SUFFIX,xn--d1acj3b,DIRECT
-  # --- IP fallbacks ---
-  - RULE-SET,proxy-ip,🛡️ VPN,no-resolve
-  - RULE-SET,refilter-ip,🛡️ VPN,no-resolve
-  - RULE-SET,ru-ip,DIRECT,no-resolve
-  # --- process rules (desktop; evaluated only if nothing above matched) ---
-  - RULE-SET,proc-torrent,DIRECT
-  - RULE-SET,proc-games,🎮 Игры
-  - PROCESS-NAME-REGEX,(?i)(claude|com\.openai\.chat),🤖 AI
-  - PROCESS-NAME-REGEX,(?i)(discord|vesktop),💬 Discord
   # --- everything else ---
   - MATCH,🛡️ VPN

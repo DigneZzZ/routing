@@ -1,24 +1,24 @@
 # ══════════════════════════════════════════════════════════════════
 #  Шаблон подписки MihoMo (Clash.Meta) для Remnawave
 #
-#  ВАРИАНТ: компьютер + реестр РКН  (полный набор)
+#  ВАРИАНТ: телефон + реестр РКН
 # ══════════════════════════════════════════════════════════════════
 #
 #  Всего вариантов четыре — выберите один:
 #
 #    template-mobile.yaml        телефон, облегчённый  (рекомендуется для iOS)
-#    template-mobile-full.yaml   телефон + реестр РКН
-#    template.yaml               компьютер + реестр РКН  (полный набор)   ← этот файл
+#    template-mobile-full.yaml   телефон + реестр РКН   ← этот файл
+#    template.yaml               компьютер + реестр РКН  (полный набор)
 #    template-lite.yaml          компьютер, облегчённый
 #
 #  Чем этот вариант отличается:
-#    • полный набор: реестр РКН, российские IP, правила по процессам;
-#    • process-правила стоят в самом низу — mihomo ищет процесс
-#      только для того, что не разобрали правила по доменам;
-#    • для телефона тяжеловат, возьмите template-mobile.yaml.
+#    • то же, что template-mobile.yaml, плюс выжимка из реестра РКН;
+#    • благодаря ей работает правило «домены .ru — напрямую»,
+#      а заблокированные .ru всё равно уходят в VPN;
+#    • на телефоне занимает примерно на 6 МБ памяти больше.
 #
 #  Прямая ссылка на этот файл:
-#    https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/template.yaml
+#    https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/template-mobile-full.yaml
 #
 #  Сгенерировано github.com/DigneZzZ/routing-build — не правьте
 #  файл руками, изменения перезапишутся при следующей сборке.
@@ -32,29 +32,11 @@ ipv6: false
 unified-delay: true
 tcp-concurrent: true
 keep-alive-interval: 30
-find-process-mode: strict
+find-process-mode: off    # без PROCESS-правил → нет поиска процесса на каждое соединение
 profile:
   store-selected: true
   store-fake-ip: true
 
-
-tun:
-  enable: true
-  stack: mixed
-  auto-route: true
-  auto-detect-interface: true
-  dns-hijack: [any:53]
-  strict-route: true
-  route-exclude-address:
-    - 224.0.0.0/3
-    - 10.0.0.0/8
-    - 127.0.0.0/8
-    - 100.64.0.0/10
-    - 172.16.0.0/12
-    - 169.254.0.0/16
-    - 192.168.0.0/16
-    - fc00::/7
-    - fe80::/10
 
 
 dns:
@@ -118,8 +100,8 @@ proxy-groups:
   - { name: 🤖 AI, icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Dark/Bot.png", type: select, remnawave: { include-proxies: false }, include-all: true, proxies: [🛡️ VPN] }
   - { name: 🎮 Игры, icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png", type: select, remnawave: { include-proxies: false }, include-all: true, proxies: [🔓 DIRECT, 🛡️ VPN] }
   # --- hidden ---
-  - { name: ⚡️ Авто, type: url-test, tolerance: 150, url: "https://cp.cloudflare.com/generate_204", interval: 300, lazy: true, hidden: true, remnawave: { include-proxies: false }, include-all: true }
-  - { name: 📶 Резерв, type: fallback, url: "https://cp.cloudflare.com/generate_204", interval: 300, lazy: true, hidden: true, remnawave: { include-proxies: false }, include-all: true }
+  - { name: ⚡️ Авто, type: url-test, tolerance: 150, url: "https://cp.cloudflare.com/generate_204", interval: 900, lazy: true, hidden: true, remnawave: { include-proxies: false }, include-all: true }
+  - { name: 📶 Резерв, type: fallback, url: "https://cp.cloudflare.com/generate_204", interval: 900, lazy: true, hidden: true, remnawave: { include-proxies: false }, include-all: true }
   - { name: PROXY, type: select, hidden: true, remnawave: { include-proxies: false }, proxies: [🛡️ VPN] }
   - { name: 🔓 DIRECT, type: select, hidden: true, remnawave: { include-proxies: false }, proxies: [DIRECT] }
 
@@ -139,8 +121,6 @@ rule-providers:
   refilter-ip:  { type: http, behavior: ipcidr, format: mrs, interval: 86400, url: "https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/release/refilter-ip.mrs", path: ./rs/refilter-ip.mrs }
   ru-ip:        { type: http, behavior: ipcidr, format: mrs, interval: 86400, url: "https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/release/ru-ip.mrs", path: ./rs/ru-ip.mrs }
   proxy-ip:     { type: http, behavior: ipcidr, format: mrs, interval: 86400, url: "https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/release/proxy-ip.mrs", path: ./rs/proxy-ip.mrs }
-  proc-games:   { type: http, behavior: classical, format: yaml, interval: 86400, url: "https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/release/proc-games.yaml", path: ./rs/proc-games.yaml }
-  proc-torrent: { type: http, behavior: classical, format: yaml, interval: 86400, url: "https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/release/proc-torrent.yaml", path: ./rs/proc-torrent.yaml }
 
 rules:
   # --- local & system ---
@@ -177,10 +157,5 @@ rules:
   - RULE-SET,proxy-ip,🛡️ VPN,no-resolve
   - RULE-SET,refilter-ip,🛡️ VPN,no-resolve
   - RULE-SET,ru-ip,DIRECT,no-resolve
-  # --- process rules (desktop; evaluated only if nothing above matched) ---
-  - RULE-SET,proc-torrent,DIRECT
-  - RULE-SET,proc-games,🎮 Игры
-  - PROCESS-NAME-REGEX,(?i)(claude|com\.openai\.chat),🤖 AI
-  - PROCESS-NAME-REGEX,(?i)(discord|vesktop),💬 Discord
   # --- everything else ---
   - MATCH,🛡️ VPN

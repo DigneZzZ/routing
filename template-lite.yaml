@@ -1,24 +1,23 @@
 # ══════════════════════════════════════════════════════════════════
 #  Шаблон подписки MihoMo (Clash.Meta) для Remnawave
 #
-#  ВАРИАНТ: компьютер + реестр РКН  (полный набор)
+#  ВАРИАНТ: компьютер, облегчённый
 # ══════════════════════════════════════════════════════════════════
 #
 #  Всего вариантов четыре — выберите один:
 #
 #    template-mobile.yaml        телефон, облегчённый  (рекомендуется для iOS)
 #    template-mobile-full.yaml   телефон + реестр РКН
-#    template.yaml               компьютер + реестр РКН  (полный набор)   ← этот файл
-#    template-lite.yaml          компьютер, облегчённый
+#    template.yaml               компьютер + реестр РКН  (полный набор)
+#    template-lite.yaml          компьютер, облегчённый   ← этот файл
 #
 #  Чем этот вариант отличается:
-#    • полный набор: реестр РКН, российские IP, правила по процессам;
-#    • process-правила стоят в самом низу — mihomo ищет процесс
-#      только для того, что не разобрали правила по доменам;
-#    • для телефона тяжеловат, возьмите template-mobile.yaml.
+#    • то же, что template.yaml, но без реестра РКН и российских IP;
+#    • неизвестные домены в зоне .ru идут через VPN;
+#    • меньше памяти и трафика на обновление правил.
 #
 #  Прямая ссылка на этот файл:
-#    https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/template.yaml
+#    https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/template-lite.yaml
 #
 #  Сгенерировано github.com/DigneZzZ/routing-build — не правьте
 #  файл руками, изменения перезапишутся при следующей сборке.
@@ -135,10 +134,6 @@ rule-providers:
   games:        { type: http, behavior: domain, format: mrs, interval: 86400, url: "https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/release/games.mrs", path: ./rs/games.mrs }
   direct:       { type: http, behavior: domain, format: mrs, interval: 86400, url: "https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/release/direct.mrs", path: ./rs/direct.mrs }
   direct-ip:    { type: http, behavior: ipcidr, format: mrs, interval: 86400, url: "https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/release/direct-ip.mrs", path: ./rs/direct-ip.mrs }
-  refilter-d:   { type: http, behavior: domain, format: mrs, interval: 86400, url: "https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/release/refilter-domain.mrs", path: ./rs/refilter-domain.mrs }
-  refilter-ip:  { type: http, behavior: ipcidr, format: mrs, interval: 86400, url: "https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/release/refilter-ip.mrs", path: ./rs/refilter-ip.mrs }
-  ru-ip:        { type: http, behavior: ipcidr, format: mrs, interval: 86400, url: "https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/release/ru-ip.mrs", path: ./rs/ru-ip.mrs }
-  proxy-ip:     { type: http, behavior: ipcidr, format: mrs, interval: 86400, url: "https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/release/proxy-ip.mrs", path: ./rs/proxy-ip.mrs }
   proc-games:   { type: http, behavior: classical, format: yaml, interval: 86400, url: "https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/release/proc-games.yaml", path: ./rs/proc-games.yaml }
   proc-torrent: { type: http, behavior: classical, format: yaml, interval: 86400, url: "https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/release/proc-torrent.yaml", path: ./rs/proc-torrent.yaml }
 
@@ -157,26 +152,9 @@ rules:
   # --- IP-probe endpoints must report the real IP ---
   # (after the proxied services: upstream lists gstatic.com here)
   - RULE-SET,ip-check,DIRECT
-  # --- RKN bypass, before the direct sets it has to override ---
-  - RULE-SET,refilter-d,🛡️ VPN
   # --- games & direct services ---
   - RULE-SET,games,🎮 Игры
   - RULE-SET,direct,DIRECT
-  # --- remaining Russian TLDs ---
-  - DOMAIN-SUFFIX,ru,DIRECT
-  - DOMAIN-SUFFIX,su,DIRECT
-  - DOMAIN-SUFFIX,moscow,DIRECT
-  - DOMAIN-SUFFIX,xn--p1ai,DIRECT
-  - DOMAIN-SUFFIX,xn--p1acf,DIRECT
-  - DOMAIN-SUFFIX,xn--80asehdb,DIRECT
-  - DOMAIN-SUFFIX,xn--c1avg,DIRECT
-  - DOMAIN-SUFFIX,xn--80aswg,DIRECT
-  - DOMAIN-SUFFIX,xn--80adxhks,DIRECT
-  - DOMAIN-SUFFIX,xn--d1acj3b,DIRECT
-  # --- IP fallbacks ---
-  - RULE-SET,proxy-ip,🛡️ VPN,no-resolve
-  - RULE-SET,refilter-ip,🛡️ VPN,no-resolve
-  - RULE-SET,ru-ip,DIRECT,no-resolve
   # --- process rules (desktop; evaluated only if nothing above matched) ---
   - RULE-SET,proc-torrent,DIRECT
   - RULE-SET,proc-games,🎮 Игры

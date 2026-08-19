@@ -1,0 +1,164 @@
+{
+  "rulesets": [
+    {
+      "name": "reject",
+      "behavior": "domain",
+      "entries": 1208,
+      "list": 26781,
+      "mrs": 11416
+    },
+    {
+      "name": "proxy",
+      "behavior": "domain",
+      "entries": 143,
+      "list": 3088,
+      "mrs": 1578
+    },
+    {
+      "name": "discord",
+      "behavior": "domain",
+      "entries": 28,
+      "list": 635,
+      "mrs": 451
+    },
+    {
+      "name": "ai",
+      "behavior": "domain",
+      "entries": 176,
+      "list": 3341,
+      "mrs": 1892
+    },
+    {
+      "name": "youtube",
+      "behavior": "domain",
+      "entries": 176,
+      "list": 2807,
+      "mrs": 1332
+    },
+    {
+      "name": "crypto",
+      "behavior": "domain",
+      "entries": 96,
+      "list": 1430,
+      "mrs": 879
+    },
+    {
+      "name": "ip-check",
+      "behavior": "domain",
+      "entries": 13,
+      "list": 363,
+      "mrs": 264
+    },
+    {
+      "name": "games",
+      "behavior": "domain",
+      "entries": 116,
+      "list": 2438,
+      "mrs": 1432
+    },
+    {
+      "name": "direct",
+      "behavior": "domain",
+      "entries": 3201,
+      "list": 59187,
+      "mrs": 30408
+    },
+    {
+      "name": "direct-ip",
+      "behavior": "ipcidr",
+      "entries": 18,
+      "list": 314,
+      "mrs": 155
+    },
+    {
+      "name": "proxy-ip",
+      "behavior": "ipcidr",
+      "entries": 13,
+      "list": 296,
+      "mrs": 141
+    },
+    {
+      "name": "proxy-ip-full",
+      "behavior": "ipcidr",
+      "entries": 1597,
+      "list": 26246,
+      "mrs": 6287
+    },
+    {
+      "name": "ru-ip",
+      "behavior": "ipcidr",
+      "entries": 25161,
+      "list": 446900,
+      "mrs": 119599
+    },
+    {
+      "name": "refilter-domain",
+      "behavior": "domain",
+      "entries": 21987,
+      "list": 393835,
+      "mrs": 175874
+    },
+    {
+      "name": "refilter-domain-full",
+      "behavior": "domain",
+      "entries": 74396,
+      "list": 1326691,
+      "mrs": 535662
+    },
+    {
+      "name": "refilter-ip",
+      "behavior": "ipcidr",
+      "entries": 1119,
+      "list": 19170,
+      "mrs": 2720
+    },
+    {
+      "name": "refilter-ip-full",
+      "behavior": "ipcidr",
+      "entries": 24961,
+      "list": 430123,
+      "mrs": 50246
+    },
+    {
+      "name": "vpndetect",
+      "behavior": "domain",
+      "entries": 13,
+      "list": 443,
+      "mrs": 264
+    },
+    {
+      "name": "refilter-community",
+      "behavior": "domain",
+      "entries": 16,
+      "list": 435,
+      "mrs": 255
+    },
+    {
+      "name": "proc-games",
+      "behavior": "classical",
+      "entries": 86,
+      "list": 2903,
+      "mrs": null
+    },
+    {
+      "name": "proc-torrent",
+      "behavior": "classical",
+      "entries": 89,
+      "list": 2961,
+      "mrs": null
+    },
+    {
+      "name": "proc-ru",
+      "behavior": "classical",
+      "entries": 526,
+      "list": 18913,
+      "mrs": null
+    }
+  ],
+  "fetch": {
+    "ok": 34,
+    "cached": 0,
+    "failed": 0,
+    "truncated": 0
+  }
+}
