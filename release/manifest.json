@@ -73,16 +73,16 @@
     {
       "name": "proxy-ip",
       "behavior": "ipcidr",
-      "entries": 13,
-      "list": 296,
-      "mrs": 141
+      "entries": 10,
+      "list": 246,
+      "mrs": 122
     },
     {
       "name": "proxy-ip-full",
       "behavior": "ipcidr",
-      "entries": 1585,
-      "list": 26020,
-      "mrs": 6267
+      "entries": 1577,
+      "list": 25887,
+      "mrs": 6215
     },
     {
       "name": "ru-ip",
