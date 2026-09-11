@@ -80,16 +80,16 @@
     {
       "name": "proxy-ip-full",
       "behavior": "ipcidr",
-      "entries": 1577,
-      "list": 25887,
-      "mrs": 6215
+      "entries": 1588,
+      "list": 26061,
+      "mrs": 6290
     },
     {
       "name": "ru-ip",
       "behavior": "ipcidr",
-      "entries": 25166,
-      "list": 447056,
-      "mrs": 119484
+      "entries": 25156,
+      "list": 446891,
+      "mrs": 119536
     },
     {
       "name": "refilter-domain",
@@ -108,9 +108,9 @@
     {
       "name": "refilter-ip",
       "behavior": "ipcidr",
-      "entries": 1120,
-      "list": 19186,
-      "mrs": 2723
+      "entries": 1121,
+      "list": 19204,
+      "mrs": 2727
     },
     {
       "name": "refilter-ip-full",
