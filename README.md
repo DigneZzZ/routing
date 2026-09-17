@@ -6,9 +6,6 @@
 
 Группы: **VPN · YouTube · Discord · AI · Games**
 
-> Этот репозиторий содержит только результат сборки. Скрипты — в
-> [`DigneZzZ/routing-build`](https://github.com/DigneZzZ/routing-build).
-
 ---
 
 ## Что выбрать
