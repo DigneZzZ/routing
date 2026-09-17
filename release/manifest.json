@@ -73,23 +73,23 @@
     {
       "name": "proxy-ip",
       "behavior": "ipcidr",
-      "entries": 10,
-      "list": 246,
-      "mrs": 122
+      "entries": 9,
+      "list": 228,
+      "mrs": 114
     },
     {
       "name": "proxy-ip-full",
       "behavior": "ipcidr",
-      "entries": 1588,
-      "list": 26061,
-      "mrs": 6290
+      "entries": 1616,
+      "list": 26503,
+      "mrs": 6413
     },
     {
       "name": "ru-ip",
       "behavior": "ipcidr",
-      "entries": 25156,
-      "list": 446891,
-      "mrs": 119536
+      "entries": 25147,
+      "list": 446770,
+      "mrs": 119464
     },
     {
       "name": "refilter-domain",
