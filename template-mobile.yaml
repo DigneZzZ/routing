@@ -48,7 +48,7 @@ dns:
   # A fake IP handed to a captive-portal probe, an NTP client or a STUN lookup
   # breaks it outright, so those never get one.
   fake-ip-filter:
-    - rule-set:direct
+    - rule-set:direct-core
     - "*.lan"
     - "*.local"
     - "*.localdomain"
@@ -116,7 +116,7 @@ rule-providers:
   crypto:       { type: http, behavior: domain, format: mrs, interval: 86400, url: "https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/release/crypto.mrs", path: ./rs/crypto.mrs }
   ip-check:     { type: http, behavior: domain, format: mrs, interval: 86400, url: "https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/release/ip-check.mrs", path: ./rs/ip-check.mrs }
   games:        { type: http, behavior: domain, format: mrs, interval: 86400, url: "https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/release/games.mrs", path: ./rs/games.mrs }
-  direct:       { type: http, behavior: domain, format: mrs, interval: 86400, url: "https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/release/direct.mrs", path: ./rs/direct.mrs }
+  direct-core:  { type: http, behavior: domain, format: mrs, interval: 86400, url: "https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/release/direct-core.mrs", path: ./rs/direct-core.mrs }
   direct-ip:    { type: http, behavior: ipcidr, format: mrs, interval: 86400, url: "https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/release/direct-ip.mrs", path: ./rs/direct-ip.mrs }
 
 rules:
@@ -136,6 +136,6 @@ rules:
   - RULE-SET,ip-check,DIRECT
   # --- games & direct services ---
   - RULE-SET,games,🎮 Игры
-  - RULE-SET,direct,DIRECT
+  - RULE-SET,direct-core,DIRECT
   # --- everything else ---
   - MATCH,🛡️ VPN

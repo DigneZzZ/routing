@@ -15,6 +15,7 @@
 
 | Устройство | mihomo | Xray / V2Ray |
 |---|---|---|
+| iPhone, слабое устройство | [`template-mobile.yaml`](template-mobile.yaml) | [`config-ios.json`](v2ray/config-ios.json) |
 | Телефон | [`template-mobile.yaml`](template-mobile.yaml) | [`config-mobile.json`](v2ray/config-mobile.json) |
 | Телефон, нужен весь реестр РКН | [`template-mobile-full.yaml`](template-mobile-full.yaml) | [`config-mobile-full.json`](v2ray/config-mobile-full.json) |
 | Компьютер | [`template-lite.yaml`](template-lite.yaml) | [`config.json`](v2ray/config.json) |
@@ -32,9 +33,35 @@ lite такого правила нет — неизвестный `.ru` идё�
 соединение, а все rule-provider'ы подключены в формате `mrs` — скомпилированном
 двоичном дереве вместо текста, который ядро держит в памяти построчно.
 
+Вместо `direct` они подключают `direct-core` — тот же набор, но вместо
+`geosite:apple` и `geosite:microsoft` в нём короткие списки реально
+используемых доменов. В апстримных категориях 3 201 запись, и 2 146 из них —
+защитные регистрации торговых марок вроде `applecoronavirus.com`,
+`12diasderegalosdeitunes.hn` и `applepaysupplies.berlin`. Ни одно устройство
+их не открывает, а место в конфиге они занимают. Если такой домен всё же
+понадобится, он просто пойдёт через прокси.
+
 Почему это важно: iOS даёт сетевому расширению **50 MiB на весь процесс**, и
 превышение — это не замедление, а мгновенное завершение. Android жёсткого
 лимита не имеет, но lmkd убивает VPN-сервис тем охотнее, чем он крупнее.
+
+**`config-ios.json` — отдельная история.** iOS даёт сетевому расширению 50 MiB
+на весь процесс, поэтому этот профиль не несёт ничего, что не обязано там быть:
+локальные сети, российские сайты, которые не пускают иностранный IP (банки,
+госуслуги, связь, транспорт, маркетплейсы), Apple, Microsoft и Google Play.
+Всё остальное — игры, Twitch, Pinterest, длинный хвост `geosite:category-ru` —
+идёт через прокси и прекрасно там работает. 170 доменов и 15 подсетей вместо
+1 297: около 0.1 MiB против 0.7 MiB. Полный список опубликован как
+`direct-ios.list`, если захотите собрать свой профиль.
+
+**Последнее правило — «всё остальное в прокси».** Значит, правило «в прокси»
+выше по списку меняет исход только там, где ниже стоит DIRECT-правило на тот
+же домен. Из 597 доменов проксируемых категорий таких ровно 33 —
+`gemini.gstatic.com` под пробником `gstatic.com`, `ads.twitch.tv` под
+`twitch.tv`. Остальные 564 повторяли то, что и так делает последнее правило,
+и в JSON-конфигах их больше нет. Маршрутизация от этого не изменилась: сборка
+прогоняет каждую запись каждого опубликованного набора через готовый профиль и
+падает, если хоть одна попала не туда.
 
 ---
 
@@ -52,14 +79,16 @@ https://raw.githubusercontent.com/DigneZzZ/routing/main/release/<файл>
 | Файл | Формат | Записей | .list | .mrs | Назначение |
 |---|---|---|---|---|---|
 | `reject` | domain · list · mrs | 1,228 | 26.7 KB | 11.3 KB | реклама и телеметрия → REJECT |
-| `proxy` | domain · list · mrs | 143 | 3.0 KB | 1.5 KB | Telegram, GitHub, WhatsApp, заблокированные РКН сайты → VPN |
+| `proxy` | domain · list · mrs | 154 | 3.2 KB | 1.7 KB | Telegram, GitHub, WhatsApp, заблокированные РКН сайты → VPN |
 | `discord` | domain · list · mrs | 28 | 0.6 KB | 0.4 KB | Discord → своя группа |
 | `ai` | domain · list · mrs | 182 | 3.3 KB | 1.9 KB | ChatGPT, Claude, Gemini, Copilot и другие → VPN |
 | `youtube` | domain · list · mrs | 176 | 2.7 KB | 1.3 KB | YouTube → своя группа |
 | `crypto` | domain · list · mrs | 96 | 1.4 KB | 0.9 KB | криптобиржи и агрегаторы → VPN |
 | `ip-check` | domain · list · mrs | 13 | 0.4 KB | 0.3 KB | сервисы проверки IP → DIRECT (показывают реальный IP) |
 | `games` | domain · list · mrs | 116 | 2.4 KB | 1.4 KB | Steam, Epic, Riot, Roblox, EFT → своя группа |
-| `direct` | domain · list · mrs | 3,201 | 57.8 KB | 29.7 KB | российские сервисы, Microsoft, Apple, Google Play, Twitch → DIRECT |
+| `direct` | domain · list · mrs | 3,226 | 58.1 KB | 29.8 KB | российские сервисы, Microsoft, Apple, Google Play, Twitch → DIRECT |
+| `direct-core` | domain · list · mrs | 1,147 | 17.9 KB | 9.3 KB | то же самое для телефонов: без «парковочных» доменов Apple и Microsoft |
+| `direct-ios` | domain · list · mrs | 155 | 2.3 KB | 1.3 KB | минимальный DIRECT: банки, госуслуги, связь, Apple, Microsoft, Google Play |
 | `direct-ip` | ipcidr · list · mrs | 18 | 0.3 KB | 0.2 KB | приватные и служебные сети → DIRECT |
 | `proxy-ip` | ipcidr · list · mrs | 9 | 0.2 KB | 0.1 KB | CIDR, которые нужно увести из-под geoip:ru → VPN |
 | `proxy-ip-full` | ipcidr · list · mrs | 1,616 | 25.9 KB | 6.3 KB | полный набор Telegram / Cloudflare / Discord CIDR |
@@ -104,8 +133,8 @@ DIRECT: домены в российских TLD и поддомены серв�
 
 | Файл | Для кого | Правил загрузится | Реестр РКН |
 |---|---|---|---|
-| [`template-mobile.yaml`](template-mobile.yaml) | телефон, облегчённый | 49 KB | нет |
-| [`template-mobile-full.yaml`](template-mobile-full.yaml) | телефон, полный | 340 KB | да |
+| [`template-mobile.yaml`](template-mobile.yaml) | телефон, облегчённый | 29 KB | нет |
+| [`template-mobile-full.yaml`](template-mobile-full.yaml) | телефон, полный | 320 KB | да |
 | [`template.yaml`](template.yaml) | компьютер, полный | 346 KB | да |
 | [`template-lite.yaml`](template-lite.yaml) | компьютер, облегчённый | 55 KB | нет |
 
@@ -162,10 +191,11 @@ Google-push.
 
 | Конфиг | Размер | Правил | Для кого |
 |---|---|---|---|
-| [`config-mobile.json`](v2ray/config-mobile.json) | 99 KB | 3,938 | iOS и Android — рекомендуемый |
-| [`config-mobile-full.json`](v2ray/config-mobile-full.json) | 655 KB | 27,056 | Android и мощные iOS: + реестр РКН |
-| [`config.json`](v2ray/config.json) | 143 KB | 3,938 | десктоп |
-| [`config_full.json`](v2ray/config_full.json) | 947 KB | 27,056 | десктоп: + реестр РКН |
+| [`config-ios.json`](v2ray/config-ios.json) | 5 KB | 181 | iOS — минимальный, только необходимое |
+| [`config-mobile.json`](v2ray/config-mobile.json) | 31 KB | 1,293 | iOS и Android — рекомендуемый |
+| [`config-mobile-full.json`](v2ray/config-mobile-full.json) | 587 KB | 24,424 | Android и мощные iOS: + реестр РКН |
+| [`config.json`](v2ray/config.json) | 124 KB | 3,399 | десктоп |
+| [`config_full.json`](v2ray/config_full.json) | 929 KB | 26,530 | десктоп: + реестр РКН |
 
 > В `outbounds` есть только `direct` и `block`. Добавьте свой outbound с тегом
 > `proxy` — без него Xray отбросит соединения (не пустит их напрямую).
@@ -173,9 +203,9 @@ Google-push.
 ### geosite.dat / geoip.dat
 
 ```
-https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/geosite.dat        # 604.3 KB — с реестром РКН
+https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/geosite.dat        # 605.9 KB — с реестром РКН
 https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/geoip.dat          # 787.5 KB
-https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/happ/geosite.dat   # 155.5 KB — без реестра, для телефонов
+https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/happ/geosite.dat   # 157.0 KB — без реестра, для телефонов
 https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/happ/geoip.dat     # 776.5 KB
 ```
 
@@ -191,8 +221,8 @@ https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/happ/geoip.dat     # 776
 |---|---|---|
 | `geosite:category-geoblock-ru` | 21,987 | нет |
 | `geosite:apple` | 1,788 | да |
-| `geosite:whitelist` | 1,131 | да |
-| `geosite:category-ru` | 1,131 | да |
+| `geosite:whitelist` | 1,092 | да |
+| `geosite:category-ru` | 1,092 | да |
 | `geosite:category-ads` | 910 | да |
 | `geosite:microsoft` | 736 | да |
 | `geosite:win-spy` | 327 | да |
@@ -200,16 +230,19 @@ https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/happ/geoip.dat     # 776
 | `geosite:youtube` | 177 | да |
 | `geosite:private` | 122 | да |
 | `geosite:crypto` | 96 | да |
+| `geosite:ru-core` | 81 | да |
 | `geosite:github` | 64 | да |
 | `geosite:steam` | 60 | да |
 | `geosite:pinterest` | 52 | да |
-| `geosite:banned-ru` | 35 | да |
+| `geosite:microsoft-core` | 49 | да |
+| `geosite:banned-ru` | 46 | да |
 | `geosite:twitch` | 34 | да |
 | `geosite:epicgames` | 30 | да |
 | `geosite:discord` | 28 | да |
 | `geosite:ai-core` | 25 | да |
 | `geosite:google-deepmind` | 25 | да |
 | `geosite:telegram` | 21 | да |
+| `geosite:apple-core` | 18 | да |
 | `geosite:hosting` | 14 | да |
 | `geosite:torrent` | 13 | да |
 | `geosite:whatsapp` | 13 | да |
@@ -319,7 +352,7 @@ V2RayTUN использует встроенные `geosite.dat`/`geoip.dat` (с
 routing: "<base64>"
 ```
 
-**Способ 3 — deeplink:** [📲 Импорт](https://r.far.ovh/?url=v2rayTun%3A%2F%2Fimport_route%2FeyJkb21haW5TdHJhdGVneSI6IkFzSXMiLCJkb21haW5NYXRjaGVyIjoiaHlicmlkIiwiaWQiOiJGRTRENjZEQy0yMTBDLTU4NTctQjRGQi04QTlBQkM0MjFGMjUiLCJuYW1lIjoiRGlnbmVaelogUm91dGluZyIsImJhbGFuY2VycyI6W10sInJ1bGVzIjpbeyJ0eXBlIjoiZmllbGQiLCJpZCI6IjY3OTk1QjIyLTUwM0QtNTM1My1BOTc0LUI1NEE2QjEzMzcwMCIsIl9fbmFtZV9fIjoiQmxvY2sgQWRzICYgVHJhY2tlcnMiLCJkb21haW5NYXRjaGVyIjoiaHlicmlkIiwiZG9tYWluIjpbImdlb3NpdGU6Y2F0ZWdvcnktYWRzLWFsbCIsImdlb3NpdGU6d2luLXNweSJdLCJvdXRib3VuZFRhZyI6ImJsb2NrIn0seyJ0eXBlIjoiZmllbGQiLCJpZCI6IjVBMzhEMzNELTVGRUEtNThBQi04Q0I5LTQyREQ5NzU0NkIxOCIsIl9fbmFtZV9fIjoiRGlyZWN0IFByaXZhdGUgSVBzIiwiaXAiOlsiZ2VvaXA6cHJpdmF0ZSJdLCJvdXRib3VuZFRhZyI6ImRpcmVjdCJ9LHsidHlwZSI6ImZpZWxkIiwiaWQiOiJCN0QwOTRENy1BMUQ5LTVFQkYtQThBRS0yQzdFN0FGNjg1OTQiLCJfX25hbWVfXyI6IkRpcmVjdCBQcml2YXRlIERvbWFpbnMiLCJkb21haW5NYXRjaGVyIjoiaHlicmlkIiwiZG9tYWluIjpbImdlb3NpdGU6cHJpdmF0ZSJdLCJvdXRib3VuZFRhZyI6ImRpcmVjdCJ9LHsidHlwZSI6ImZpZWxkIiwiaWQiOiJBNTYzMDZCNi1CQUIxLTUyNUQtQUZBOC1CNkFEQkYxQ0JBODYiLCJfX25hbWVfXyI6IkRpcmVjdCBCaXRUb3JyZW50IiwicHJvdG9jb2wiOlsiYml0dG9ycmVudCJdLCJvdXRib3VuZFRhZyI6ImRpcmVjdCJ9LHsidHlwZSI6ImZpZWxkIiwiaWQiOiIyMjBCQUIzRS02QjBGLTUzNUYtOUU4RS1DMDA2MjZGNDZCMzkiLCJfX25hbWVfXyI6IlByb3h5IFRlbGVncmFtIC8gRGlzY29yZCAvIFdoYXRzQXBwIiwiZG9tYWluTWF0Y2hlciI6Imh5YnJpZCIsImRvbWFpbiI6WyJnZW9zaXRlOnRlbGVncmFtIiwiZ2Vvc2l0ZTpkaXNjb3JkIiwiZ2Vvc2l0ZTp3aGF0c2FwcCIsImdlb3NpdGU6Z2l0aHViIl0sIm91dGJvdW5kVGFnIjoicHJveHkifSx7InR5cGUiOiJmaWVsZCIsImlkIjoiQzZERTE4NDItM0NCOC01QTVCLThDRkItMDExOUE1MTcyOEZDIiwiX19uYW1lX18iOiJQcm94eSBZb3VUdWJlIiwiZG9tYWluTWF0Y2hlciI6Imh5YnJpZCIsImRvbWFpbiI6WyJnZW9zaXRlOnlvdXR1YmUiXSwib3V0Ym91bmRUYWciOiJwcm94eSJ9LHsidHlwZSI6ImZpZWxkIiwiaWQiOiI3RkU4OUVGMy04N0NGLTU5MzgtQkU2Qy02MEJFQTEwRDhGOEUiLCJfX25hbWVfXyI6IlByb3h5IEFJIiwiZG9tYWluTWF0Y2hlciI6Imh5YnJpZCIsImRvbWFpbiI6WyJkb21haW46YWkuZ29vZ2xlLmRldiIsImRvbWFpbjphaXN0dWRpby5nb29nbGUuY29tIiwiZG9tYWluOmFudGhyb3BpYy5jb20iLCJkb21haW46Y2hhcmFjdGVyLmFpIiwiZG9tYWluOmNoYXRncHQuY29tIiwiZG9tYWluOmNsYXVkZS5haSIsImRvbWFpbjpjbGF1ZGV1c2VyY29udGVudC5jb20iLCJkb21haW46Y29waWxvdC5taWNyb3NvZnQuY29tIiwiZG9tYWluOmRlZXBsLmNvbSIsImRvbWFpbjpkZWVwbWluZC5nb29nbGUiLCJkb21haW46ZWxldmVubGFicy5pbyIsImRvbWFpbjpnZW1pbmkuZ29vZ2xlLmNvbSIsImRvbWFpbjpnZW5lcmF0aXZlbGFuZ3VhZ2UuZ29vZ2xlYXBpcy5jb20iLCJkb21haW46Z2l0aHViY29waWxvdC5jb20iLCJkb21haW46Z3Jvay5jb20iLCJkb21haW46Z3JvcS5jb20iLCJkb21haW46aHVnZ2luZ2ZhY2UuY28iLCJkb21haW46bWlkam91cm5leS5jb20iLCJkb21haW46bWlzdHJhbC5haSIsImRvbWFpbjpvYWlzdGF0aWMuY29tIiwiZG9tYWluOm9haXVzZXJjb250ZW50LmNvbSIsImRvbWFpbjpvcGVuYWkuY29tIiwiZG9tYWluOnBlcnBsZXhpdHkuYWkiLCJkb21haW46cG9lLmNvbSIsImRvbWFpbjp4LmFpIl0sIm91dGJvdW5kVGFnIjoicHJveHkifSx7InR5cGUiOiJmaWVsZCIsImlkIjoiMDE5NkQ1M0QtREM2Ri01QzZBLUI4NUItMDdGQkVFREI0RjgzIiwiX19uYW1lX18iOiJQcm94eSBDcnlwdG8gRXhjaGFuZ2VzIiwiZG9tYWluTWF0Y2hlciI6Imh5YnJpZCIsImRvbWFpbiI6WyJkb21haW46YXJiaXNjYW4uaW8iLCJkb21haW46YmFzZXNjYW4ub3JnIiwiZG9tYWluOmJnY2RuaW1nLmNvbSIsImRvbWFpbjpiaWZpbml0eS5jb20iLCJkb21haW46YmluYW5jZS5jaGFyaXR5IiwiZG9tYWluOmJpbmFuY2UuY2xvdWQiLCJkb21haW46YmluYW5jZS5jb20iLCJkb21haW46YmluYW5jZS5kZXYiLCJkb21haW46YmluYW5jZS5pbmZvIiwiZG9tYWluOmJpbmFuY2UubWUiLCJkb21haW46YmluYW5jZS5vcmciLCJkb21haW46YmluYW5jZS51cyIsImRvbWFpbjpiaW5hbmNlLnZpc2lvbiIsImRvbWFpbjpiaW5hbmNlY250LmNvbSIsImRvbWFpbjpiaW5hbmNlZnV0dXJlLmNvbSIsImRvbWFpbjpiaXRnZXQuY29tIiwiZG9tYWluOmJpdGdldC5zaXRlIiwiZG9tYWluOmJpdGdldGFwcC5jb20iLCJkb21haW46YmxvY2tjaGFpbi5jb20iLCJkb21haW46YmxvY2tjaGFpci5jb20iLCJkb21haW46Ym5iY2hhaW4ub3JnIiwiZG9tYWluOmJuYmNoYWluLndvcmxkIiwiZG9tYWluOmJuYnN0YXRpYy5jb20iLCJkb21haW46YnNjc2Nhbi5jb20iLCJkb21haW46YnliaXQtdHIuY29tIiwiZG9tYWluOmJ5Yml0LmFlIiwiZG9tYWluOmJ5Yml0LmNvbSIsImRvbWFpbjpieWJpdC5ldSIsImRvbWFpbjpieWJpdC5pZCIsImRvbWFpbjpieWJpdC5reiIsImRvbWFpbjpieWJpdC5ubCIsImRvbWFpbjpieWJpdC5vcmciLCJkb21haW46YnliaXQudHIiLCJkb21haW46YnliaXRhcGkuY29tIiwiZG9tYWluOmJ5Yml0Y2RuLmNvbSIsImRvbWFpbjpieWJpdGdlb3JnaWEuZ2UiLCJkb21haW46YnliaXRnbG9iYWwuY29tIiwiZG9tYWluOmJ5Yml0c2lnbnVwLmNvbSIsImRvbWFpbjpieWNzaS5jb20iLCJkb21haW46YnlyZWFsLmlvIiwiZG9tYWluOmJ5dGljay5jb20iLCJkb21haW46Y2ItYm4ubmV0IiwiZG9tYWluOmNkbmJhc2UuaW8iLCJkb21haW46Y29pbmJhc2Utc3RhdGljcy5jb20iLCJkb21haW46Y29pbmJhc2UuY2xvdWQiLCJkb21haW46Y29pbmJhc2UuY29tIiwiZG9tYWluOmNvaW5iYXNlLm9yZyIsImRvbWFpbjpjb2luZ2Vja28uY29tIiwiZG9tYWluOmNvaW5tYXJrZXRjYXAuY29tIiwiZG9tYWluOmRlZmlsbGFtYS5jb20iLCJkb21haW46ZGV4c2NyZWVuZXIuY29tIiwiZG9tYWluOmRleHRvb2xzLmlvIiwiZG9tYWluOmV0aGVyc2Nhbi5pbyIsImRvbWFpbjpnYXRlLmFjIiwiZG9tYWluOmdhdGUuaW8iLCJkb21haW46Z2F0ZWRhdGEub3JnIiwiZG9tYWluOmdhdGVpbWcuY29tIiwiZG9tYWluOmdhdGVpby5jbyIsImRvbWFpbjpnYXRlaW8ud3MiLCJkb21haW46Z2F0ZXRvb2wuY29tIiwiZG9tYWluOmhiZG0uY29tIiwiZG9tYWluOmhiZmlsZS5uZXQiLCJkb21haW46aGJnLmNvbSIsImRvbWFpbjpodHguY28iLCJkb21haW46aHR4LmNvbSIsImRvbWFpbjpodW9iaS5jb20iLCJkb21haW46aHVvYmkucHJvIiwiZG9tYWluOmh1b2JpZ3JvdXAuY29tIiwiZG9tYWluOmtyYWtlbi5jbyIsImRvbWFpbjprcmFrZW4uY29tIiwiZG9tYWluOmtyYWtlbmZ4LmNvbSIsImRvbWFpbjprdWNvaW4uY29tIiwiZG9tYWluOmt1Y29pbi5pbyIsImRvbWFpbjprdWNvaW4ucGx1cyIsImRvbWFpbjprdW1leC5jb20iLCJkb21haW46bWV4Yy5jbyIsImRvbWFpbjptZXhjLmNvbSIsImRvbWFpbjptZXhjLmlvIiwiZG9tYWluOm1leGNnbG9iYWwuY29tIiwiZG9tYWluOm1vY29ydGVjaC5jb20iLCJkb21haW46b2tidG90aGVtb29uLmNvbSIsImRvbWFpbjpva2Nkbi5jb20iLCJkb21haW46b2tjb2luLmNvbSIsImRvbWFpbjpva2V4LmNvbSIsImRvbWFpbjpva2V4Y24uY29tIiwiZG9tYWluOm9rbGluay5jb20iLCJkb21haW46b2t4LmNhYiIsImRvbWFpbjpva3guY29tIiwiZG9tYWluOm9reC5vcmciLCJkb21haW46cGF5d2FyZC5jb20iLCJkb21haW46cG9seWdvbnNjYW4uY29tIiwiZG9tYWluOnNhZnUuaW0iLCJkb21haW46c29sc2Nhbi5pbyIsImRvbWFpbjp0cmFkaW5ndmlldy5jb20iLCJkb21haW46dHJvbnNjYW4ub3JnIiwiZG9tYWluOnRydXN0d2FsbGV0LmNvbSJdLCJvdXRib3VuZFRhZyI6InByb3h5In0seyJ0eXBlIjoiZmllbGQiLCJpZCI6IjhCNzhCM0Y0LTUzOEYtNTNEOC1BRTY2LTk4MjczODlGQzNBMiIsIl9fbmFtZV9fIjoiUHJveHkgQmFubmVkIFJVIFNpdGVzIiwiZG9tYWluTWF0Y2hlciI6Imh5YnJpZCIsImRvbWFpbiI6WyJkb21haW46NHBkYS50byIsImRvbWFpbjphbGZhaG9zdC5pbyIsImRvbWFpbjphbGZhaG9zdC5wcm8iLCJkb21haW46YW1uZXppYS5vcmciLCJkb21haW46YXJrb3NlbGFicy5jb20iLCJkb21haW46YXV0b2Rlc2suY29tIiwiZG9tYWluOmJldHRlcnN0YWNrLmNvbSIsImRvbWFpbjpjb2luaWZ5LmNvbSIsImRvbWFpbjplY2hvLm1zay5ydSIsImRvbWFpbjpoYWJyLmNvbSIsImRvbWFpbjpoZHJlemthLmFnIiwiZG9tYWluOmhkcmV6a2EubWUiLCJkb21haW46aG9zdHplYWxvdC5jb20iLCJkb21haW46anV0LnN1IiwiZG9tYWluOmthbWF0ZXJhLmNvbSIsImRvbWFpbjprYXJhLnN1IiwiZG9tYWluOmtlbW9uby5zdSIsImRvbWFpbjpraW5vLnB1YiIsImRvbWFpbjpraW5vemFsLmd1cnUiLCJkb21haW46a2lub3phbC50diIsImRvbWFpbjpsaWIuc29jaWFsIiwiZG9tYWluOmxvc3RmaWxtLmRvd25sb2FkIiwiZG9tYWluOmxvc3RmaWxtLnR2IiwiZG9tYWluOmxvc3RmaWxtLnVubyIsImRvbWFpbjptZWRpYXpvbmEuY2EiLCJkb21haW46bWVkdXphLmlvIiwiZG9tYWluOm1vc2Nvd3RpbWVzLnJ1IiwiZG9tYWluOm5hbWVjaGVhcC5jb20iLCJkb21haW46bmdyb2stZnJlZS5kZXYiLCJkb21haW46bm92YXlhZ2F6ZXRhLnJ1IiwiZG9tYWluOm50Yy5wYXJ0eSIsImRvbWFpbjpvcGVub2RlLnh5eiIsImRvbWFpbjpvdmQubmV3cyIsImRvbWFpbjpwcm9la3QubWVkaWEiLCJkb21haW46cXdhbnQuY29tIiwiZG9tYWluOnJlcHVibGljLnJ1IiwiZG9tYWluOnJlemthLmFnIiwiZG9tYWluOnJveWFsZWhvc3RpbmcubmV0IiwiZG9tYWluOnJ1dHJhY2tlci5uZXQiLCJkb21haW46cnV0cmFja2VyLm9yZyIsImRvbWFpbjpzZWFzb252YXIucnUiLCJkb21haW46c25vYi5ydSIsImRvbWFpbjpzc2hpZC5pbyIsImRvbWFpbjp0aGUtdmlsbGFnZS5ydSIsImRvbWFpbjp0aGVpbnMucnUiLCJkb21haW46dHZyYWluLnJ1IiwiZG9tYWluOnZkc2luYS5jb20iLCJkb21haW46d2ViaG9vay5zaXRlIiwiZG9tYWluOnpvbmEubWVkaWEiXSwib3V0Ym91bmRUYWciOiJwcm94eSJ9LHsidHlwZSI6ImZpZWxkIiwiaWQiOiIyM0FGMDkzOS05N0FCLTU2OUEtOTg5NS0yM0Q2OEY4MzRDNDkiLCJfX25hbWVfXyI6IkRpcmVjdCBJUC1jaGVjayBFbmRwb2ludHMiLCJkb21haW5NYXRjaGVyIjoiaHlicmlkIiwiZG9tYWluIjpbImRvbWFpbjphcGkuaXBpZnkub3JnIiwiZG9tYWluOmNhbGxzLm9rY2RuLnJ1IiwiZG9tYWluOmNoZWNraXAuYW1hem9uYXdzLmNvbSIsImRvbWFpbjpnb3N1c2x1Z2kucnUiLCJkb21haW46Z3N0YXRpYy5jb20iLCJkb21haW46aWZjb25maWcubWUiLCJkb21haW46aXAubWFpbC5ydSIsImRvbWFpbjppcHY0LWludGVybmV0LnlhbmRleC5uZXQiLCJkb21haW46aXB2Ni1pbnRlcm5ldC55YW5kZXgubmV0IiwiZG9tYWluOm10YWxrLmdvb2dsZS5jb20iLCJkb21haW46cHVzaHRycy5wdXNoLmhpY2xvdWQuY29tIiwiZG9tYWluOnB1c2h0cnMxLnB1c2guaGljbG91ZC5jb20iLCJkb21haW46dG9rZW4tZHJjbi5wdXNoLmRiYW5rY2xvdWQuY29tIl0sIm91dGJvdW5kVGFnIjoiZGlyZWN0In0seyJ0eXBlIjoiZmllbGQiLCJpZCI6IjREMkUxRTBBLTg5Q0YtNUM2Ni1BN0UyLTI0OTI3ODZBRDk1MiIsIl9fbmFtZV9fIjoiRGlyZWN0IFJVIFNlcnZpY2VzIiwiZG9tYWluTWF0Y2hlciI6Imh5YnJpZCIsImRvbWFpbiI6WyJnZW9zaXRlOmNhdGVnb3J5LXJ1IiwiZ2Vvc2l0ZTphcHBsZSIsImdlb3NpdGU6bWljcm9zb2Z0IiwiZ2Vvc2l0ZTpzdGVhbSIsImdlb3NpdGU6ZXBpY2dhbWVzIiwiZ2Vvc2l0ZTpwaW50ZXJlc3QiLCJnZW9zaXRlOmdvb2dsZS1wbGF5IiwiZ2Vvc2l0ZTpvcmlnaW4iLCJnZW9zaXRlOnR3aXRjaCJdLCJvdXRib3VuZFRhZyI6ImRpcmVjdCJ9LHsidHlwZSI6ImZpZWxkIiwiaWQiOiJBQzBCNjMyOS0wRDJELTVFREItQTA0Ni04NUE3NzhFRkM1MDAiLCJfX25hbWVfXyI6IkRpcmVjdCBSVSBUTERzIiwiZG9tYWluTWF0Y2hlciI6Imh5YnJpZCIsImRvbWFpbiI6WyJkb21haW46cnUiLCJkb21haW46c3UiLCJkb21haW46bW9zY293IiwiZG9tYWluOnhuLS1wMWFpIiwiZG9tYWluOnhuLS1wMWFjZiIsImRvbWFpbjp4bi0tODBhc2VoZGIiLCJkb21haW46eG4tLWMxYXZnIiwiZG9tYWluOnhuLS04MGFzd2ciLCJkb21haW46eG4tLTgwYWR4aGtzIiwiZG9tYWluOnhuLS1kMWFjajNiIl0sIm91dGJvdW5kVGFnIjoiZGlyZWN0In0seyJ0eXBlIjoiZmllbGQiLCJpZCI6IjA3RENGNTU4LUUwNEQtNTUzMC1BOEQ3LThGRDc4Q0JEMzJBQSIsIl9fbmFtZV9fIjoiRGlyZWN0IFJVIElQcyIsImlwIjpbImdlb2lwOnJ1Il0sIm91dGJvdW5kVGFnIjoiZGlyZWN0In0seyJ0eXBlIjoiZmllbGQiLCJpZCI6Ijg1QTZFRjYwLThFRUEtNTJGMS1BQzYzLTM4RDBFM0JFQTRFRCIsIl9fbmFtZV9fIjoiUHJveHkgQWxsIiwicG9ydCI6IjAtNjU1MzUiLCJvdXRib3VuZFRhZyI6InByb3h5In1dfQ%3D%3D)
+**Способ 3 — deeplink:** [📲 Импорт](https://r.far.ovh/?url=v2rayTun%3A%2F%2Fimport_route%2FeyJkb21haW5TdHJhdGVneSI6IkFzSXMiLCJkb21haW5NYXRjaGVyIjoiaHlicmlkIiwiaWQiOiJGRTRENjZEQy0yMTBDLTU4NTctQjRGQi04QTlBQkM0MjFGMjUiLCJuYW1lIjoiRGlnbmVaelogUm91dGluZyIsImJhbGFuY2VycyI6W10sInJ1bGVzIjpbeyJ0eXBlIjoiZmllbGQiLCJpZCI6IjY3OTk1QjIyLTUwM0QtNTM1My1BOTc0LUI1NEE2QjEzMzcwMCIsIl9fbmFtZV9fIjoiQmxvY2sgQWRzICYgVHJhY2tlcnMiLCJkb21haW5NYXRjaGVyIjoiaHlicmlkIiwiZG9tYWluIjpbImdlb3NpdGU6Y2F0ZWdvcnktYWRzLWFsbCIsImdlb3NpdGU6d2luLXNweSJdLCJvdXRib3VuZFRhZyI6ImJsb2NrIn0seyJ0eXBlIjoiZmllbGQiLCJpZCI6IjVBMzhEMzNELTVGRUEtNThBQi04Q0I5LTQyREQ5NzU0NkIxOCIsIl9fbmFtZV9fIjoiRGlyZWN0IFByaXZhdGUgSVBzIiwiaXAiOlsiZ2VvaXA6cHJpdmF0ZSJdLCJvdXRib3VuZFRhZyI6ImRpcmVjdCJ9LHsidHlwZSI6ImZpZWxkIiwiaWQiOiJCN0QwOTRENy1BMUQ5LTVFQkYtQThBRS0yQzdFN0FGNjg1OTQiLCJfX25hbWVfXyI6IkRpcmVjdCBQcml2YXRlIERvbWFpbnMiLCJkb21haW5NYXRjaGVyIjoiaHlicmlkIiwiZG9tYWluIjpbImdlb3NpdGU6cHJpdmF0ZSJdLCJvdXRib3VuZFRhZyI6ImRpcmVjdCJ9LHsidHlwZSI6ImZpZWxkIiwiaWQiOiJBNTYzMDZCNi1CQUIxLTUyNUQtQUZBOC1CNkFEQkYxQ0JBODYiLCJfX25hbWVfXyI6IkRpcmVjdCBCaXRUb3JyZW50IiwicHJvdG9jb2wiOlsiYml0dG9ycmVudCJdLCJvdXRib3VuZFRhZyI6ImRpcmVjdCJ9LHsidHlwZSI6ImZpZWxkIiwiaWQiOiIyMjBCQUIzRS02QjBGLTUzNUYtOUU4RS1DMDA2MjZGNDZCMzkiLCJfX25hbWVfXyI6IlByb3h5IFRlbGVncmFtIC8gRGlzY29yZCAvIFdoYXRzQXBwIiwiZG9tYWluTWF0Y2hlciI6Imh5YnJpZCIsImRvbWFpbiI6WyJnZW9zaXRlOnRlbGVncmFtIiwiZ2Vvc2l0ZTpkaXNjb3JkIiwiZ2Vvc2l0ZTp3aGF0c2FwcCIsImdlb3NpdGU6Z2l0aHViIl0sIm91dGJvdW5kVGFnIjoicHJveHkifSx7InR5cGUiOiJmaWVsZCIsImlkIjoiQzZERTE4NDItM0NCOC01QTVCLThDRkItMDExOUE1MTcyOEZDIiwiX19uYW1lX18iOiJQcm94eSBZb3VUdWJlIiwiZG9tYWluTWF0Y2hlciI6Imh5YnJpZCIsImRvbWFpbiI6WyJnZW9zaXRlOnlvdXR1YmUiXSwib3V0Ym91bmRUYWciOiJwcm94eSJ9LHsidHlwZSI6ImZpZWxkIiwiaWQiOiI3RkU4OUVGMy04N0NGLTU5MzgtQkU2Qy02MEJFQTEwRDhGOEUiLCJfX25hbWVfXyI6IlByb3h5IEFJIiwiZG9tYWluTWF0Y2hlciI6Imh5YnJpZCIsImRvbWFpbiI6WyJkb21haW46Y29waWxvdC5taWNyb3NvZnQuY29tIiwiZG9tYWluOmdpdGh1YmNvcGlsb3QuY29tIl0sIm91dGJvdW5kVGFnIjoicHJveHkifSx7InR5cGUiOiJmaWVsZCIsImlkIjoiOEI3OEIzRjQtNTM4Ri01M0Q4LUFFNjYtOTgyNzM4OUZDM0EyIiwiX19uYW1lX18iOiJQcm94eSBCYW5uZWQgUlUgU2l0ZXMiLCJkb21haW5NYXRjaGVyIjoiaHlicmlkIiwiZG9tYWluIjpbImRvbWFpbjplY2hvLm1zay5ydSIsImRvbWFpbjpqdXQuc3UiLCJkb21haW46a2FyYS5zdSIsImRvbWFpbjprZW1vbm8uc3UiLCJkb21haW46bW9zY293dGltZXMucnUiLCJkb21haW46bm92YXlhZ2F6ZXRhLnJ1IiwiZG9tYWluOnJlcHVibGljLnJ1IiwiZG9tYWluOnNlYXNvbnZhci5ydSIsImRvbWFpbjpzbm9iLnJ1IiwiZG9tYWluOnRoZS12aWxsYWdlLnJ1IiwiZG9tYWluOnRoZWlucy5ydSIsImRvbWFpbjp0dnJhaW4ucnUiXSwib3V0Ym91bmRUYWciOiJwcm94eSJ9LHsidHlwZSI6ImZpZWxkIiwiaWQiOiIyM0FGMDkzOS05N0FCLTU2OUEtOTg5NS0yM0Q2OEY4MzRDNDkiLCJfX25hbWVfXyI6IkRpcmVjdCBJUC1jaGVjayBFbmRwb2ludHMiLCJkb21haW5NYXRjaGVyIjoiaHlicmlkIiwiZG9tYWluIjpbImRvbWFpbjphcGkuaXBpZnkub3JnIiwiZG9tYWluOmNhbGxzLm9rY2RuLnJ1IiwiZG9tYWluOmNoZWNraXAuYW1hem9uYXdzLmNvbSIsImRvbWFpbjpnb3N1c2x1Z2kucnUiLCJkb21haW46Z3N0YXRpYy5jb20iLCJkb21haW46aWZjb25maWcubWUiLCJkb21haW46aXAubWFpbC5ydSIsImRvbWFpbjppcHY0LWludGVybmV0LnlhbmRleC5uZXQiLCJkb21haW46aXB2Ni1pbnRlcm5ldC55YW5kZXgubmV0IiwiZG9tYWluOm10YWxrLmdvb2dsZS5jb20iLCJkb21haW46cHVzaHRycy5wdXNoLmhpY2xvdWQuY29tIiwiZG9tYWluOnB1c2h0cnMxLnB1c2guaGljbG91ZC5jb20iLCJkb21haW46dG9rZW4tZHJjbi5wdXNoLmRiYW5rY2xvdWQuY29tIl0sIm91dGJvdW5kVGFnIjoiZGlyZWN0In0seyJ0eXBlIjoiZmllbGQiLCJpZCI6IjREMkUxRTBBLTg5Q0YtNUM2Ni1BN0UyLTI0OTI3ODZBRDk1MiIsIl9fbmFtZV9fIjoiRGlyZWN0IFJVIFNlcnZpY2VzIiwiZG9tYWluTWF0Y2hlciI6Imh5YnJpZCIsImRvbWFpbiI6WyJnZW9zaXRlOmNhdGVnb3J5LXJ1IiwiZ2Vvc2l0ZTphcHBsZSIsImdlb3NpdGU6bWljcm9zb2Z0IiwiZ2Vvc2l0ZTpzdGVhbSIsImdlb3NpdGU6ZXBpY2dhbWVzIiwiZ2Vvc2l0ZTpwaW50ZXJlc3QiLCJnZW9zaXRlOmdvb2dsZS1wbGF5IiwiZ2Vvc2l0ZTpvcmlnaW4iLCJnZW9zaXRlOnR3aXRjaCJdLCJvdXRib3VuZFRhZyI6ImRpcmVjdCJ9LHsidHlwZSI6ImZpZWxkIiwiaWQiOiJBQzBCNjMyOS0wRDJELTVFREItQTA0Ni04NUE3NzhFRkM1MDAiLCJfX25hbWVfXyI6IkRpcmVjdCBSVSBUTERzIiwiZG9tYWluTWF0Y2hlciI6Imh5YnJpZCIsImRvbWFpbiI6WyJkb21haW46cnUiLCJkb21haW46c3UiLCJkb21haW46bW9zY293IiwiZG9tYWluOnhuLS1wMWFpIiwiZG9tYWluOnhuLS1wMWFjZiIsImRvbWFpbjp4bi0tODBhc2VoZGIiLCJkb21haW46eG4tLWMxYXZnIiwiZG9tYWluOnhuLS04MGFzd2ciLCJkb21haW46eG4tLTgwYWR4aGtzIiwiZG9tYWluOnhuLS1kMWFjajNiIl0sIm91dGJvdW5kVGFnIjoiZGlyZWN0In0seyJ0eXBlIjoiZmllbGQiLCJpZCI6IjA3RENGNTU4LUUwNEQtNTUzMC1BOEQ3LThGRDc4Q0JEMzJBQSIsIl9fbmFtZV9fIjoiRGlyZWN0IFJVIElQcyIsImlwIjpbImdlb2lwOnJ1Il0sIm91dGJvdW5kVGFnIjoiZGlyZWN0In0seyJ0eXBlIjoiZmllbGQiLCJpZCI6Ijg1QTZFRjYwLThFRUEtNTJGMS1BQzYzLTM4RDBFM0JFQTRFRCIsIl9fbmFtZV9fIjoiUHJveHkgQWxsIiwicG9ydCI6IjAtNjU1MzUiLCJvdXRib3VuZFRhZyI6InByb3h5In1dfQ%3D%3D)
 
 ```
 https://raw.githubusercontent.com/DigneZzZ/routing/main/v2ray/v2raytun/routing.json
@@ -340,26 +373,27 @@ template-lite.yaml                                   8 KB
 template-mobile-full.yaml                            9 KB
 template-mobile.yaml                                 8 KB
 template.yaml                                       10 KB
-v2ray/config-mobile-full.json                      655 KB
-v2ray/config-mobile.json                            99 KB
-v2ray/config.json                                  143 KB
-v2ray/config_full.json                             947 KB
+v2ray/config-ios.json                                5 KB
+v2ray/config-mobile-full.json                      587 KB
+v2ray/config-mobile.json                            31 KB
+v2ray/config.json                                  124 KB
+v2ray/config_full.json                             929 KB
 v2ray/geoip.dat                                    787 KB
-v2ray/geosite.dat                                  604 KB
+v2ray/geosite.dat                                  606 KB
 v2ray/happ/default.json                              2 KB
 v2ray/happ/default_deeplink.txt                      2 KB
 v2ray/happ/full.json                                 2 KB
 v2ray/happ/full_deeplink.txt                         2 KB
 v2ray/happ/geoip.dat                               776 KB
-v2ray/happ/geosite.dat                             155 KB
+v2ray/happ/geosite.dat                             157 KB
 v2ray/incy/default.json                              2 KB
 v2ray/incy/default_deeplink.txt                      2 KB
 v2ray/incy/full.json                                 2 KB
 v2ray/incy/full_deeplink.txt                         2 KB
-v2ray/v2raytun/routing.json                          9 KB
-v2ray/v2raytun/routing_base64.txt                    9 KB
-v2ray/v2raytun/routing_deeplink.txt                  9 KB
-v2ray/v2raytun/routing_header.txt                    9 KB
+v2ray/v2raytun/routing.json                          4 KB
+v2ray/v2raytun/routing_base64.txt                    4 KB
+v2ray/v2raytun/routing_deeplink.txt                  4 KB
+v2ray/v2raytun/routing_header.txt                    4 KB
 ```
 
 Всё пересобирается автоматически два раза в сутки через GitHub Actions.

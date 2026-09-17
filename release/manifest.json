@@ -10,9 +10,9 @@
     {
       "name": "proxy",
       "behavior": "domain",
-      "entries": 143,
-      "list": 3088,
-      "mrs": 1578
+      "entries": 154,
+      "list": 3254,
+      "mrs": 1699
     },
     {
       "name": "discord",
@@ -59,9 +59,23 @@
     {
       "name": "direct",
       "behavior": "domain",
-      "entries": 3201,
-      "list": 59187,
-      "mrs": 30408
+      "entries": 3226,
+      "list": 59489,
+      "mrs": 30564
+    },
+    {
+      "name": "direct-core",
+      "behavior": "domain",
+      "entries": 1147,
+      "list": 18313,
+      "mrs": 9557
+    },
+    {
+      "name": "direct-ios",
+      "behavior": "domain",
+      "entries": 155,
+      "list": 2321,
+      "mrs": 1296
     },
     {
       "name": "direct-ip",
