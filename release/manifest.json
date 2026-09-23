@@ -4,8 +4,8 @@
       "name": "reject",
       "behavior": "domain",
       "entries": 1228,
-      "list": 27315,
-      "mrs": 11604
+      "list": 27305,
+      "mrs": 11196
     },
     {
       "name": "proxy",
