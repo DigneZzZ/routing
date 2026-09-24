@@ -87,23 +87,23 @@
     {
       "name": "proxy-ip",
       "behavior": "ipcidr",
-      "entries": 9,
-      "list": 228,
-      "mrs": 114
+      "entries": 7,
+      "list": 199,
+      "mrs": 101
     },
     {
       "name": "proxy-ip-full",
       "behavior": "ipcidr",
-      "entries": 1616,
-      "list": 26503,
-      "mrs": 6413
+      "entries": 1612,
+      "list": 26437,
+      "mrs": 6325
     },
     {
       "name": "ru-ip",
       "behavior": "ipcidr",
-      "entries": 25147,
-      "list": 446770,
-      "mrs": 119464
+      "entries": 25113,
+      "list": 446220,
+      "mrs": 119272
     },
     {
       "name": "refilter-domain",
@@ -122,9 +122,9 @@
     {
       "name": "refilter-ip",
       "behavior": "ipcidr",
-      "entries": 1121,
-      "list": 19204,
-      "mrs": 2727
+      "entries": 1120,
+      "list": 19186,
+      "mrs": 2723
     },
     {
       "name": "refilter-ip-full",
