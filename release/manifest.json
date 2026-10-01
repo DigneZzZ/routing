@@ -24,9 +24,9 @@
     {
       "name": "ai",
       "behavior": "domain",
-      "entries": 184,
-      "list": 3457,
-      "mrs": 1936
+      "entries": 190,
+      "list": 3598,
+      "mrs": 2002
     },
     {
       "name": "youtube",
@@ -94,16 +94,16 @@
     {
       "name": "proxy-ip-full",
       "behavior": "ipcidr",
-      "entries": 1612,
-      "list": 26437,
-      "mrs": 6325
+      "entries": 1628,
+      "list": 26678,
+      "mrs": 6445
     },
     {
       "name": "ru-ip",
       "behavior": "ipcidr",
-      "entries": 25113,
-      "list": 446220,
-      "mrs": 119272
+      "entries": 25094,
+      "list": 445919,
+      "mrs": 119281
     },
     {
       "name": "refilter-domain",
@@ -164,8 +164,8 @@
     {
       "name": "proc-ru",
       "behavior": "classical",
-      "entries": 526,
-      "list": 18913,
+      "entries": 527,
+      "list": 18942,
       "mrs": null
     }
   ],
