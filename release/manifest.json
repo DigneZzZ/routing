@@ -94,9 +94,9 @@
     {
       "name": "proxy-ip-full",
       "behavior": "ipcidr",
-      "entries": 1628,
-      "list": 26678,
-      "mrs": 6445
+      "entries": 1638,
+      "list": 26841,
+      "mrs": 6555
     },
     {
       "name": "ru-ip",
