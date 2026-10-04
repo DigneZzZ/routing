@@ -85,3 +85,4 @@ payload:
   - DOMAIN-SUFFIX,faceit-cdn.net
   - DOMAIN-SUFFIX,cybershoke.net
   - PROCESS-NAME,MIMESIS.exe
+  - PROCESS-NAME-REGEX,(?i)^AstrumPlay

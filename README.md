@@ -99,7 +99,7 @@ https://raw.githubusercontent.com/DigneZzZ/routing/main/release/<файл>
 | `refilter-ip-full` | ipcidr · list · mrs | 24,961 | 420.0 KB | 49.1 KB | полный IP-реестр РКН |
 | `vpndetect` | domain · list · mrs | 13 | 0.4 KB | 0.3 KB |  |
 | `refilter-community` | domain · list · mrs | 16 | 0.4 KB | 0.2 KB |  |
-| `proc-games` | classical · yaml | 86 | 2.8 KB | — | процессы игровых лаунчеров → DIRECT (десктоп) |
+| `proc-games` | classical · yaml | 87 | 2.9 KB | — | процессы игровых лаунчеров → DIRECT (десктоп) |
 | `proc-torrent` | classical · yaml | 89 | 2.9 KB | — | процессы торрент-клиентов → DIRECT (десктоп) |
 | `proc-ru` | classical · yaml | 527 | 18.5 KB | — | Android-пакеты российских приложений (опционально) |
 
