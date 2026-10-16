@@ -59,16 +59,16 @@
     {
       "name": "direct",
       "behavior": "domain",
-      "entries": 3207,
-      "list": 59234,
-      "mrs": 30445
+      "entries": 3243,
+      "list": 59745,
+      "mrs": 30692
     },
     {
       "name": "direct-core",
       "behavior": "domain",
-      "entries": 1128,
-      "list": 18058,
-      "mrs": 9286
+      "entries": 1164,
+      "list": 18569,
+      "mrs": 9697
     },
     {
       "name": "direct-ios",
@@ -94,9 +94,9 @@
     {
       "name": "proxy-ip-full",
       "behavior": "ipcidr",
-      "entries": 1776,
-      "list": 28795,
-      "mrs": 7221
+      "entries": 1775,
+      "list": 28782,
+      "mrs": 7184
     },
     {
       "name": "ru-ip",
