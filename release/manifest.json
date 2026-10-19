@@ -108,30 +108,30 @@
     {
       "name": "refilter-domain",
       "behavior": "domain",
-      "entries": 21988,
-      "list": 393847,
-      "mrs": 176072
+      "entries": 21990,
+      "list": 393907,
+      "mrs": 175961
     },
     {
       "name": "refilter-domain-full",
       "behavior": "domain",
-      "entries": 74589,
-      "list": 1329602,
-      "mrs": 536828
+      "entries": 74664,
+      "list": 1330727,
+      "mrs": 537353
     },
     {
       "name": "refilter-ip",
       "behavior": "ipcidr",
-      "entries": 1135,
-      "list": 19437,
-      "mrs": 2754
+      "entries": 1141,
+      "list": 19543,
+      "mrs": 2768
     },
     {
       "name": "refilter-ip-full",
       "behavior": "ipcidr",
-      "entries": 25158,
-      "list": 433286,
-      "mrs": 50902
+      "entries": 25266,
+      "list": 434999,
+      "mrs": 51145
     },
     {
       "name": "vpndetect",
@@ -143,9 +143,9 @@
     {
       "name": "refilter-community",
       "behavior": "domain",
-      "entries": 16,
-      "list": 435,
-      "mrs": 255
+      "entries": 17,
+      "list": 451,
+      "mrs": 265
     },
     {
       "name": "proc-games",
