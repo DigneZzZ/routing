@@ -24,9 +24,9 @@
     {
       "name": "ai",
       "behavior": "domain",
-      "entries": 196,
-      "list": 3679,
-      "mrs": 2051
+      "entries": 206,
+      "list": 3838,
+      "mrs": 2143
     },
     {
       "name": "youtube",
@@ -59,16 +59,16 @@
     {
       "name": "direct",
       "behavior": "domain",
-      "entries": 3270,
-      "list": 60228,
-      "mrs": 30931
+      "entries": 3276,
+      "list": 60314,
+      "mrs": 31032
     },
     {
       "name": "direct-core",
       "behavior": "domain",
-      "entries": 1193,
-      "list": 19092,
-      "mrs": 9845
+      "entries": 1199,
+      "list": 19178,
+      "mrs": 10048
     },
     {
       "name": "direct-ios",
