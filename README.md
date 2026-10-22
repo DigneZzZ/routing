@@ -86,16 +86,16 @@ https://raw.githubusercontent.com/DigneZzZ/routing/main/release/<файл>
 | `crypto` | domain · list · mrs | 96 | 1.4 KB | 0.9 KB | криптобиржи и агрегаторы → VPN |
 | `ip-check` | domain · list · mrs | 13 | 0.4 KB | 0.3 KB | сервисы проверки IP → DIRECT (показывают реальный IP) |
 | `games` | domain · list · mrs | 116 | 2.4 KB | 1.4 KB | Steam, Epic, Riot, Roblox, EFT → своя группа |
-| `direct` | domain · list · mrs | 3,276 | 58.9 KB | 30.3 KB | российские сервисы, Microsoft, Apple, Google Play, Twitch → DIRECT |
-| `direct-core` | domain · list · mrs | 1,199 | 18.7 KB | 9.8 KB | то же самое для телефонов: без «парковочных» доменов Apple и Microsoft |
+| `direct` | domain · list · mrs | 3,277 | 58.9 KB | 30.3 KB | российские сервисы, Microsoft, Apple, Google Play, Twitch → DIRECT |
+| `direct-core` | domain · list · mrs | 1,200 | 18.8 KB | 9.8 KB | то же самое для телефонов: без «парковочных» доменов Apple и Microsoft |
 | `direct-ios` | domain · list · mrs | 155 | 2.3 KB | 1.3 KB | минимальный DIRECT: банки, госуслуги, связь, Apple, Microsoft, Google Play |
 | `direct-ip` | ipcidr · list · mrs | 18 | 0.3 KB | 0.2 KB | приватные и служебные сети → DIRECT |
 | `proxy-ip` | ipcidr · list · mrs | 6 | 0.2 KB | 0.1 KB | CIDR, которые нужно увести из-под geoip:ru → VPN |
-| `proxy-ip-full` | ipcidr · list · mrs | 1,775 | 28.1 KB | 7.0 KB | полный набор Telegram / Cloudflare / Discord CIDR |
-| `ru-ip` | ipcidr · list · mrs | 25,194 | 437.1 KB | 116.9 KB | российские IP → DIRECT |
+| `proxy-ip-full` | ipcidr · list · mrs | 1,685 | 26.9 KB | 6.7 KB | полный набор Telegram / Cloudflare / Discord CIDR |
+| `ru-ip` | ipcidr · list · mrs | 25,107 | 435.6 KB | 116.7 KB | российские IP → DIRECT |
 | `refilter-domain` | domain · list · mrs | 21,990 | 384.7 KB | 171.8 KB | реестр РКН, только то, что перекрывает DIRECT-правила |
 | `refilter-domain-full` | domain · list · mrs | 74,664 | 1299.5 KB | 524.8 KB | полный реестр РКН (нужен только при direct-by-default) |
-| `refilter-ip` | ipcidr · list · mrs | 1,141 | 19.1 KB | 2.7 KB | IP из реестра РКН, попадающие в geoip:ru |
+| `refilter-ip` | ipcidr · list · mrs | 1,143 | 19.1 KB | 2.7 KB | IP из реестра РКН, попадающие в geoip:ru |
 | `refilter-ip-full` | ipcidr · list · mrs | 25,266 | 424.8 KB | 49.9 KB | полный IP-реестр РКН |
 | `vpndetect` | domain · list · mrs | 13 | 0.4 KB | 0.3 KB |  |
 | `refilter-community` | domain · list · mrs | 17 | 0.4 KB | 0.3 KB |  |
@@ -135,7 +135,7 @@ DIRECT: домены в российских TLD и поддомены серв�
 |---|---|---|---|
 | [`template-mobile.yaml`](template-mobile.yaml) | телефон, облегчённый | 29 KB | нет |
 | [`template-mobile-full.yaml`](template-mobile-full.yaml) | телефон, полный | 320 KB | да |
-| [`template.yaml`](template.yaml) | компьютер, полный | 347 KB | да |
+| [`template.yaml`](template.yaml) | компьютер, полный | 346 KB | да |
 | [`template-lite.yaml`](template-lite.yaml) | компьютер, облегчённый | 55 KB | нет |
 
 Мобильные варианты не просто меньше: в них выключен `find-process-mode`,
@@ -192,10 +192,10 @@ Google-push.
 | Конфиг | Размер | Правил | Для кого |
 |---|---|---|---|
 | [`config-ios.json`](v2ray/config-ios.json) | 5 KB | 178 | iOS — минимальный, только необходимое |
-| [`config-mobile.json`](v2ray/config-mobile.json) | 32 KB | 1,342 | iOS и Android — рекомендуемый |
-| [`config-mobile-full.json`](v2ray/config-mobile-full.json) | 589 KB | 24,496 | Android и мощные iOS: + реестр РКН |
-| [`config.json`](v2ray/config.json) | 126 KB | 3,446 | десктоп |
-| [`config_full.json`](v2ray/config_full.json) | 931 KB | 26,600 | десктоп: + реестр РКН |
+| [`config-mobile.json`](v2ray/config-mobile.json) | 32 KB | 1,343 | iOS и Android — рекомендуемый |
+| [`config-mobile-full.json`](v2ray/config-mobile-full.json) | 589 KB | 24,499 | Android и мощные iOS: + реестр РКН |
+| [`config.json`](v2ray/config.json) | 126 KB | 3,447 | десктоп |
+| [`config_full.json`](v2ray/config_full.json) | 931 KB | 26,603 | десктоп: + реестр РКН |
 
 > В `outbounds` есть только `direct` и `block`. Добавьте свой outbound с тегом
 > `proxy` — без него Xray отбросит соединения (не пустит их напрямую).
@@ -203,10 +203,10 @@ Google-push.
 ### geosite.dat / geoip.dat
 
 ```
-https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/geosite.dat        # 608.0 KB — с реестром РКН
-https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/geoip.dat          # 788.8 KB
+https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/geosite.dat        # 608.1 KB — с реестром РКН
+https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/geoip.dat          # 787.0 KB
 https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/happ/geosite.dat   # 159.1 KB — без реестра, для телефонов
-https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/happ/geoip.dat     # 777.6 KB
+https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/happ/geoip.dat     # 775.8 KB
 ```
 
 Файлы стандартные (protobuf v2ray/v2fly), подходят для V2Ray, Xray, sing-box и
@@ -236,7 +236,7 @@ https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/happ/geoip.dat     # 777
 | `geosite:pinterest` | 52 | да |
 | `geosite:microsoft-core` | 49 | да |
 | `geosite:banned-ru` | 46 | да |
-| `geosite:twitch` | 34 | да |
+| `geosite:twitch` | 35 | да |
 | `geosite:epicgames` | 30 | да |
 | `geosite:discord` | 28 | да |
 | `geosite:ai-core` | 25 | да |
@@ -263,9 +263,9 @@ https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/happ/geoip.dat     # 777
 
 | Категория | CIDR | Есть в mobile-файле |
 |---|---|---|
-| `geoip:ru` | 25,194 | да |
-| `geoip:whitelist` | 25,194 | да |
-| `geoip:blocked-ru` | 1,141 | нет |
+| `geoip:ru` | 25,107 | да |
+| `geoip:whitelist` | 25,107 | да |
+| `geoip:blocked-ru` | 1,143 | нет |
 | `geoip:private` | 18 | да |
 | `geoip:telegram` | 12 | да |
 
@@ -308,8 +308,8 @@ https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/happ/geoip.dat     # 777
 
 | Вариант | Happ | INCY |
 |---|---|---|
-| **Lite** (рекомендуется) | [📲 Импорт](https://r.far.ovh/?url=happ%3A%2F%2Frouting%2Fonadd%2FeyJOYW1lIjoiRGlnbmVaelogKGxpdGUpIiwiR2xvYmFsUHJveHkiOiJ0cnVlIiwiVXNlQ2h1bmtGaWxlcyI6ImZhbHNlIiwiUmVtb3RlRG5zIjoiOC44LjguOCIsIkRvbWVzdGljRG5zIjoiNzcuODguOC44IiwiUmVtb3RlRE5TVHlwZSI6IkRvSCIsIlJlbW90ZUROU0RvbWFpbiI6Imh0dHBzOi8vOC44LjguOC9kbnMtcXVlcnkiLCJSZW1vdGVETlNJUCI6IjguOC44LjgiLCJEb21lc3RpY0ROU1R5cGUiOiJEb0giLCJEb21lc3RpY0ROU0RvbWFpbiI6Imh0dHBzOi8vNzcuODguOC44L2Rucy1xdWVyeSIsIkRvbWVzdGljRE5TSVAiOiI3Ny44OC44LjgiLCJMYXN0VXBkYXRlZCI6IjIwMjYtMTAtMjEiLCJEbnNIb3N0cyI6e30sIlJvdXRlT3JkZXIiOiJibG9jay1wcm94eS1kaXJlY3QiLCJEaXJlY3RTaXRlcyI6WyJnZW9zaXRlOnByaXZhdGUiLCJnZW9zaXRlOmNhdGVnb3J5LXJ1IiwiZ2Vvc2l0ZTptaWNyb3NvZnQiLCJnZW9zaXRlOmFwcGxlIiwiZ2Vvc2l0ZTpnb29nbGUtcGxheSIsImdlb3NpdGU6dHdpdGNoIiwiZ2Vvc2l0ZTpwaW50ZXJlc3QiLCJnZW9zaXRlOnN0ZWFtIiwiZ2Vvc2l0ZTplcGljZ2FtZXMiLCJnZW9zaXRlOm9yaWdpbiIsImdlb3NpdGU6ZXNjYXBlZnJvbXRhcmtvdiIsImdlb3NpdGU6ZmFjZWl0IiwiZ2Vvc2l0ZTpyaW90IiwiZ2Vvc2l0ZTpyb2Jsb3giLCJnZW9zaXRlOmlwLWNoZWNrIiwiZ2Vvc2l0ZTp2cG5kZXRlY3QiXSwiRGlyZWN0SXAiOlsiZ2VvaXA6cHJpdmF0ZSIsImdlb2lwOnJ1Il0sIkJsb2NrU2l0ZXMiOlsiZ2Vvc2l0ZTpjYXRlZ29yeS1hZHMiLCJnZW9zaXRlOndpbi1zcHkiLCJnZW9zaXRlOnRvcnJlbnQiXSwiQmxvY2tJcCI6W10sIkRvbWFpblN0cmF0ZWd5IjoiSVBJZk5vbk1hdGNoIiwiRmFrZUROUyI6ImZhbHNlIiwiR2VvaXB1cmwiOiJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvZ2gvRGlnbmVaelovcm91dGluZ0BtYWluL3YycmF5L2hhcHAvZ2VvaXAuZGF0IiwiR2Vvc2l0ZXVybCI6Imh0dHBzOi8vY2RuLmpzZGVsaXZyLm5ldC9naC9EaWduZVp6Wi9yb3V0aW5nQG1haW4vdjJyYXkvaGFwcC9nZW9zaXRlLmRhdCIsIlByb3h5U2l0ZXMiOlsiZ2Vvc2l0ZTp0ZWxlZ3JhbSIsImdlb3NpdGU6Z2l0aHViIiwiZ2Vvc2l0ZTpkaXNjb3JkIiwiZ2Vvc2l0ZTp3aGF0c2FwcCIsImdlb3NpdGU6YmFubmVkLXJ1IiwiZ2Vvc2l0ZTpob3N0aW5nIiwiZ2Vvc2l0ZTp0d2l0Y2gtYWRzIiwiZ2Vvc2l0ZTp5b3V0dWJlIiwiZ2Vvc2l0ZTphaSIsImdlb3NpdGU6Y3J5cHRvIl0sIlByb3h5SXAiOlsiZ2VvaXA6dGVsZWdyYW0iXX0%3D) | [📲 Импорт](https://r.far.ovh/?url=incy%3A%2F%2Frouting%2Fonadd%2FeyJOYW1lIjoiRGlnbmVaelogKGxpdGUpIiwiR2xvYmFsUHJveHkiOiJ0cnVlIiwiVXNlQ2h1bmtGaWxlcyI6ImZhbHNlIiwiUmVtb3RlRG5zIjoiOC44LjguOCIsIkRvbWVzdGljRG5zIjoiNzcuODguOC44IiwiUmVtb3RlRE5TVHlwZSI6IkRvSCIsIlJlbW90ZUROU0RvbWFpbiI6Imh0dHBzOi8vOC44LjguOC9kbnMtcXVlcnkiLCJSZW1vdGVETlNJUCI6IjguOC44LjgiLCJEb21lc3RpY0ROU1R5cGUiOiJEb0giLCJEb21lc3RpY0ROU0RvbWFpbiI6Imh0dHBzOi8vNzcuODguOC44L2Rucy1xdWVyeSIsIkRvbWVzdGljRE5TSVAiOiI3Ny44OC44LjgiLCJMYXN0VXBkYXRlZCI6IjIwMjYtMTAtMjEiLCJEbnNIb3N0cyI6e30sIlJvdXRlT3JkZXIiOiJibG9jay1wcm94eS1kaXJlY3QiLCJEaXJlY3RTaXRlcyI6WyJnZW9zaXRlOnByaXZhdGUiLCJnZW9zaXRlOmNhdGVnb3J5LXJ1IiwiZ2Vvc2l0ZTptaWNyb3NvZnQiLCJnZW9zaXRlOmFwcGxlIiwiZ2Vvc2l0ZTpnb29nbGUtcGxheSIsImdlb3NpdGU6dHdpdGNoIiwiZ2Vvc2l0ZTpwaW50ZXJlc3QiLCJnZW9zaXRlOnN0ZWFtIiwiZ2Vvc2l0ZTplcGljZ2FtZXMiLCJnZW9zaXRlOm9yaWdpbiIsImdlb3NpdGU6ZXNjYXBlZnJvbXRhcmtvdiIsImdlb3NpdGU6ZmFjZWl0IiwiZ2Vvc2l0ZTpyaW90IiwiZ2Vvc2l0ZTpyb2Jsb3giLCJnZW9zaXRlOmlwLWNoZWNrIiwiZ2Vvc2l0ZTp2cG5kZXRlY3QiXSwiRGlyZWN0SXAiOlsiZ2VvaXA6cHJpdmF0ZSIsImdlb2lwOnJ1Il0sIkJsb2NrU2l0ZXMiOlsiZ2Vvc2l0ZTpjYXRlZ29yeS1hZHMiLCJnZW9zaXRlOndpbi1zcHkiLCJnZW9zaXRlOnRvcnJlbnQiXSwiQmxvY2tJcCI6W10sIkRvbWFpblN0cmF0ZWd5IjoiSVBJZk5vbk1hdGNoIiwiRmFrZUROUyI6ImZhbHNlIiwiR2VvaXB1cmwiOiJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvZ2gvRGlnbmVaelovcm91dGluZ0BtYWluL3YycmF5L2hhcHAvZ2VvaXAuZGF0IiwiR2Vvc2l0ZXVybCI6Imh0dHBzOi8vY2RuLmpzZGVsaXZyLm5ldC9naC9EaWduZVp6Wi9yb3V0aW5nQG1haW4vdjJyYXkvaGFwcC9nZW9zaXRlLmRhdCIsIlByb3h5U2l0ZXMiOlsiZ2Vvc2l0ZTp0ZWxlZ3JhbSIsImdlb3NpdGU6Z2l0aHViIiwiZ2Vvc2l0ZTpkaXNjb3JkIiwiZ2Vvc2l0ZTp3aGF0c2FwcCIsImdlb3NpdGU6YmFubmVkLXJ1IiwiZ2Vvc2l0ZTpob3N0aW5nIiwiZ2Vvc2l0ZTp0d2l0Y2gtYWRzIiwiZ2Vvc2l0ZTp5b3V0dWJlIiwiZ2Vvc2l0ZTphaSIsImdlb3NpdGU6Y3J5cHRvIl0sIlByb3h5SXAiOlsiZ2VvaXA6dGVsZWdyYW0iXX0%3D) |
-| **Full** (весь реестр РКН) | [📲 Импорт](https://r.far.ovh/?url=happ%3A%2F%2Frouting%2Fonadd%2FeyJOYW1lIjoiRGlnbmVaelogKGZ1bGwpIiwiR2xvYmFsUHJveHkiOiJ0cnVlIiwiVXNlQ2h1bmtGaWxlcyI6ImZhbHNlIiwiUmVtb3RlRG5zIjoiOC44LjguOCIsIkRvbWVzdGljRG5zIjoiNzcuODguOC44IiwiUmVtb3RlRE5TVHlwZSI6IkRvSCIsIlJlbW90ZUROU0RvbWFpbiI6Imh0dHBzOi8vOC44LjguOC9kbnMtcXVlcnkiLCJSZW1vdGVETlNJUCI6IjguOC44LjgiLCJEb21lc3RpY0ROU1R5cGUiOiJEb0giLCJEb21lc3RpY0ROU0RvbWFpbiI6Imh0dHBzOi8vNzcuODguOC44L2Rucy1xdWVyeSIsIkRvbWVzdGljRE5TSVAiOiI3Ny44OC44LjgiLCJMYXN0VXBkYXRlZCI6IjIwMjYtMTAtMjEiLCJEbnNIb3N0cyI6e30sIlJvdXRlT3JkZXIiOiJibG9jay1wcm94eS1kaXJlY3QiLCJEaXJlY3RTaXRlcyI6WyJnZW9zaXRlOnByaXZhdGUiLCJnZW9zaXRlOmNhdGVnb3J5LXJ1IiwiZ2Vvc2l0ZTptaWNyb3NvZnQiLCJnZW9zaXRlOmFwcGxlIiwiZ2Vvc2l0ZTpnb29nbGUtcGxheSIsImdlb3NpdGU6dHdpdGNoIiwiZ2Vvc2l0ZTpwaW50ZXJlc3QiLCJnZW9zaXRlOnN0ZWFtIiwiZ2Vvc2l0ZTplcGljZ2FtZXMiLCJnZW9zaXRlOm9yaWdpbiIsImdlb3NpdGU6ZXNjYXBlZnJvbXRhcmtvdiIsImdlb3NpdGU6ZmFjZWl0IiwiZ2Vvc2l0ZTpyaW90IiwiZ2Vvc2l0ZTpyb2Jsb3giLCJnZW9zaXRlOmlwLWNoZWNrIiwiZ2Vvc2l0ZTp2cG5kZXRlY3QiXSwiRGlyZWN0SXAiOlsiZ2VvaXA6cHJpdmF0ZSIsImdlb2lwOnJ1Il0sIkJsb2NrU2l0ZXMiOlsiZ2Vvc2l0ZTpjYXRlZ29yeS1hZHMiLCJnZW9zaXRlOndpbi1zcHkiLCJnZW9zaXRlOnRvcnJlbnQiXSwiQmxvY2tJcCI6W10sIkRvbWFpblN0cmF0ZWd5IjoiSVBJZk5vbk1hdGNoIiwiRmFrZUROUyI6ImZhbHNlIiwiR2VvaXB1cmwiOiJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvZ2gvRGlnbmVaelovcm91dGluZ0BtYWluL3YycmF5L2dlb2lwLmRhdCIsIkdlb3NpdGV1cmwiOiJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvZ2gvRGlnbmVaelovcm91dGluZ0BtYWluL3YycmF5L2dlb3NpdGUuZGF0IiwiUHJveHlTaXRlcyI6WyJnZW9zaXRlOnRlbGVncmFtIiwiZ2Vvc2l0ZTpnaXRodWIiLCJnZW9zaXRlOmRpc2NvcmQiLCJnZW9zaXRlOndoYXRzYXBwIiwiZ2Vvc2l0ZTpiYW5uZWQtcnUiLCJnZW9zaXRlOmhvc3RpbmciLCJnZW9zaXRlOnR3aXRjaC1hZHMiLCJnZW9zaXRlOnlvdXR1YmUiLCJnZW9zaXRlOmFpIiwiZ2Vvc2l0ZTpjcnlwdG8iLCJnZW9zaXRlOmNhdGVnb3J5LWdlb2Jsb2NrLXJ1Il0sIlByb3h5SXAiOlsiZ2VvaXA6dGVsZWdyYW0iLCJnZW9pcDpibG9ja2VkLXJ1Il19) | [📲 Импорт](https://r.far.ovh/?url=incy%3A%2F%2Frouting%2Fonadd%2FeyJOYW1lIjoiRGlnbmVaelogKGZ1bGwpIiwiR2xvYmFsUHJveHkiOiJ0cnVlIiwiVXNlQ2h1bmtGaWxlcyI6ImZhbHNlIiwiUmVtb3RlRG5zIjoiOC44LjguOCIsIkRvbWVzdGljRG5zIjoiNzcuODguOC44IiwiUmVtb3RlRE5TVHlwZSI6IkRvSCIsIlJlbW90ZUROU0RvbWFpbiI6Imh0dHBzOi8vOC44LjguOC9kbnMtcXVlcnkiLCJSZW1vdGVETlNJUCI6IjguOC44LjgiLCJEb21lc3RpY0ROU1R5cGUiOiJEb0giLCJEb21lc3RpY0ROU0RvbWFpbiI6Imh0dHBzOi8vNzcuODguOC44L2Rucy1xdWVyeSIsIkRvbWVzdGljRE5TSVAiOiI3Ny44OC44LjgiLCJMYXN0VXBkYXRlZCI6IjIwMjYtMTAtMjEiLCJEbnNIb3N0cyI6e30sIlJvdXRlT3JkZXIiOiJibG9jay1wcm94eS1kaXJlY3QiLCJEaXJlY3RTaXRlcyI6WyJnZW9zaXRlOnByaXZhdGUiLCJnZW9zaXRlOmNhdGVnb3J5LXJ1IiwiZ2Vvc2l0ZTptaWNyb3NvZnQiLCJnZW9zaXRlOmFwcGxlIiwiZ2Vvc2l0ZTpnb29nbGUtcGxheSIsImdlb3NpdGU6dHdpdGNoIiwiZ2Vvc2l0ZTpwaW50ZXJlc3QiLCJnZW9zaXRlOnN0ZWFtIiwiZ2Vvc2l0ZTplcGljZ2FtZXMiLCJnZW9zaXRlOm9yaWdpbiIsImdlb3NpdGU6ZXNjYXBlZnJvbXRhcmtvdiIsImdlb3NpdGU6ZmFjZWl0IiwiZ2Vvc2l0ZTpyaW90IiwiZ2Vvc2l0ZTpyb2Jsb3giLCJnZW9zaXRlOmlwLWNoZWNrIiwiZ2Vvc2l0ZTp2cG5kZXRlY3QiXSwiRGlyZWN0SXAiOlsiZ2VvaXA6cHJpdmF0ZSIsImdlb2lwOnJ1Il0sIkJsb2NrU2l0ZXMiOlsiZ2Vvc2l0ZTpjYXRlZ29yeS1hZHMiLCJnZW9zaXRlOndpbi1zcHkiLCJnZW9zaXRlOnRvcnJlbnQiXSwiQmxvY2tJcCI6W10sIkRvbWFpblN0cmF0ZWd5IjoiSVBJZk5vbk1hdGNoIiwiRmFrZUROUyI6ImZhbHNlIiwiR2VvaXB1cmwiOiJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvZ2gvRGlnbmVaelovcm91dGluZ0BtYWluL3YycmF5L2dlb2lwLmRhdCIsIkdlb3NpdGV1cmwiOiJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvZ2gvRGlnbmVaelovcm91dGluZ0BtYWluL3YycmF5L2dlb3NpdGUuZGF0IiwiUHJveHlTaXRlcyI6WyJnZW9zaXRlOnRlbGVncmFtIiwiZ2Vvc2l0ZTpnaXRodWIiLCJnZW9zaXRlOmRpc2NvcmQiLCJnZW9zaXRlOndoYXRzYXBwIiwiZ2Vvc2l0ZTpiYW5uZWQtcnUiLCJnZW9zaXRlOmhvc3RpbmciLCJnZW9zaXRlOnR3aXRjaC1hZHMiLCJnZW9zaXRlOnlvdXR1YmUiLCJnZW9zaXRlOmFpIiwiZ2Vvc2l0ZTpjcnlwdG8iLCJnZW9zaXRlOmNhdGVnb3J5LWdlb2Jsb2NrLXJ1Il0sIlByb3h5SXAiOlsiZ2VvaXA6dGVsZWdyYW0iLCJnZW9pcDpibG9ja2VkLXJ1Il19) |
+| **Lite** (рекомендуется) | [📲 Импорт](https://r.far.ovh/?url=happ%3A%2F%2Frouting%2Fonadd%2FeyJOYW1lIjoiRGlnbmVaelogKGxpdGUpIiwiR2xvYmFsUHJveHkiOiJ0cnVlIiwiVXNlQ2h1bmtGaWxlcyI6ImZhbHNlIiwiUmVtb3RlRG5zIjoiOC44LjguOCIsIkRvbWVzdGljRG5zIjoiNzcuODguOC44IiwiUmVtb3RlRE5TVHlwZSI6IkRvSCIsIlJlbW90ZUROU0RvbWFpbiI6Imh0dHBzOi8vOC44LjguOC9kbnMtcXVlcnkiLCJSZW1vdGVETlNJUCI6IjguOC44LjgiLCJEb21lc3RpY0ROU1R5cGUiOiJEb0giLCJEb21lc3RpY0ROU0RvbWFpbiI6Imh0dHBzOi8vNzcuODguOC44L2Rucy1xdWVyeSIsIkRvbWVzdGljRE5TSVAiOiI3Ny44OC44LjgiLCJMYXN0VXBkYXRlZCI6IjIwMjYtMTAtMjIiLCJEbnNIb3N0cyI6e30sIlJvdXRlT3JkZXIiOiJibG9jay1wcm94eS1kaXJlY3QiLCJEaXJlY3RTaXRlcyI6WyJnZW9zaXRlOnByaXZhdGUiLCJnZW9zaXRlOmNhdGVnb3J5LXJ1IiwiZ2Vvc2l0ZTptaWNyb3NvZnQiLCJnZW9zaXRlOmFwcGxlIiwiZ2Vvc2l0ZTpnb29nbGUtcGxheSIsImdlb3NpdGU6dHdpdGNoIiwiZ2Vvc2l0ZTpwaW50ZXJlc3QiLCJnZW9zaXRlOnN0ZWFtIiwiZ2Vvc2l0ZTplcGljZ2FtZXMiLCJnZW9zaXRlOm9yaWdpbiIsImdlb3NpdGU6ZXNjYXBlZnJvbXRhcmtvdiIsImdlb3NpdGU6ZmFjZWl0IiwiZ2Vvc2l0ZTpyaW90IiwiZ2Vvc2l0ZTpyb2Jsb3giLCJnZW9zaXRlOmlwLWNoZWNrIiwiZ2Vvc2l0ZTp2cG5kZXRlY3QiXSwiRGlyZWN0SXAiOlsiZ2VvaXA6cHJpdmF0ZSIsImdlb2lwOnJ1Il0sIkJsb2NrU2l0ZXMiOlsiZ2Vvc2l0ZTpjYXRlZ29yeS1hZHMiLCJnZW9zaXRlOndpbi1zcHkiLCJnZW9zaXRlOnRvcnJlbnQiXSwiQmxvY2tJcCI6W10sIkRvbWFpblN0cmF0ZWd5IjoiSVBJZk5vbk1hdGNoIiwiRmFrZUROUyI6ImZhbHNlIiwiR2VvaXB1cmwiOiJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvZ2gvRGlnbmVaelovcm91dGluZ0BtYWluL3YycmF5L2hhcHAvZ2VvaXAuZGF0IiwiR2Vvc2l0ZXVybCI6Imh0dHBzOi8vY2RuLmpzZGVsaXZyLm5ldC9naC9EaWduZVp6Wi9yb3V0aW5nQG1haW4vdjJyYXkvaGFwcC9nZW9zaXRlLmRhdCIsIlByb3h5U2l0ZXMiOlsiZ2Vvc2l0ZTp0ZWxlZ3JhbSIsImdlb3NpdGU6Z2l0aHViIiwiZ2Vvc2l0ZTpkaXNjb3JkIiwiZ2Vvc2l0ZTp3aGF0c2FwcCIsImdlb3NpdGU6YmFubmVkLXJ1IiwiZ2Vvc2l0ZTpob3N0aW5nIiwiZ2Vvc2l0ZTp0d2l0Y2gtYWRzIiwiZ2Vvc2l0ZTp5b3V0dWJlIiwiZ2Vvc2l0ZTphaSIsImdlb3NpdGU6Y3J5cHRvIl0sIlByb3h5SXAiOlsiZ2VvaXA6dGVsZWdyYW0iXX0%3D) | [📲 Импорт](https://r.far.ovh/?url=incy%3A%2F%2Frouting%2Fonadd%2FeyJOYW1lIjoiRGlnbmVaelogKGxpdGUpIiwiR2xvYmFsUHJveHkiOiJ0cnVlIiwiVXNlQ2h1bmtGaWxlcyI6ImZhbHNlIiwiUmVtb3RlRG5zIjoiOC44LjguOCIsIkRvbWVzdGljRG5zIjoiNzcuODguOC44IiwiUmVtb3RlRE5TVHlwZSI6IkRvSCIsIlJlbW90ZUROU0RvbWFpbiI6Imh0dHBzOi8vOC44LjguOC9kbnMtcXVlcnkiLCJSZW1vdGVETlNJUCI6IjguOC44LjgiLCJEb21lc3RpY0ROU1R5cGUiOiJEb0giLCJEb21lc3RpY0ROU0RvbWFpbiI6Imh0dHBzOi8vNzcuODguOC44L2Rucy1xdWVyeSIsIkRvbWVzdGljRE5TSVAiOiI3Ny44OC44LjgiLCJMYXN0VXBkYXRlZCI6IjIwMjYtMTAtMjIiLCJEbnNIb3N0cyI6e30sIlJvdXRlT3JkZXIiOiJibG9jay1wcm94eS1kaXJlY3QiLCJEaXJlY3RTaXRlcyI6WyJnZW9zaXRlOnByaXZhdGUiLCJnZW9zaXRlOmNhdGVnb3J5LXJ1IiwiZ2Vvc2l0ZTptaWNyb3NvZnQiLCJnZW9zaXRlOmFwcGxlIiwiZ2Vvc2l0ZTpnb29nbGUtcGxheSIsImdlb3NpdGU6dHdpdGNoIiwiZ2Vvc2l0ZTpwaW50ZXJlc3QiLCJnZW9zaXRlOnN0ZWFtIiwiZ2Vvc2l0ZTplcGljZ2FtZXMiLCJnZW9zaXRlOm9yaWdpbiIsImdlb3NpdGU6ZXNjYXBlZnJvbXRhcmtvdiIsImdlb3NpdGU6ZmFjZWl0IiwiZ2Vvc2l0ZTpyaW90IiwiZ2Vvc2l0ZTpyb2Jsb3giLCJnZW9zaXRlOmlwLWNoZWNrIiwiZ2Vvc2l0ZTp2cG5kZXRlY3QiXSwiRGlyZWN0SXAiOlsiZ2VvaXA6cHJpdmF0ZSIsImdlb2lwOnJ1Il0sIkJsb2NrU2l0ZXMiOlsiZ2Vvc2l0ZTpjYXRlZ29yeS1hZHMiLCJnZW9zaXRlOndpbi1zcHkiLCJnZW9zaXRlOnRvcnJlbnQiXSwiQmxvY2tJcCI6W10sIkRvbWFpblN0cmF0ZWd5IjoiSVBJZk5vbk1hdGNoIiwiRmFrZUROUyI6ImZhbHNlIiwiR2VvaXB1cmwiOiJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvZ2gvRGlnbmVaelovcm91dGluZ0BtYWluL3YycmF5L2hhcHAvZ2VvaXAuZGF0IiwiR2Vvc2l0ZXVybCI6Imh0dHBzOi8vY2RuLmpzZGVsaXZyLm5ldC9naC9EaWduZVp6Wi9yb3V0aW5nQG1haW4vdjJyYXkvaGFwcC9nZW9zaXRlLmRhdCIsIlByb3h5U2l0ZXMiOlsiZ2Vvc2l0ZTp0ZWxlZ3JhbSIsImdlb3NpdGU6Z2l0aHViIiwiZ2Vvc2l0ZTpkaXNjb3JkIiwiZ2Vvc2l0ZTp3aGF0c2FwcCIsImdlb3NpdGU6YmFubmVkLXJ1IiwiZ2Vvc2l0ZTpob3N0aW5nIiwiZ2Vvc2l0ZTp0d2l0Y2gtYWRzIiwiZ2Vvc2l0ZTp5b3V0dWJlIiwiZ2Vvc2l0ZTphaSIsImdlb3NpdGU6Y3J5cHRvIl0sIlByb3h5SXAiOlsiZ2VvaXA6dGVsZWdyYW0iXX0%3D) |
+| **Full** (весь реестр РКН) | [📲 Импорт](https://r.far.ovh/?url=happ%3A%2F%2Frouting%2Fonadd%2FeyJOYW1lIjoiRGlnbmVaelogKGZ1bGwpIiwiR2xvYmFsUHJveHkiOiJ0cnVlIiwiVXNlQ2h1bmtGaWxlcyI6ImZhbHNlIiwiUmVtb3RlRG5zIjoiOC44LjguOCIsIkRvbWVzdGljRG5zIjoiNzcuODguOC44IiwiUmVtb3RlRE5TVHlwZSI6IkRvSCIsIlJlbW90ZUROU0RvbWFpbiI6Imh0dHBzOi8vOC44LjguOC9kbnMtcXVlcnkiLCJSZW1vdGVETlNJUCI6IjguOC44LjgiLCJEb21lc3RpY0ROU1R5cGUiOiJEb0giLCJEb21lc3RpY0ROU0RvbWFpbiI6Imh0dHBzOi8vNzcuODguOC44L2Rucy1xdWVyeSIsIkRvbWVzdGljRE5TSVAiOiI3Ny44OC44LjgiLCJMYXN0VXBkYXRlZCI6IjIwMjYtMTAtMjIiLCJEbnNIb3N0cyI6e30sIlJvdXRlT3JkZXIiOiJibG9jay1wcm94eS1kaXJlY3QiLCJEaXJlY3RTaXRlcyI6WyJnZW9zaXRlOnByaXZhdGUiLCJnZW9zaXRlOmNhdGVnb3J5LXJ1IiwiZ2Vvc2l0ZTptaWNyb3NvZnQiLCJnZW9zaXRlOmFwcGxlIiwiZ2Vvc2l0ZTpnb29nbGUtcGxheSIsImdlb3NpdGU6dHdpdGNoIiwiZ2Vvc2l0ZTpwaW50ZXJlc3QiLCJnZW9zaXRlOnN0ZWFtIiwiZ2Vvc2l0ZTplcGljZ2FtZXMiLCJnZW9zaXRlOm9yaWdpbiIsImdlb3NpdGU6ZXNjYXBlZnJvbXRhcmtvdiIsImdlb3NpdGU6ZmFjZWl0IiwiZ2Vvc2l0ZTpyaW90IiwiZ2Vvc2l0ZTpyb2Jsb3giLCJnZW9zaXRlOmlwLWNoZWNrIiwiZ2Vvc2l0ZTp2cG5kZXRlY3QiXSwiRGlyZWN0SXAiOlsiZ2VvaXA6cHJpdmF0ZSIsImdlb2lwOnJ1Il0sIkJsb2NrU2l0ZXMiOlsiZ2Vvc2l0ZTpjYXRlZ29yeS1hZHMiLCJnZW9zaXRlOndpbi1zcHkiLCJnZW9zaXRlOnRvcnJlbnQiXSwiQmxvY2tJcCI6W10sIkRvbWFpblN0cmF0ZWd5IjoiSVBJZk5vbk1hdGNoIiwiRmFrZUROUyI6ImZhbHNlIiwiR2VvaXB1cmwiOiJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvZ2gvRGlnbmVaelovcm91dGluZ0BtYWluL3YycmF5L2dlb2lwLmRhdCIsIkdlb3NpdGV1cmwiOiJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvZ2gvRGlnbmVaelovcm91dGluZ0BtYWluL3YycmF5L2dlb3NpdGUuZGF0IiwiUHJveHlTaXRlcyI6WyJnZW9zaXRlOnRlbGVncmFtIiwiZ2Vvc2l0ZTpnaXRodWIiLCJnZW9zaXRlOmRpc2NvcmQiLCJnZW9zaXRlOndoYXRzYXBwIiwiZ2Vvc2l0ZTpiYW5uZWQtcnUiLCJnZW9zaXRlOmhvc3RpbmciLCJnZW9zaXRlOnR3aXRjaC1hZHMiLCJnZW9zaXRlOnlvdXR1YmUiLCJnZW9zaXRlOmFpIiwiZ2Vvc2l0ZTpjcnlwdG8iLCJnZW9zaXRlOmNhdGVnb3J5LWdlb2Jsb2NrLXJ1Il0sIlByb3h5SXAiOlsiZ2VvaXA6dGVsZWdyYW0iLCJnZW9pcDpibG9ja2VkLXJ1Il19) | [📲 Импорт](https://r.far.ovh/?url=incy%3A%2F%2Frouting%2Fonadd%2FeyJOYW1lIjoiRGlnbmVaelogKGZ1bGwpIiwiR2xvYmFsUHJveHkiOiJ0cnVlIiwiVXNlQ2h1bmtGaWxlcyI6ImZhbHNlIiwiUmVtb3RlRG5zIjoiOC44LjguOCIsIkRvbWVzdGljRG5zIjoiNzcuODguOC44IiwiUmVtb3RlRE5TVHlwZSI6IkRvSCIsIlJlbW90ZUROU0RvbWFpbiI6Imh0dHBzOi8vOC44LjguOC9kbnMtcXVlcnkiLCJSZW1vdGVETlNJUCI6IjguOC44LjgiLCJEb21lc3RpY0ROU1R5cGUiOiJEb0giLCJEb21lc3RpY0ROU0RvbWFpbiI6Imh0dHBzOi8vNzcuODguOC44L2Rucy1xdWVyeSIsIkRvbWVzdGljRE5TSVAiOiI3Ny44OC44LjgiLCJMYXN0VXBkYXRlZCI6IjIwMjYtMTAtMjIiLCJEbnNIb3N0cyI6e30sIlJvdXRlT3JkZXIiOiJibG9jay1wcm94eS1kaXJlY3QiLCJEaXJlY3RTaXRlcyI6WyJnZW9zaXRlOnByaXZhdGUiLCJnZW9zaXRlOmNhdGVnb3J5LXJ1IiwiZ2Vvc2l0ZTptaWNyb3NvZnQiLCJnZW9zaXRlOmFwcGxlIiwiZ2Vvc2l0ZTpnb29nbGUtcGxheSIsImdlb3NpdGU6dHdpdGNoIiwiZ2Vvc2l0ZTpwaW50ZXJlc3QiLCJnZW9zaXRlOnN0ZWFtIiwiZ2Vvc2l0ZTplcGljZ2FtZXMiLCJnZW9zaXRlOm9yaWdpbiIsImdlb3NpdGU6ZXNjYXBlZnJvbXRhcmtvdiIsImdlb3NpdGU6ZmFjZWl0IiwiZ2Vvc2l0ZTpyaW90IiwiZ2Vvc2l0ZTpyb2Jsb3giLCJnZW9zaXRlOmlwLWNoZWNrIiwiZ2Vvc2l0ZTp2cG5kZXRlY3QiXSwiRGlyZWN0SXAiOlsiZ2VvaXA6cHJpdmF0ZSIsImdlb2lwOnJ1Il0sIkJsb2NrU2l0ZXMiOlsiZ2Vvc2l0ZTpjYXRlZ29yeS1hZHMiLCJnZW9zaXRlOndpbi1zcHkiLCJnZW9zaXRlOnRvcnJlbnQiXSwiQmxvY2tJcCI6W10sIkRvbWFpblN0cmF0ZWd5IjoiSVBJZk5vbk1hdGNoIiwiRmFrZUROUyI6ImZhbHNlIiwiR2VvaXB1cmwiOiJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvZ2gvRGlnbmVaelovcm91dGluZ0BtYWluL3YycmF5L2dlb2lwLmRhdCIsIkdlb3NpdGV1cmwiOiJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvZ2gvRGlnbmVaelovcm91dGluZ0BtYWluL3YycmF5L2dlb3NpdGUuZGF0IiwiUHJveHlTaXRlcyI6WyJnZW9zaXRlOnRlbGVncmFtIiwiZ2Vvc2l0ZTpnaXRodWIiLCJnZW9zaXRlOmRpc2NvcmQiLCJnZW9zaXRlOndoYXRzYXBwIiwiZ2Vvc2l0ZTpiYW5uZWQtcnUiLCJnZW9zaXRlOmhvc3RpbmciLCJnZW9zaXRlOnR3aXRjaC1hZHMiLCJnZW9zaXRlOnlvdXR1YmUiLCJnZW9zaXRlOmFpIiwiZ2Vvc2l0ZTpjcnlwdG8iLCJnZW9zaXRlOmNhdGVnb3J5LWdlb2Jsb2NrLXJ1Il0sIlByb3h5SXAiOlsiZ2VvaXA6dGVsZWdyYW0iLCJnZW9pcDpibG9ja2VkLXJ1Il19) |
 
 ### Импорт файлом
 
@@ -378,13 +378,13 @@ v2ray/config-mobile-full.json                      589 KB
 v2ray/config-mobile.json                            32 KB
 v2ray/config.json                                  126 KB
 v2ray/config_full.json                             931 KB
-v2ray/geoip.dat                                    789 KB
+v2ray/geoip.dat                                    787 KB
 v2ray/geosite.dat                                  608 KB
 v2ray/happ/default.json                              2 KB
 v2ray/happ/default_deeplink.txt                      2 KB
 v2ray/happ/full.json                                 2 KB
 v2ray/happ/full_deeplink.txt                         2 KB
-v2ray/happ/geoip.dat                               778 KB
+v2ray/happ/geoip.dat                               776 KB
 v2ray/happ/geosite.dat                             159 KB
 v2ray/incy/default.json                              2 KB
 v2ray/incy/default_deeplink.txt                      2 KB
