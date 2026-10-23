@@ -94,7 +94,7 @@ https://raw.githubusercontent.com/DigneZzZ/routing/main/release/<файл>
 | `proxy-ip-full` | ipcidr · list · mrs | 1,685 | 26.9 KB | 6.7 KB | полный набор Telegram / Cloudflare / Discord CIDR |
 | `ru-ip` | ipcidr · list · mrs | 25,107 | 435.6 KB | 116.7 KB | российские IP → DIRECT |
 | `refilter-domain` | domain · list · mrs | 21,990 | 384.7 KB | 171.8 KB | реестр РКН, только то, что перекрывает DIRECT-правила |
-| `refilter-domain-full` | domain · list · mrs | 74,664 | 1299.5 KB | 524.8 KB | полный реестр РКН (нужен только при direct-by-default) |
+| `refilter-domain-full` | domain · list · mrs | 74,670 | 1299.6 KB | 524.9 KB | полный реестр РКН (нужен только при direct-by-default) |
 | `refilter-ip` | ipcidr · list · mrs | 1,143 | 19.1 KB | 2.7 KB | IP из реестра РКН, попадающие в geoip:ru |
 | `refilter-ip-full` | ipcidr · list · mrs | 25,266 | 424.8 KB | 49.9 KB | полный IP-реестр РКН |
 | `vpndetect` | domain · list · mrs | 13 | 0.4 KB | 0.3 KB |  |

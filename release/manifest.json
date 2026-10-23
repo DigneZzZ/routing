@@ -115,9 +115,9 @@
     {
       "name": "refilter-domain-full",
       "behavior": "domain",
-      "entries": 74664,
-      "list": 1330727,
-      "mrs": 537353
+      "entries": 74670,
+      "list": 1330834,
+      "mrs": 537520
     },
     {
       "name": "refilter-ip",
