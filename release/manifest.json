@@ -52,23 +52,23 @@
     {
       "name": "games",
       "behavior": "domain",
-      "entries": 116,
-      "list": 2438,
-      "mrs": 1432
+      "entries": 117,
+      "list": 2454,
+      "mrs": 1439
     },
     {
       "name": "direct",
       "behavior": "domain",
-      "entries": 3277,
-      "list": 60346,
-      "mrs": 31014
+      "entries": 3280,
+      "list": 60387,
+      "mrs": 31083
     },
     {
       "name": "direct-core",
       "behavior": "domain",
-      "entries": 1200,
-      "list": 19210,
-      "mrs": 10071
+      "entries": 1203,
+      "list": 19251,
+      "mrs": 10052
     },
     {
       "name": "direct-ios",
