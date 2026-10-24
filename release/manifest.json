@@ -80,9 +80,9 @@
     {
       "name": "direct-ip",
       "behavior": "ipcidr",
-      "entries": 18,
-      "list": 314,
-      "mrs": 155
+      "entries": 28,
+      "list": 445,
+      "mrs": 236
     },
     {
       "name": "proxy-ip",
