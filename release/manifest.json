@@ -3,9 +3,9 @@
     {
       "name": "reject",
       "behavior": "domain",
-      "entries": 1220,
-      "list": 27061,
-      "mrs": 11070
+      "entries": 1221,
+      "list": 27074,
+      "mrs": 11107
     },
     {
       "name": "proxy",
@@ -24,9 +24,9 @@
     {
       "name": "ai",
       "behavior": "domain",
-      "entries": 206,
-      "list": 3838,
-      "mrs": 2143
+      "entries": 215,
+      "list": 4066,
+      "mrs": 2250
     },
     {
       "name": "youtube",
@@ -59,16 +59,16 @@
     {
       "name": "direct",
       "behavior": "domain",
-      "entries": 3280,
-      "list": 60387,
-      "mrs": 31083
+      "entries": 3282,
+      "list": 60418,
+      "mrs": 30996
     },
     {
       "name": "direct-core",
       "behavior": "domain",
-      "entries": 1203,
-      "list": 19251,
-      "mrs": 10052
+      "entries": 1204,
+      "list": 19260,
+      "mrs": 9889
     },
     {
       "name": "direct-ios",
@@ -94,16 +94,16 @@
     {
       "name": "proxy-ip-full",
       "behavior": "ipcidr",
-      "entries": 1685,
-      "list": 27575,
-      "mrs": 6855
+      "entries": 1693,
+      "list": 27700,
+      "mrs": 6895
     },
     {
       "name": "ru-ip",
       "behavior": "ipcidr",
-      "entries": 25107,
-      "list": 446100,
-      "mrs": 119493
+      "entries": 25157,
+      "list": 446987,
+      "mrs": 119656
     },
     {
       "name": "refilter-domain",
@@ -122,9 +122,9 @@
     {
       "name": "refilter-ip",
       "behavior": "ipcidr",
-      "entries": 1143,
-      "list": 19578,
-      "mrs": 2776
+      "entries": 1144,
+      "list": 19594,
+      "mrs": 2779
     },
     {
       "name": "refilter-ip-full",
