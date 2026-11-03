@@ -86,8 +86,8 @@ https://raw.githubusercontent.com/DigneZzZ/routing/main/release/<файл>
 | `crypto` | domain · list · mrs | 96 | 1.4 KB | 0.9 KB | криптобиржи и агрегаторы → VPN |
 | `ip-check` | domain · list · mrs | 13 | 0.4 KB | 0.3 KB | сервисы проверки IP → DIRECT (показывают реальный IP) |
 | `games` | domain · list · mrs | 117 | 2.4 KB | 1.4 KB | Steam, Epic, Riot, Roblox, EFT → своя группа |
-| `direct` | domain · list · mrs | 3,282 | 59.0 KB | 30.3 KB | российские сервисы, Microsoft, Apple, Google Play, Twitch → DIRECT |
-| `direct-core` | domain · list · mrs | 1,204 | 18.8 KB | 9.7 KB | то же самое для телефонов: без «парковочных» доменов Apple и Microsoft |
+| `direct` | domain · list · mrs | 3,283 | 59.0 KB | 30.3 KB | российские сервисы, Microsoft, Apple, Google Play, Twitch → DIRECT |
+| `direct-core` | domain · list · mrs | 1,205 | 18.8 KB | 9.7 KB | то же самое для телефонов: без «парковочных» доменов Apple и Microsoft |
 | `direct-ios` | domain · list · mrs | 155 | 2.3 KB | 1.3 KB | минимальный DIRECT: банки, госуслуги, связь, Apple, Microsoft, Google Play |
 | `direct-ip` | ipcidr · list · mrs | 28 | 0.4 KB | 0.2 KB | приватные и служебные сети → DIRECT |
 | `proxy-ip` | ipcidr · list · mrs | 6 | 0.2 KB | 0.1 KB | CIDR, которые нужно увести из-под geoip:ru → VPN |
@@ -192,10 +192,10 @@ Google-push.
 | Конфиг | Размер | Правил | Для кого |
 |---|---|---|---|
 | [`config-ios.json`](v2ray/config-ios.json) | 5 KB | 178 | iOS — минимальный, только необходимое |
-| [`config-mobile.json`](v2ray/config-mobile.json) | 32 KB | 1,348 | iOS и Android — рекомендуемый |
-| [`config-mobile-full.json`](v2ray/config-mobile-full.json) | 589 KB | 24,501 | Android и мощные iOS: + реестр РКН |
-| [`config.json`](v2ray/config.json) | 126 KB | 3,453 | десктоп |
-| [`config_full.json`](v2ray/config_full.json) | 931 KB | 26,606 | десктоп: + реестр РКН |
+| [`config-mobile.json`](v2ray/config-mobile.json) | 32 KB | 1,349 | iOS и Android — рекомендуемый |
+| [`config-mobile-full.json`](v2ray/config-mobile-full.json) | 589 KB | 24,502 | Android и мощные iOS: + реестр РКН |
+| [`config.json`](v2ray/config.json) | 126 KB | 3,454 | десктоп |
+| [`config_full.json`](v2ray/config_full.json) | 932 KB | 26,607 | десктоп: + реестр РКН |
 
 > В `outbounds` есть только `direct` и `block`. Добавьте свой outbound с тегом
 > `proxy` — без него Xray отбросит соединения (не пустит их напрямую).
@@ -205,7 +205,7 @@ Google-push.
 ```
 https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/geosite.dat        # 608.8 KB — с реестром РКН
 https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/geoip.dat          # 788.4 KB
-https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/happ/geosite.dat   # 159.8 KB — без реестра, для телефонов
+https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/happ/geosite.dat   # 159.9 KB — без реестра, для телефонов
 https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/happ/geoip.dat     # 777.2 KB
 ```
 
@@ -221,8 +221,8 @@ https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/happ/geoip.dat     # 777
 |---|---|---|
 | `geosite:category-geoblock-ru` | 21,989 | нет |
 | `geosite:apple` | 1,789 | да |
-| `geosite:whitelist` | 1,145 | да |
-| `geosite:category-ru` | 1,145 | да |
+| `geosite:whitelist` | 1,146 | да |
+| `geosite:category-ru` | 1,146 | да |
 | `geosite:category-ads` | 904 | да |
 | `geosite:microsoft` | 743 | да |
 | `geosite:win-spy` | 327 | да |
@@ -377,7 +377,7 @@ v2ray/config-ios.json                                5 KB
 v2ray/config-mobile-full.json                      589 KB
 v2ray/config-mobile.json                            32 KB
 v2ray/config.json                                  126 KB
-v2ray/config_full.json                             931 KB
+v2ray/config_full.json                             932 KB
 v2ray/geoip.dat                                    788 KB
 v2ray/geosite.dat                                  609 KB
 v2ray/happ/default.json                              2 KB
