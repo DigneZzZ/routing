@@ -59,16 +59,16 @@
     {
       "name": "direct",
       "behavior": "domain",
-      "entries": 3283,
-      "list": 60431,
-      "mrs": 31045
+      "entries": 3284,
+      "list": 60445,
+      "mrs": 30971
     },
     {
       "name": "direct-core",
       "behavior": "domain",
-      "entries": 1205,
-      "list": 19273,
-      "mrs": 9928
+      "entries": 1206,
+      "list": 19287,
+      "mrs": 9922
     },
     {
       "name": "direct-ios",
