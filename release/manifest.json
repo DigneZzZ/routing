@@ -108,30 +108,30 @@
     {
       "name": "refilter-domain",
       "behavior": "domain",
-      "entries": 21989,
-      "list": 393863,
-      "mrs": 176015
+      "entries": 21990,
+      "list": 393873,
+      "mrs": 175939
     },
     {
       "name": "refilter-domain-full",
       "behavior": "domain",
-      "entries": 75306,
-      "list": 1340975,
-      "mrs": 540857
+      "entries": 75396,
+      "list": 1342555,
+      "mrs": 541381
     },
     {
       "name": "refilter-ip",
       "behavior": "ipcidr",
-      "entries": 1143,
-      "list": 19574,
-      "mrs": 2777
+      "entries": 1146,
+      "list": 19625,
+      "mrs": 2786
     },
     {
       "name": "refilter-ip-full",
       "behavior": "ipcidr",
-      "entries": 25391,
-      "list": 437484,
-      "mrs": 51444
+      "entries": 25394,
+      "list": 437399,
+      "mrs": 51636
     },
     {
       "name": "vpndetect",

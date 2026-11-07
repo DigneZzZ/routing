@@ -93,10 +93,10 @@ https://raw.githubusercontent.com/DigneZzZ/routing/main/release/<файл>
 | `proxy-ip` | ipcidr · list · mrs | 6 | 0.2 KB | 0.1 KB | CIDR, которые нужно увести из-под geoip:ru → VPN |
 | `proxy-ip-full` | ipcidr · list · mrs | 1,714 | 27.4 KB | 6.8 KB | полный набор Telegram / Cloudflare / Discord CIDR |
 | `ru-ip` | ipcidr · list · mrs | 25,244 | 437.9 KB | 117.1 KB | российские IP → DIRECT |
-| `refilter-domain` | domain · list · mrs | 21,989 | 384.6 KB | 171.9 KB | реестр РКН, только то, что перекрывает DIRECT-правила |
-| `refilter-domain-full` | domain · list · mrs | 75,306 | 1309.5 KB | 528.2 KB | полный реестр РКН (нужен только при direct-by-default) |
-| `refilter-ip` | ipcidr · list · mrs | 1,143 | 19.1 KB | 2.7 KB | IP из реестра РКН, попадающие в geoip:ru |
-| `refilter-ip-full` | ipcidr · list · mrs | 25,391 | 427.2 KB | 50.2 KB | полный IP-реестр РКН |
+| `refilter-domain` | domain · list · mrs | 21,990 | 384.6 KB | 171.8 KB | реестр РКН, только то, что перекрывает DIRECT-правила |
+| `refilter-domain-full` | domain · list · mrs | 75,396 | 1311.1 KB | 528.7 KB | полный реестр РКН (нужен только при direct-by-default) |
+| `refilter-ip` | ipcidr · list · mrs | 1,146 | 19.2 KB | 2.7 KB | IP из реестра РКН, попадающие в geoip:ru |
+| `refilter-ip-full` | ipcidr · list · mrs | 25,394 | 427.1 KB | 50.4 KB | полный IP-реестр РКН |
 | `vpndetect` | domain · list · mrs | 13 | 0.4 KB | 0.3 KB |  |
 | `refilter-community` | domain · list · mrs | 17 | 0.4 KB | 0.3 KB |  |
 | `proc-games` | classical · yaml | 87 | 2.9 KB | — | процессы игровых лаунчеров → DIRECT (десктоп) |
@@ -193,9 +193,9 @@ Google-push.
 |---|---|---|---|
 | [`config-ios.json`](v2ray/config-ios.json) | 5 KB | 178 | iOS — минимальный, только необходимое |
 | [`config-mobile.json`](v2ray/config-mobile.json) | 32 KB | 1,350 | iOS и Android — рекомендуемый |
-| [`config-mobile-full.json`](v2ray/config-mobile-full.json) | 589 KB | 24,505 | Android и мощные iOS: + реестр РКН |
+| [`config-mobile-full.json`](v2ray/config-mobile-full.json) | 589 KB | 24,509 | Android и мощные iOS: + реестр РКН |
 | [`config.json`](v2ray/config.json) | 126 KB | 3,455 | десктоп |
-| [`config_full.json`](v2ray/config_full.json) | 932 KB | 26,610 | десктоп: + реестр РКН |
+| [`config_full.json`](v2ray/config_full.json) | 932 KB | 26,614 | десктоп: + реестр РКН |
 
 > В `outbounds` есть только `direct` и `block`. Добавьте свой outbound с тегом
 > `proxy` — без него Xray отбросит соединения (не пустит их напрямую).
@@ -203,7 +203,7 @@ Google-push.
 ### geosite.dat / geoip.dat
 
 ```
-https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/geosite.dat        # 608.9 KB — с реестром РКН
+https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/geosite.dat        # 609.0 KB — с реестром РКН
 https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/geoip.dat          # 790.2 KB
 https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/happ/geosite.dat   # 160.0 KB — без реестра, для телефонов
 https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/happ/geoip.dat     # 779.0 KB
@@ -219,7 +219,7 @@ https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/happ/geoip.dat     # 779
 
 | Категория | Записей | Есть в mobile-файле |
 |---|---|---|
-| `geosite:category-geoblock-ru` | 21,989 | нет |
+| `geosite:category-geoblock-ru` | 21,990 | нет |
 | `geosite:apple` | 1,790 | да |
 | `geosite:whitelist` | 1,147 | да |
 | `geosite:category-ru` | 1,147 | да |
@@ -265,7 +265,7 @@ https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/happ/geoip.dat     # 779
 |---|---|---|
 | `geoip:ru` | 25,244 | да |
 | `geoip:whitelist` | 25,244 | да |
-| `geoip:blocked-ru` | 1,143 | нет |
+| `geoip:blocked-ru` | 1,146 | нет |
 | `geoip:private` | 28 | да |
 | `geoip:telegram` | 12 | да |
 
