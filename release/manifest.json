@@ -10,9 +10,9 @@
     {
       "name": "proxy",
       "behavior": "domain",
-      "entries": 154,
-      "list": 3254,
-      "mrs": 1699
+      "entries": 155,
+      "list": 3307,
+      "mrs": 1719
     },
     {
       "name": "discord",
@@ -24,9 +24,9 @@
     {
       "name": "ai",
       "behavior": "domain",
-      "entries": 215,
-      "list": 4066,
-      "mrs": 2250
+      "entries": 217,
+      "list": 4117,
+      "mrs": 2270
     },
     {
       "name": "youtube",
@@ -59,16 +59,16 @@
     {
       "name": "direct",
       "behavior": "domain",
-      "entries": 3284,
-      "list": 60445,
-      "mrs": 30971
+      "entries": 3285,
+      "list": 60459,
+      "mrs": 31075
     },
     {
       "name": "direct-core",
       "behavior": "domain",
-      "entries": 1206,
-      "list": 19287,
-      "mrs": 9922
+      "entries": 1207,
+      "list": 19301,
+      "mrs": 10068
     },
     {
       "name": "direct-ios",
