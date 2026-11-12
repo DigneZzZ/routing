@@ -91,8 +91,8 @@ https://raw.githubusercontent.com/DigneZzZ/routing/main/release/<файл>
 | `direct-ios` | domain · list · mrs | 155 | 2.3 KB | 1.3 KB | минимальный DIRECT: банки, госуслуги, связь, Apple, Microsoft, Google Play |
 | `direct-ip` | ipcidr · list · mrs | 28 | 0.4 KB | 0.2 KB | приватные и служебные сети → DIRECT |
 | `proxy-ip` | ipcidr · list · mrs | 6 | 0.2 KB | 0.1 KB | CIDR, которые нужно увести из-под geoip:ru → VPN |
-| `proxy-ip-full` | ipcidr · list · mrs | 1,714 | 27.4 KB | 6.8 KB | полный набор Telegram / Cloudflare / Discord CIDR |
-| `ru-ip` | ipcidr · list · mrs | 25,244 | 437.9 KB | 117.1 KB | российские IP → DIRECT |
+| `proxy-ip-full` | ipcidr · list · mrs | 1,812 | 28.7 KB | 7.3 KB | полный набор Telegram / Cloudflare / Discord CIDR |
+| `ru-ip` | ipcidr · list · mrs | 25,265 | 438.3 KB | 117.2 KB | российские IP → DIRECT |
 | `refilter-domain` | domain · list · mrs | 21,990 | 384.6 KB | 171.8 KB | реестр РКН, только то, что перекрывает DIRECT-правила |
 | `refilter-domain-full` | domain · list · mrs | 75,396 | 1311.1 KB | 528.7 KB | полный реестр РКН (нужен только при direct-by-default) |
 | `refilter-ip` | ipcidr · list · mrs | 1,146 | 19.2 KB | 2.7 KB | IP из реестра РКН, попадающие в geoip:ru |
@@ -204,9 +204,9 @@ Google-push.
 
 ```
 https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/geosite.dat        # 609.3 KB — с реестром РКН
-https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/geoip.dat          # 790.2 KB
+https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/geoip.dat          # 790.7 KB
 https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/happ/geosite.dat   # 160.4 KB — без реестра, для телефонов
-https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/happ/geoip.dat     # 779.0 KB
+https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/happ/geoip.dat     # 779.5 KB
 ```
 
 Файлы стандартные (protobuf v2ray/v2fly), подходят для V2Ray, Xray, sing-box и
@@ -263,8 +263,8 @@ https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/happ/geoip.dat     # 779
 
 | Категория | CIDR | Есть в mobile-файле |
 |---|---|---|
-| `geoip:ru` | 25,244 | да |
-| `geoip:whitelist` | 25,244 | да |
+| `geoip:ru` | 25,265 | да |
+| `geoip:whitelist` | 25,265 | да |
 | `geoip:blocked-ru` | 1,146 | нет |
 | `geoip:private` | 28 | да |
 | `geoip:telegram` | 12 | да |
@@ -378,13 +378,13 @@ v2ray/config-mobile-full.json                      589 KB
 v2ray/config-mobile.json                            32 KB
 v2ray/config.json                                  126 KB
 v2ray/config_full.json                             932 KB
-v2ray/geoip.dat                                    790 KB
+v2ray/geoip.dat                                    791 KB
 v2ray/geosite.dat                                  609 KB
 v2ray/happ/default.json                              2 KB
 v2ray/happ/default_deeplink.txt                      2 KB
 v2ray/happ/full.json                                 2 KB
 v2ray/happ/full_deeplink.txt                         2 KB
-v2ray/happ/geoip.dat                               779 KB
+v2ray/happ/geoip.dat                               780 KB
 v2ray/happ/geosite.dat                             160 KB
 v2ray/incy/default.json                              2 KB
 v2ray/incy/default_deeplink.txt                      2 KB

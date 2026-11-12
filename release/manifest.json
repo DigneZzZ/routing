@@ -94,16 +94,16 @@
     {
       "name": "proxy-ip-full",
       "behavior": "ipcidr",
-      "entries": 1714,
-      "list": 28038,
-      "mrs": 6966
+      "entries": 1812,
+      "list": 29371,
+      "mrs": 7489
     },
     {
       "name": "ru-ip",
       "behavior": "ipcidr",
-      "entries": 25244,
-      "list": 448457,
-      "mrs": 119933
+      "entries": 25265,
+      "list": 448792,
+      "mrs": 120032
     },
     {
       "name": "refilter-domain",
