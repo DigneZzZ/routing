@@ -81,13 +81,13 @@ https://raw.githubusercontent.com/DigneZzZ/routing/main/release/<файл>
 | `reject` | domain · list · mrs | 1,225 | 26.5 KB | 11.5 KB | реклама и телеметрия → REJECT |
 | `proxy` | domain · list · mrs | 155 | 3.2 KB | 1.7 KB | Telegram, GitHub, WhatsApp, заблокированные РКН сайты → VPN |
 | `discord` | domain · list · mrs | 28 | 0.6 KB | 0.4 KB | Discord → своя группа |
-| `ai` | domain · list · mrs | 217 | 4.0 KB | 2.2 KB | ChatGPT, Claude, Gemini, Copilot и другие → VPN |
+| `ai` | domain · list · mrs | 218 | 4.0 KB | 2.2 KB | ChatGPT, Claude, Gemini, Copilot и другие → VPN |
 | `youtube` | domain · list · mrs | 176 | 2.7 KB | 1.3 KB | YouTube → своя группа |
 | `crypto` | domain · list · mrs | 96 | 1.4 KB | 0.9 KB | криптобиржи и агрегаторы → VPN |
 | `ip-check` | domain · list · mrs | 13 | 0.4 KB | 0.3 KB | сервисы проверки IP → DIRECT (показывают реальный IP) |
 | `games` | domain · list · mrs | 117 | 2.4 KB | 1.4 KB | Steam, Epic, Riot, Roblox, EFT → своя группа |
-| `direct` | domain · list · mrs | 3,287 | 59.1 KB | 30.3 KB | российские сервисы, Microsoft, Apple, Google Play, Twitch → DIRECT |
-| `direct-core` | domain · list · mrs | 1,209 | 18.9 KB | 9.8 KB | то же самое для телефонов: без «парковочных» доменов Apple и Microsoft |
+| `direct` | domain · list · mrs | 3,286 | 59.0 KB | 30.5 KB | российские сервисы, Microsoft, Apple, Google Play, Twitch → DIRECT |
+| `direct-core` | domain · list · mrs | 1,208 | 18.9 KB | 9.7 KB | то же самое для телефонов: без «парковочных» доменов Apple и Microsoft |
 | `direct-ios` | domain · list · mrs | 155 | 2.3 KB | 1.3 KB | минимальный DIRECT: банки, госуслуги, связь, Apple, Microsoft, Google Play |
 | `direct-ip` | ipcidr · list · mrs | 28 | 0.4 KB | 0.2 KB | приватные и служебные сети → DIRECT |
 | `proxy-ip` | ipcidr · list · mrs | 6 | 0.2 KB | 0.1 KB | CIDR, которые нужно увести из-под geoip:ru → VPN |
@@ -134,7 +134,7 @@ DIRECT: домены в российских TLD и поддомены серв�
 | Файл | Для кого | Правил загрузится | Реестр РКН |
 |---|---|---|---|
 | [`template-mobile.yaml`](template-mobile.yaml) | телефон, облегчённый | 30 KB | нет |
-| [`template-mobile-full.yaml`](template-mobile-full.yaml) | телефон, полный | 322 KB | да |
+| [`template-mobile-full.yaml`](template-mobile-full.yaml) | телефон, полный | 321 KB | да |
 | [`template.yaml`](template.yaml) | компьютер, полный | 348 KB | да |
 | [`template-lite.yaml`](template-lite.yaml) | компьютер, облегчённый | 56 KB | нет |
 
@@ -192,10 +192,10 @@ Google-push.
 | Конфиг | Размер | Правил | Для кого |
 |---|---|---|---|
 | [`config-ios.json`](v2ray/config-ios.json) | 5 KB | 178 | iOS — минимальный, только необходимое |
-| [`config-mobile.json`](v2ray/config-mobile.json) | 32 KB | 1,353 | iOS и Android — рекомендуемый |
-| [`config-mobile-full.json`](v2ray/config-mobile-full.json) | 589 KB | 24,512 | Android и мощные iOS: + реестр РКН |
-| [`config.json`](v2ray/config.json) | 126 KB | 3,459 | десктоп |
-| [`config_full.json`](v2ray/config_full.json) | 932 KB | 26,618 | десктоп: + реестр РКН |
+| [`config-mobile.json`](v2ray/config-mobile.json) | 32 KB | 1,352 | iOS и Android — рекомендуемый |
+| [`config-mobile-full.json`](v2ray/config-mobile-full.json) | 589 KB | 24,511 | Android и мощные iOS: + реестр РКН |
+| [`config.json`](v2ray/config.json) | 126 KB | 3,458 | десктоп |
+| [`config_full.json`](v2ray/config_full.json) | 932 KB | 26,617 | десктоп: + реестр РКН |
 
 > В `outbounds` есть только `direct` и `block`. Добавьте свой outbound с тегом
 > `proxy` — без него Xray отбросит соединения (не пустит их напрямую).
@@ -221,12 +221,12 @@ https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/happ/geoip.dat     # 779
 |---|---|---|
 | `geosite:category-geoblock-ru` | 21,990 | нет |
 | `geosite:apple` | 1,794 | да |
-| `geosite:whitelist` | 1,150 | да |
-| `geosite:category-ru` | 1,150 | да |
+| `geosite:whitelist` | 1,149 | да |
+| `geosite:category-ru` | 1,149 | да |
 | `geosite:category-ads` | 908 | да |
 | `geosite:microsoft` | 747 | да |
 | `geosite:win-spy` | 327 | да |
-| `geosite:ai` | 229 | да |
+| `geosite:ai` | 230 | да |
 | `geosite:youtube` | 177 | да |
 | `geosite:private` | 124 | да |
 | `geosite:crypto` | 96 | да |
