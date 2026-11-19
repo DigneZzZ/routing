@@ -3,9 +3,9 @@
     {
       "name": "reject",
       "behavior": "domain",
-      "entries": 1225,
-      "list": 27169,
-      "mrs": 11805
+      "entries": 1226,
+      "list": 27186,
+      "mrs": 11278
     },
     {
       "name": "proxy",
@@ -87,23 +87,23 @@
     {
       "name": "proxy-ip",
       "behavior": "ipcidr",
-      "entries": 6,
-      "list": 182,
-      "mrs": 92
+      "entries": 5,
+      "list": 166,
+      "mrs": 83
     },
     {
       "name": "proxy-ip-full",
       "behavior": "ipcidr",
-      "entries": 1812,
-      "list": 29371,
-      "mrs": 7489
+      "entries": 1808,
+      "list": 29312,
+      "mrs": 7469
     },
     {
       "name": "ru-ip",
       "behavior": "ipcidr",
-      "entries": 25265,
-      "list": 448792,
-      "mrs": 120032
+      "entries": 25365,
+      "list": 450408,
+      "mrs": 120414
     },
     {
       "name": "refilter-domain",

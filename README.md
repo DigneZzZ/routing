@@ -78,7 +78,7 @@ https://raw.githubusercontent.com/DigneZzZ/routing/main/release/<файл>
 
 | Файл | Формат | Записей | .list | .mrs | Назначение |
 |---|---|---|---|---|---|
-| `reject` | domain · list · mrs | 1,225 | 26.5 KB | 11.5 KB | реклама и телеметрия → REJECT |
+| `reject` | domain · list · mrs | 1,226 | 26.5 KB | 11.0 KB | реклама и телеметрия → REJECT |
 | `proxy` | domain · list · mrs | 155 | 3.2 KB | 1.7 KB | Telegram, GitHub, WhatsApp, заблокированные РКН сайты → VPN |
 | `discord` | domain · list · mrs | 28 | 0.6 KB | 0.4 KB | Discord → своя группа |
 | `ai` | domain · list · mrs | 218 | 4.0 KB | 2.2 KB | ChatGPT, Claude, Gemini, Copilot и другие → VPN |
@@ -90,9 +90,9 @@ https://raw.githubusercontent.com/DigneZzZ/routing/main/release/<файл>
 | `direct-core` | domain · list · mrs | 1,208 | 18.9 KB | 9.7 KB | то же самое для телефонов: без «парковочных» доменов Apple и Microsoft |
 | `direct-ios` | domain · list · mrs | 155 | 2.3 KB | 1.3 KB | минимальный DIRECT: банки, госуслуги, связь, Apple, Microsoft, Google Play |
 | `direct-ip` | ipcidr · list · mrs | 28 | 0.4 KB | 0.2 KB | приватные и служебные сети → DIRECT |
-| `proxy-ip` | ipcidr · list · mrs | 6 | 0.2 KB | 0.1 KB | CIDR, которые нужно увести из-под geoip:ru → VPN |
-| `proxy-ip-full` | ipcidr · list · mrs | 1,812 | 28.7 KB | 7.3 KB | полный набор Telegram / Cloudflare / Discord CIDR |
-| `ru-ip` | ipcidr · list · mrs | 25,265 | 438.3 KB | 117.2 KB | российские IP → DIRECT |
+| `proxy-ip` | ipcidr · list · mrs | 5 | 0.2 KB | 0.1 KB | CIDR, которые нужно увести из-под geoip:ru → VPN |
+| `proxy-ip-full` | ipcidr · list · mrs | 1,808 | 28.6 KB | 7.3 KB | полный набор Telegram / Cloudflare / Discord CIDR |
+| `ru-ip` | ipcidr · list · mrs | 25,365 | 439.9 KB | 117.6 KB | российские IP → DIRECT |
 | `refilter-domain` | domain · list · mrs | 21,990 | 384.6 KB | 171.8 KB | реестр РКН, только то, что перекрывает DIRECT-правила |
 | `refilter-domain-full` | domain · list · mrs | 75,396 | 1311.1 KB | 528.7 KB | полный реестр РКН (нужен только при direct-by-default) |
 | `refilter-ip` | ipcidr · list · mrs | 1,146 | 19.2 KB | 2.7 KB | IP из реестра РКН, попадающие в geoip:ru |
@@ -133,7 +133,7 @@ DIRECT: домены в российских TLD и поддомены серв�
 
 | Файл | Для кого | Правил загрузится | Реестр РКН |
 |---|---|---|---|
-| [`template-mobile.yaml`](template-mobile.yaml) | телефон, облегчённый | 30 KB | нет |
+| [`template-mobile.yaml`](template-mobile.yaml) | телефон, облегчённый | 29 KB | нет |
 | [`template-mobile-full.yaml`](template-mobile-full.yaml) | телефон, полный | 321 KB | да |
 | [`template.yaml`](template.yaml) | компьютер, полный | 348 KB | да |
 | [`template-lite.yaml`](template-lite.yaml) | компьютер, облегчённый | 56 KB | нет |
@@ -191,11 +191,11 @@ Google-push.
 
 | Конфиг | Размер | Правил | Для кого |
 |---|---|---|---|
-| [`config-ios.json`](v2ray/config-ios.json) | 5 KB | 178 | iOS — минимальный, только необходимое |
-| [`config-mobile.json`](v2ray/config-mobile.json) | 32 KB | 1,352 | iOS и Android — рекомендуемый |
-| [`config-mobile-full.json`](v2ray/config-mobile-full.json) | 589 KB | 24,511 | Android и мощные iOS: + реестр РКН |
-| [`config.json`](v2ray/config.json) | 126 KB | 3,458 | десктоп |
-| [`config_full.json`](v2ray/config_full.json) | 932 KB | 26,617 | десктоп: + реестр РКН |
+| [`config-ios.json`](v2ray/config-ios.json) | 5 KB | 177 | iOS — минимальный, только необходимое |
+| [`config-mobile.json`](v2ray/config-mobile.json) | 32 KB | 1,351 | iOS и Android — рекомендуемый |
+| [`config-mobile-full.json`](v2ray/config-mobile-full.json) | 589 KB | 24,510 | Android и мощные iOS: + реестр РКН |
+| [`config.json`](v2ray/config.json) | 126 KB | 3,457 | десктоп |
+| [`config_full.json`](v2ray/config_full.json) | 932 KB | 26,616 | десктоп: + реестр РКН |
 
 > В `outbounds` есть только `direct` и `block`. Добавьте свой outbound с тегом
 > `proxy` — без него Xray отбросит соединения (не пустит их напрямую).
@@ -204,9 +204,9 @@ Google-push.
 
 ```
 https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/geosite.dat        # 609.5 KB — с реестром РКН
-https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/geoip.dat          # 790.7 KB
+https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/geoip.dat          # 792.5 KB
 https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/happ/geosite.dat   # 160.6 KB — без реестра, для телефонов
-https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/happ/geoip.dat     # 779.5 KB
+https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/happ/geoip.dat     # 781.3 KB
 ```
 
 Файлы стандартные (protobuf v2ray/v2fly), подходят для V2Ray, Xray, sing-box и
@@ -223,7 +223,7 @@ https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/happ/geoip.dat     # 779
 | `geosite:apple` | 1,794 | да |
 | `geosite:whitelist` | 1,149 | да |
 | `geosite:category-ru` | 1,149 | да |
-| `geosite:category-ads` | 908 | да |
+| `geosite:category-ads` | 909 | да |
 | `geosite:microsoft` | 747 | да |
 | `geosite:win-spy` | 327 | да |
 | `geosite:ai` | 230 | да |
@@ -263,8 +263,8 @@ https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/happ/geoip.dat     # 779
 
 | Категория | CIDR | Есть в mobile-файле |
 |---|---|---|
-| `geoip:ru` | 25,265 | да |
-| `geoip:whitelist` | 25,265 | да |
+| `geoip:ru` | 25,365 | да |
+| `geoip:whitelist` | 25,365 | да |
 | `geoip:blocked-ru` | 1,146 | нет |
 | `geoip:private` | 28 | да |
 | `geoip:telegram` | 12 | да |
@@ -378,13 +378,13 @@ v2ray/config-mobile-full.json                      589 KB
 v2ray/config-mobile.json                            32 KB
 v2ray/config.json                                  126 KB
 v2ray/config_full.json                             932 KB
-v2ray/geoip.dat                                    791 KB
+v2ray/geoip.dat                                    793 KB
 v2ray/geosite.dat                                  610 KB
 v2ray/happ/default.json                              2 KB
 v2ray/happ/default_deeplink.txt                      2 KB
 v2ray/happ/full.json                                 2 KB
 v2ray/happ/full_deeplink.txt                         2 KB
-v2ray/happ/geoip.dat                               780 KB
+v2ray/happ/geoip.dat                               781 KB
 v2ray/happ/geosite.dat                             161 KB
 v2ray/incy/default.json                              2 KB
 v2ray/incy/default_deeplink.txt                      2 KB
