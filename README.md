@@ -86,7 +86,7 @@ https://raw.githubusercontent.com/DigneZzZ/routing/main/release/<файл>
 | `crypto` | domain · list · mrs | 96 | 1.4 KB | 0.9 KB | криптобиржи и агрегаторы → VPN |
 | `ip-check` | domain · list · mrs | 13 | 0.4 KB | 0.3 KB | сервисы проверки IP → DIRECT (показывают реальный IP) |
 | `games` | domain · list · mrs | 117 | 2.4 KB | 1.4 KB | Steam, Epic, Riot, Roblox, EFT → своя группа |
-| `direct` | domain · list · mrs | 3,286 | 59.0 KB | 30.5 KB | российские сервисы, Microsoft, Apple, Google Play, Twitch → DIRECT |
+| `direct` | domain · list · mrs | 3,156 | 56.6 KB | 29.1 KB | российские сервисы, Microsoft, Apple, Google Play, Twitch → DIRECT |
 | `direct-core` | domain · list · mrs | 1,208 | 18.9 KB | 9.7 KB | то же самое для телефонов: без «парковочных» доменов Apple и Microsoft |
 | `direct-ios` | domain · list · mrs | 155 | 2.3 KB | 1.3 KB | минимальный DIRECT: банки, госуслуги, связь, Apple, Microsoft, Google Play |
 | `direct-ip` | ipcidr · list · mrs | 28 | 0.4 KB | 0.2 KB | приватные и служебные сети → DIRECT |
@@ -135,8 +135,8 @@ DIRECT: домены в российских TLD и поддомены серв�
 |---|---|---|---|
 | [`template-mobile.yaml`](template-mobile.yaml) | телефон, облегчённый | 29 KB | нет |
 | [`template-mobile-full.yaml`](template-mobile-full.yaml) | телефон, полный | 321 KB | да |
-| [`template.yaml`](template.yaml) | компьютер, полный | 348 KB | да |
-| [`template-lite.yaml`](template-lite.yaml) | компьютер, облегчённый | 56 KB | нет |
+| [`template.yaml`](template.yaml) | компьютер, полный | 346 KB | да |
+| [`template-lite.yaml`](template-lite.yaml) | компьютер, облегчённый | 54 KB | нет |
 
 Мобильные варианты не просто меньше: в них выключен `find-process-mode`,
 поэтому mihomo не ищет процесс на каждое соединение, а все наборы правил
@@ -194,8 +194,8 @@ Google-push.
 | [`config-ios.json`](v2ray/config-ios.json) | 5 KB | 177 | iOS — минимальный, только необходимое |
 | [`config-mobile.json`](v2ray/config-mobile.json) | 32 KB | 1,351 | iOS и Android — рекомендуемый |
 | [`config-mobile-full.json`](v2ray/config-mobile-full.json) | 589 KB | 24,510 | Android и мощные iOS: + реестр РКН |
-| [`config.json`](v2ray/config.json) | 126 KB | 3,457 | десктоп |
-| [`config_full.json`](v2ray/config_full.json) | 932 KB | 26,616 | десктоп: + реестр РКН |
+| [`config.json`](v2ray/config.json) | 122 KB | 3,327 | десктоп |
+| [`config_full.json`](v2ray/config_full.json) | 927 KB | 26,486 | десктоп: + реестр РКН |
 
 > В `outbounds` есть только `direct` и `block`. Добавьте свой outbound с тегом
 > `proxy` — без него Xray отбросит соединения (не пустит их напрямую).
@@ -203,9 +203,9 @@ Google-push.
 ### geosite.dat / geoip.dat
 
 ```
-https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/geosite.dat        # 609.5 KB — с реестром РКН
+https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/geosite.dat        # 606.8 KB — с реестром РКН
 https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/geoip.dat          # 792.5 KB
-https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/happ/geosite.dat   # 160.6 KB — без реестра, для телефонов
+https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/happ/geosite.dat   # 157.8 KB — без реестра, для телефонов
 https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/happ/geoip.dat     # 781.3 KB
 ```
 
@@ -220,7 +220,7 @@ https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/happ/geoip.dat     # 781
 | Категория | Записей | Есть в mobile-файле |
 |---|---|---|
 | `geosite:category-geoblock-ru` | 21,990 | нет |
-| `geosite:apple` | 1,794 | да |
+| `geosite:apple` | 1,664 | да |
 | `geosite:whitelist` | 1,149 | да |
 | `geosite:category-ru` | 1,149 | да |
 | `geosite:category-ads` | 909 | да |
@@ -376,16 +376,16 @@ template.yaml                                       10 KB
 v2ray/config-ios.json                                5 KB
 v2ray/config-mobile-full.json                      589 KB
 v2ray/config-mobile.json                            32 KB
-v2ray/config.json                                  126 KB
-v2ray/config_full.json                             932 KB
+v2ray/config.json                                  122 KB
+v2ray/config_full.json                             927 KB
 v2ray/geoip.dat                                    793 KB
-v2ray/geosite.dat                                  610 KB
+v2ray/geosite.dat                                  607 KB
 v2ray/happ/default.json                              2 KB
 v2ray/happ/default_deeplink.txt                      2 KB
 v2ray/happ/full.json                                 2 KB
 v2ray/happ/full_deeplink.txt                         2 KB
 v2ray/happ/geoip.dat                               781 KB
-v2ray/happ/geosite.dat                             161 KB
+v2ray/happ/geosite.dat                             158 KB
 v2ray/incy/default.json                              2 KB
 v2ray/incy/default_deeplink.txt                      2 KB
 v2ray/incy/full.json                                 2 KB
