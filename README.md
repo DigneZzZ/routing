@@ -81,7 +81,7 @@ https://raw.githubusercontent.com/DigneZzZ/routing/main/release/<файл>
 | `reject` | domain · list · mrs | 1,226 | 26.5 KB | 11.0 KB | реклама и телеметрия → REJECT |
 | `proxy` | domain · list · mrs | 155 | 3.2 KB | 1.7 KB | Telegram, GitHub, WhatsApp, заблокированные РКН сайты → VPN |
 | `discord` | domain · list · mrs | 28 | 0.6 KB | 0.4 KB | Discord → своя группа |
-| `ai` | domain · list · mrs | 218 | 4.0 KB | 2.2 KB | ChatGPT, Claude, Gemini, Copilot и другие → VPN |
+| `ai` | domain · list · mrs | 219 | 4.1 KB | 2.2 KB | ChatGPT, Claude, Gemini, Copilot и другие → VPN |
 | `youtube` | domain · list · mrs | 176 | 2.7 KB | 1.3 KB | YouTube → своя группа |
 | `crypto` | domain · list · mrs | 96 | 1.4 KB | 0.9 KB | криптобиржи и агрегаторы → VPN |
 | `ip-check` | domain · list · mrs | 13 | 0.4 KB | 0.3 KB | сервисы проверки IP → DIRECT (показывают реальный IP) |
@@ -226,7 +226,7 @@ https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/happ/geoip.dat     # 781
 | `geosite:category-ads` | 909 | да |
 | `geosite:microsoft` | 747 | да |
 | `geosite:win-spy` | 327 | да |
-| `geosite:ai` | 230 | да |
+| `geosite:ai` | 231 | да |
 | `geosite:youtube` | 177 | да |
 | `geosite:private` | 124 | да |
 | `geosite:crypto` | 96 | да |
