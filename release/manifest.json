@@ -59,16 +59,16 @@
     {
       "name": "direct",
       "behavior": "domain",
-      "entries": 3156,
-      "list": 58001,
-      "mrs": 29759
+      "entries": 3174,
+      "list": 58261,
+      "mrs": 29981
     },
     {
       "name": "direct-core",
       "behavior": "domain",
-      "entries": 1208,
-      "list": 19308,
-      "mrs": 9954
+      "entries": 1226,
+      "list": 19568,
+      "mrs": 10155
     },
     {
       "name": "direct-ios",
@@ -94,16 +94,16 @@
     {
       "name": "proxy-ip-full",
       "behavior": "ipcidr",
-      "entries": 1808,
-      "list": 29312,
-      "mrs": 7469
+      "entries": 1816,
+      "list": 29440,
+      "mrs": 7463
     },
     {
       "name": "ru-ip",
       "behavior": "ipcidr",
-      "entries": 25365,
-      "list": 450408,
-      "mrs": 120414
+      "entries": 25421,
+      "list": 451378,
+      "mrs": 120675
     },
     {
       "name": "refilter-domain",
@@ -122,9 +122,9 @@
     {
       "name": "refilter-ip",
       "behavior": "ipcidr",
-      "entries": 1144,
-      "list": 19593,
-      "mrs": 2790
+      "entries": 1131,
+      "list": 19376,
+      "mrs": 2772
     },
     {
       "name": "refilter-ip-full",
