@@ -59,9 +59,9 @@
     {
       "name": "direct",
       "behavior": "domain",
-      "entries": 3174,
-      "list": 58261,
-      "mrs": 29981
+      "entries": 3175,
+      "list": 58301,
+      "mrs": 30073
     },
     {
       "name": "direct-core",

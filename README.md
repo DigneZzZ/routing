@@ -86,7 +86,7 @@ https://raw.githubusercontent.com/DigneZzZ/routing/main/release/<файл>
 | `crypto` | domain · list · mrs | 96 | 1.4 KB | 0.9 KB | криптобиржи и агрегаторы → VPN |
 | `ip-check` | domain · list · mrs | 13 | 0.4 KB | 0.3 KB | сервисы проверки IP → DIRECT (показывают реальный IP) |
 | `games` | domain · list · mrs | 117 | 2.4 KB | 1.4 KB | Steam, Epic, Riot, Roblox, EFT → своя группа |
-| `direct` | domain · list · mrs | 3,174 | 56.9 KB | 29.3 KB | российские сервисы, Microsoft, Apple, Google Play, Twitch → DIRECT |
+| `direct` | domain · list · mrs | 3,175 | 56.9 KB | 29.4 KB | российские сервисы, Microsoft, Apple, Google Play, Twitch → DIRECT |
 | `direct-core` | domain · list · mrs | 1,226 | 19.1 KB | 9.9 KB | то же самое для телефонов: без «парковочных» доменов Apple и Microsoft |
 | `direct-ios` | domain · list · mrs | 155 | 2.3 KB | 1.3 KB | минимальный DIRECT: банки, госуслуги, связь, Apple, Microsoft, Google Play |
 | `direct-ip` | ipcidr · list · mrs | 28 | 0.4 KB | 0.2 KB | приватные и служебные сети → DIRECT |
@@ -136,7 +136,7 @@ DIRECT: домены в российских TLD и поддомены серв�
 | [`template-mobile.yaml`](template-mobile.yaml) | телефон, облегчённый | 29 KB | нет |
 | [`template-mobile-full.yaml`](template-mobile-full.yaml) | телефон, полный | 322 KB | да |
 | [`template.yaml`](template.yaml) | компьютер, полный | 347 KB | да |
-| [`template-lite.yaml`](template-lite.yaml) | компьютер, облегчённый | 54 KB | нет |
+| [`template-lite.yaml`](template-lite.yaml) | компьютер, облегчённый | 55 KB | нет |
 
 Мобильные варианты не просто меньше: в них выключен `find-process-mode`,
 поэтому mihomo не ищет процесс на каждое соединение, а все наборы правил
@@ -194,8 +194,8 @@ Google-push.
 | [`config-ios.json`](v2ray/config-ios.json) | 5 KB | 177 | iOS — минимальный, только необходимое |
 | [`config-mobile.json`](v2ray/config-mobile.json) | 33 KB | 1,369 | iOS и Android — рекомендуемый |
 | [`config-mobile-full.json`](v2ray/config-mobile-full.json) | 589 KB | 24,514 | Android и мощные iOS: + реестр РКН |
-| [`config.json`](v2ray/config.json) | 122 KB | 3,345 | десктоп |
-| [`config_full.json`](v2ray/config_full.json) | 927 KB | 26,490 | десктоп: + реестр РКН |
+| [`config.json`](v2ray/config.json) | 122 KB | 3,346 | десктоп |
+| [`config_full.json`](v2ray/config_full.json) | 927 KB | 26,491 | десктоп: + реестр РКН |
 
 > В `outbounds` есть только `direct` и `block`. Добавьте свой outbound с тегом
 > `proxy` — без него Xray отбросит соединения (не пустит их напрямую).
@@ -203,7 +203,7 @@ Google-push.
 ### geosite.dat / geoip.dat
 
 ```
-https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/geosite.dat        # 607.4 KB — с реестром РКН
+https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/geosite.dat        # 607.5 KB — с реестром РКН
 https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/geoip.dat          # 793.9 KB
 https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/happ/geosite.dat   # 158.5 KB — без реестра, для телефонов
 https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/happ/geoip.dat     # 782.8 KB
@@ -224,7 +224,7 @@ https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/happ/geoip.dat     # 782
 | `geosite:whitelist` | 1,167 | да |
 | `geosite:category-ru` | 1,167 | да |
 | `geosite:category-ads` | 909 | да |
-| `geosite:microsoft` | 747 | да |
+| `geosite:microsoft` | 748 | да |
 | `geosite:win-spy` | 327 | да |
 | `geosite:ai` | 231 | да |
 | `geosite:youtube` | 177 | да |
